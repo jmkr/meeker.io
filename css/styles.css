@@ -1,0 +1,231 @@
+
+
+/* Colors 
+
+Orange-Red: #DD4A38;
+Dark-Red: #7A2116;
+
+*/
+
+@import url(animate.min.css);
+
+@import url(fonts.css);
+
+::selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #333;
+}
+
+::-moz-selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #333;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: 'ProximaNovaLtRegular', 'Helvetica Neue', Helvetica, serif;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background: #fff;
+}
+
+.rails {
+	width: 100%;
+	height: 100%;
+	min-height: 600px;
+	max-height: 900px;
+	background: url(../img/bgRails.png);
+	background-size: cover;
+}
+
+header {
+	width: 100%;
+	height: 105px;
+	background: rgba(0, 0, 0, 0);
+}
+
+.head {
+	width: 95%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+}
+.logo:hover {
+	text-decoration: none;
+}
+
+.logo h1 {
+	font-family: 'Raleway';
+	/*font-family: 'Rock Salt', cursive;*/
+
+	text-transform: uppercase;
+	font-size: 2.2em;
+	font-weight: 200;
+	color: #fff;
+	padding-top: 40px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.logo h1 span {
+	color: rgba(255, 255, 255, .4);
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.logo:hover h1 span {
+	color: #fff;
+}
+
+.nav {
+	float: right;
+	padding-top: 40px;
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+}
+
+.nav li {
+	display: inline-block;
+}
+
+.nav li:last-child {
+	padding-right: 0px;
+}
+.nav li a {
+	font-family: 'icomoon';
+	font-size: 1.7em;
+	font-weight: 300;
+	/*color: rgba(255, 255, 255, .5);*/
+	color:#DD4A38;
+	padding: 15px;
+	-webkit-transition: color .4s ease;
+	-moz-transition: color .4s ease;
+	transition: color .4s ease;
+}
+
+.nav li a.current {
+	color: rgba(255, 255, 255, .7);
+}
+
+.nav li a:last-child {
+	padding-right: 0px;
+}
+
+.nav li a:hover {
+	background:none;
+	color: #222;
+}
+
+.main {
+	margin-top: 140px;
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .7s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+}
+
+.title {
+	margin-top: -20px;
+	text-align: center;
+}
+
+.title span {
+	padding: 10px;
+	font-size: 2.5em;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-shadow: 0 2px 0 #fff;
+	color: #0cc93d;
+	background: #fff;
+}
+
+.in {
+	text-align: center;
+	-webkit-transition: color .6s ease;
+	-moz-transition: color .6s ease;
+	transition: color .6s ease;	
+}
+
+.in h1 {
+	font-size: 5em;
+	color: #fff;
+}
+
+.in small {
+	font-size: 2em;
+	color: rgba(255, 255, 255, .8);
+	line-height: 1.7em;
+}
+
+.cont .btn {
+	font-family: 'ProximaNovaRegular';
+	font-size: 30px;
+	color: #fff;
+	padding: 15px;
+	background: #0cc93d;
+	display: inline-block;
+	margin-top: 30px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;	
+}
+
+.cont:hover .btn {
+	background: #0dd93d;
+}
+
+.cont .arrow {
+	font-family: 'icomoon';
+	font-size: 60px;
+	display: inline-block;
+	margin-top: -50px;
+	opacity: 0;
+	visibility: hidden;
+	color: #0dd93d;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.cont:hover .arrow {
+	margin-top: 20px;
+	opacity: 1;
+	visibility: visible;
+}
+
+

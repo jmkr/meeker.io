@@ -1,0 +1,73 @@
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+
+/*
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('proxima_nova-webfont.eot');
+    src: url('proxima_nova-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proxima_nova-webfont.woff') format('woff'),
+         url('proxima_nova-webfont.ttf') format('truetype'),
+         url('proxima_nova-webfont.svg#ProximaNovaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'ProximaNovaLtRegular';
+    src: url('proximanova-light-webfont.eot');
+    src: url('proximanova-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('proximanova-light-webfont.woff') format('woff'),
+         url('proximanova-light-webfont.ttf') format('truetype'),
+         url('proximanova-light-webfont.svg#ProximaNovaLtRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+@font-face {
+    font-family: 'icomoon';
+    src:url('fonts/icomoon.eot');
+    src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.svg#icomoon') format('svg'),
+        url('fonts/icomoon.woff') format('woff'),
+        url('fonts/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: 'icomoon';
+    font-style: normal;
+    speak: none;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-tumblr:before {
+    content: "\21";
+}
+.icon-github:before {
+    content: "\22";
+}
+.icon-twitter:before {
+    content: "\23";
+}
+.icon-user:before {
+    content: "\25";
+}
+.icon-briefcase:before {
+    content: "\24";
+}
+.icon-user-2:before {
+    content: "\26";
+}
+.icon-home:before {
+    content: "\27";
+}
+.icon-search:before {
+    content: "\28";
+}
+.icon-map-pin-fill:before {
+    content: "\29";
+}
