@@ -32,36 +32,52 @@
               <h1>meeker<span>.io</span>
               </h1> 
             </a>
-            <ul class="nav">
-              <li><a href="#work">&#x24;</a></li>
-              <li><a href="about.html">&#x25;</a></li>
-              <li><a href="http://github.meeker.io">&#x22;</a></li>
-              <li><a href="http://twitter.com/meekr5">&#x23;</a></li>
-              <li><a href="http://blog.meeker.io">&#x21;</a></li>              
-            </ul>
+            <div class="slideout">
+              <ul class="nav">
+                <li><a href="#work">&#x24;</a></li>
+                <li><a href="about.html">&#x25;</a></li>
+                <li><a href="http://github.meeker.io">&#x22;</a></li>
+                <li><a href="http://twitter.com/meekr5">&#x23;</a></li>
+                <li><a href="http://blog.meeker.io">&#x21;</a></li>              
+              </ul>
+             </div> 
           </div>
         </header>
         <section class="main">
           <div class="head">          
             <div class="in">
-              <h1>I Design Interfaces</h1>
-              <small>for websites and apps</small><br />
-              <a class="cont" href="#work"><span class="btn">Latest Work</span><br />
-              <span class="arrow">&#xe1c2;</span></a>
+              <h1><div id="typer" data-typer-targets='
+    { "targets" : ["I am a creator","I am a web developer","I am innovative","I am hungry","I am foolish"]}'>I am a software engineer</div></h1>
+
+    
+              <small></small><br />
+              <a class="cont" href="#work"><span class="button">Latest Work</span><br />
+              <span class="arrow">&#x2b;</span></a>
             </div>            
           </div>
         </section>
+        
     </div>
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-35178468-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+      <script type="text/javascript">
+        $(document).ready(function() {
+
+          setTimeout(function() {
+            $('[data-typer-targets]').typer();    
+          }, 7500);
+
+        });                
+      </script>
+
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        try {
+          var pageTracker = _gat._getTracker("UA-35178468-1");
+        pageTracker._trackPageview();
+        } catch(err) {}
+      </script>
 
   </body>
 </html>

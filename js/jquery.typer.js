@@ -13,13 +13,13 @@ String.prototype.rightChars = function(n){
 (function($) {
   var
     options = {
-      highlightSpeed    : 20,
-      typeSpeed         : 100,
-      clearDelay        : 500,
-      typeDelay         : 200,
+      highlightSpeed    : 80,
+      typeSpeed         : 250,
+      clearDelay        : 3000,
+      typeDelay         : 500,
       clearOnHighlight  : true,
       typerDataAttr     : 'data-typer-targets',
-      typerInterval     : 2000
+      typerInterval     : 4000
     },
     highlight,
     clearText,
@@ -38,6 +38,7 @@ String.prototype.rightChars = function(n){
   spanWithColor = function(color, backgroundColor) {
     if (color === 'rgba(0, 0, 0, 0)') {
       color = 'rgb(255, 255, 255)';
+      backgroundColor = 'rgb(123, 123, 123)';
     }
 
     return $('<span></span>')
