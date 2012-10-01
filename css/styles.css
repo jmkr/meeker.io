@@ -43,6 +43,12 @@ html, body {
 	background-size: cover;
 }
 
+.topBar {
+	background: url(../img/bgRails.png);
+	background-size: cover;
+	height:125px;
+}
+
 header {
 	width: 100%;
 	height: 105px;
@@ -96,6 +102,8 @@ header {
 .logo:hover h1 span {
 	color: #fff;
 }
+
+
 
 .nav {
 	float: right;
@@ -234,3 +242,160 @@ header {
 }
 
 
+
+/* Photo page */
+.photo-page, .work-page {
+	/*background: #d5ccaf repeat top center;*/
+}
+
+.photo-page * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	
+	-webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.photo-page header {
+	/*background: #52445b repeat top center;*/
+}
+
+.photo-page h1 {
+	text-align: center;
+	font-size: 2.2em;
+}
+
+.photo-page header h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 8px;
+}
+
+.photo-page .inside {
+	padding: 2% 0;
+	width: 90%;
+	margin: 0 auto;	
+	margin-bottom: -75px;
+	padding-top: 50px;
+}
+
+.rss-box {
+	width: 90%;
+	margin: 0 auto;
+	padding: 5% 0;
+}
+
+
+/*Clear fix*/
+/* For modern browsers */
+.rss-items:before,
+.rss-items:after {
+    content:"";
+    display:table;
+}
+
+.rss-items:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.rss-items {
+    zoom:1;
+}
+
+
+.rss-items li {
+	/* float: left;  */
+	width: 33%;
+	height: 33%;
+	display: inline-block;
+	padding: 2%;
+	list-style-type: none;
+	position: relative;
+}
+
+.rss-items li br {
+	display: none;
+}
+
+.rss-items li a {
+	display: none;
+}
+
+.rss-items li:hover a {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	padding: 50% 0 0 0;
+	background: rgba(0, 0, 0, 0.1);
+	color: #fff;
+	text-align: center;
+	text-shadow: 0px 1px 0px #000000;
+}
+
+.rss-items li:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+.rss-items img {
+	display: block;
+	width: 100%;
+	height: auto;
+	
+	-webkit-box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
+	        box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) { 
+	.rss-items li {
+		width: 49%;
+	}
+	
+}
+
+@media screen and (max-width: 320px) { 
+	.rss-items li {
+		width: 100%;
+	}
+	
+	.photo-page header h1 {
+		font-size: 1em;
+	}
+	
+	.photo-page .connect {
+		width: 100%;
+	}
+	
+	.photo-page .connect h2 {
+		font-size: 2em;
+	}
+	
+}
+
+
+/* Lab */
+.lab{
+	/*border: 3px solid #999;
+    -webkit-border-radius: 30px;
+    height: 18px;
+    width: 18px;*/
+    position: absolute;
+    /*left:20px;
+    top:214px;*/
+    -webkit-animation: pulsate 2s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.5, 0.5); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.0, 1.0); opacity: 0.0;}
+}​
