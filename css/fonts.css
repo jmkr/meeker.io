@@ -25,6 +25,21 @@
 
 }
 */
+
+
+@font-face {
+    font-family: 'RawengulkSansRegular';
+    src: url('fonts/RawengulkSans-094-webfont.eot');
+    src: url('fonts/RawengulkSans-094-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/RawengulkSans-094-webfont.woff') format('woff'),
+         url('fonts/RawengulkSans-094-webfont.ttf') format('truetype'),
+         url('fonts/RawengulkSans-094-webfont.svg#RawengulkSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
 @font-face {
     font-family: 'icomoon';
     src:url('fonts/icomoon.eot');

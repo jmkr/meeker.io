@@ -25,7 +25,7 @@
 	<body class="photo-page">
 		<header  class="topBar">
 			<div class="head">
-            	<a href class="logo">
+            	<a href="index.html" class="logo">
             	 	<h1>meeker<span>.io</span>
             	  	</h1> 
             	</a>
@@ -44,6 +44,43 @@
 		<div class="inside">
     	    <h1>About me</h1>
     	</div>
+    	<div id="twitter">
+    	</div>
+    	<script type="text/javascript">
+    		$(document).ready(function() {  
+    
+    			var user = 'meekr5';    	
+    	
+    			$.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
+        			var tweet = "";
+					for (i = 0; i < data.length; i++) {
+						tweet += data[i].text + "</br></br>";
+					}    
+					tweetText = tweet;    
+        			tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
+            			return '<a target="_blank" href="'+url+'">'+url+'</a>';
+        			}).replace(/B@([_a-z0-9]+)/ig, function(reply) {
+            			return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
+        			});        	
+        			//$("#tweet").html(tweet);
+        			tweetSet(tweet, tweetText);
+    			}); 
+      			function tweetSet(tweet, tweetText){
+      				$("#twitter").html(tweet);
+					//$("#twitter").typeTo(tweetText);
+				}
+			});
+
+    		/*
+        	$.getJSON("http://twitter.com/statuses/user_timeline/meekr5.json?callback=?", function(data) {
+     			tweet = data[0].text;
+     			console.log(tweet);
+ 				tweetSet(tweet);
+			});*/
+			
+
+                    
+      	</script>
 		<script type="text/javascript" src="http://chxo.com/feedsplitter/feedsplitter.php?format=jstable&stylesheet=1&feed=http%3A%2F%2Fgithub.com%2Fjmkr.atom%3Ftoken%3Dtoken&stylesheet=1">
 </script><noscript>Javascript newsfeed here, see https://github.com/jmkr.atom?token=token.</noscript>
 

@@ -27,7 +27,7 @@ Comp Green: #2AA54A;
 html, body {
 	width: 100%;
 	height: 100%;
-	font-family: 'Raleway', 'Helvetica Neue', Helvetica, serif;
+	font-family: 'RawengulkSansRegular', 'Helvetica Neue', Helvetica, serif;
 	color: #333;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -79,7 +79,7 @@ header {
 }
 
 .logo h1 {
-	font-family: 'Raleway';
+	/*font-family: 'Raleway';*/
 	/*font-family: 'Rock Salt', cursive;*/
 
 	text-transform: uppercase;
@@ -182,7 +182,7 @@ header {
 }
 
 .in {
-	font-family: 'Raleway';
+	font-family: 'RawengulkSansRegular';
 	text-align: center;
 	-webkit-transition: color .6s ease;
 	-moz-transition: color .6s ease;
@@ -265,6 +265,7 @@ header {
 }
 
 .photo-page h1 {
+	font-family: "Raleway";
 	text-align: center;
 	font-size: 2.2em;
 }
@@ -310,13 +311,14 @@ header {
 
 
 .rss-items li {
-	/* float: left;  */
+	
 	width: 33%;
 	height: 33%;
 	display: inline-block;
 	padding: 2%;
 	list-style-type: none;
 	position: relative;
+
 }
 
 .rss-items li br {
@@ -324,10 +326,13 @@ header {
 }
 
 .rss-items li a {
+	
 	display: none;
+	
 }
 
 .rss-items li:hover a {
+	
 	display: block;
 	position: absolute;
 	top: 0px;
@@ -339,6 +344,7 @@ header {
 	color: #fff;
 	text-align: center;
 	text-shadow: 0px 1px 0px #000000;
+
 }
 
 .rss-items li:nth-child(3n+1) {
