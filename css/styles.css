@@ -243,8 +243,8 @@ header {
 
 
 
-/* Photo page */
-.photo-page, .work-page {
+/* Photo page.. and about page */
+.photo-page, .about-page {
 	/*background: #d5ccaf repeat top center;*/
 }
 
@@ -260,24 +260,24 @@ header {
   transition: all 0.2s ease-out;
 }
 
-.photo-page header {
+.photo-page header, .about-page header{
 	/*background: #52445b repeat top center;*/
 }
 
-.photo-page h1 {
-	font-family: "Raleway";
+.photo-page h1, .about-page h1 {
+	font-family: "RalewayThin";
 	text-align: center;
 	font-size: 2.2em;
 }
 
-.photo-page header h2 {
+.photo-page header h2, .about-page header h2 {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1em;
 	letter-spacing: 8px;
 }
 
-.photo-page .inside {
+.photo-page .inside, .about-page .inside{
 	padding: 2% 0;
 	width: 90%;
 	margin: 0 auto;	
@@ -285,6 +285,71 @@ header {
 	padding-top: 50px;
 }
 
+/* About page */
+.about-page .content .deathRays{
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*margin-top: 200px;*/
+	margin-left: 200px;
+	min-height: 500px;
+	/*max-height: 900px;*/
+	background: url(../img/raySmall.png);
+	background-repeat: no-repeat;
+}
+
+p.thoughtBubble
+{
+	font-size: 22px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+	width: 600px;
+	height: 150px;
+	text-align: center;
+	/*line-height: 100px;*/
+	margin: 60px auto;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	-webkit-box-shadow: 2px 2px 4px #888;
+	-moz-box-shadow: 2px 2px 4px #888;
+	box-shadow: 2px 2px 4px #888;
+	-webkit-border-radius: 108px;
+	-moz-border-radius: 108px;
+	border-radius: 108px;
+}
+p.thoughtBubble:before, p.thoughtBubble:after
+{
+	left: 10px;
+	top: 70px;
+	width: 40px;
+	height: 40px;
+	background-color: #fff;
+	border: 8px solid #666;
+	-webkit-border-radius: 28px;
+	-moz-border-radius: 28px;
+	border-radius: 28px;
+	border-radius: 28px;
+	content: ' ';
+	position: absolute;
+}
+p.thoughtBubble:after
+{
+	width: 20px;
+	height: 20px;
+	left: 5px;
+	top: 100px;
+	-webkit-border-radius: 18px;
+	-moz-border-radius: 18px;
+	border-radius: 18px;
+}
+
+
+
+/* Photo page */
 .rss-box {
 	width: 90%;
 	margin: 0 auto;

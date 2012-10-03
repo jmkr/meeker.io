@@ -15,6 +15,9 @@
     	<script src="js/jquery.easing.1.3.js"></script>
     	<script src="js/jquery.typer.js"></script>
     	<script src="js/bootstrap.min.js"></script>
+    	<script src="https://www.google.com/jsapi"></script>
+
+
     	<!--[if lt IE 9]>
     	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     	<![endif]-->
@@ -22,7 +25,7 @@
     	<title>Meeker.io</title>
 	</head>
 
-	<body class="photo-page">
+	<body class="about-page">
 		<header  class="topBar">
 			<div class="head">
             	<a href="index.html" class="logo">
@@ -44,8 +47,21 @@
 		<div class="inside">
     	    <h1>About me</h1>
     	</div>
+    	<div class="content">
+
+		    	<p class="thoughtBubble"></p>    		
+
+    		<div class="deathRays">
+    		</div>	
+    	</div>	
+    			
+    	
+
     	<div id="twitter">
     	</div>
+    	<div id="tweetTime">
+    	</div>
+    	
     	<script type="text/javascript">
     		$(document).ready(function() {  
     
@@ -53,9 +69,13 @@
     	
     			$.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
         			var tweet = "";
-					for (i = 0; i < data.length; i++) {
-						tweet += data[i].text + "</br></br>";
-					}    
+        			var tweetTime = "";
+        			console.log(data.length);
+					//for (i = 0; i < data.length; i++) {
+						tweet += data[0].text + "</br></br>";
+						tweetTime += data[0].created_at;
+					//}    
+
 					tweetText = tweet;    
         			tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
             			return '<a target="_blank" href="'+url+'">'+url+'</a>';
@@ -63,11 +83,72 @@
             			return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
         			});        	
         			//$("#tweet").html(tweet);
-        			tweetSet(tweet, tweetText);
-    			}); 
-      			function tweetSet(tweet, tweetText){
-      				$("#twitter").html(tweet);
+        			tweetTime = timeAgo(tweetTime);
+        			tweetSet(tweet, tweetText, tweetTime);
+    			});
+
+				function timeAgo(dateString) {
+        			var rightNow = new Date();
+        			var then = new Date(dateString);
+         
+        			if ($.browser.msie) {
+            			// IE can't parse for poop
+            			then = Date.parse(dateString.replace(/( \+)/, ' UTC$1'));
+        			}
+ 
+        			var diff = rightNow - then;
+ 
+        			var second = 1000,
+        				minute = second * 60,
+        				hour = minute * 60,
+        				day = hour * 24,
+        				week = day * 7;
+ 
+        			if (isNaN(diff) || diff < 0) {
+            			return "";
+        			}
+ 
+        			if (diff < second * 2) {
+        			    return "right now";
+        			}
+ 			
+        			if (diff < minute) {
+        			    return Math.floor(diff / second) + " seconds ago";
+        			}
+ 			
+        			if (diff < minute * 2) {
+        			    return "about 1 minute ago";
+        			}
+ 			
+        			if (diff < hour) {
+        			    return Math.floor(diff / minute) + " minutes ago";
+        			}
+ 			
+        			if (diff < hour * 2) {
+        			    return "about 1 hour ago";
+        			}
+ 			
+        			if (diff < day) {        				
+        			    return  Math.floor(diff / hour) + " hours ago";
+        			}
+ 			
+        			if (diff > day && diff < day * 2) {
+        			    return "yesterday";
+        			}
+ 			
+        			if (diff < day * 365) {
+        			    return Math.floor(diff / day) + " days ago";
+        			}
+ 			
+        			else {
+        			    return "over a year ago";
+        			}
+    			}
+
+      			function tweetSet(tweet, tweetText, tweetTime){
+      				$(".thoughtBubble").html(tweet);
 					//$("#twitter").typeTo(tweetText);
+					$("#tweetTime").html(tweetTime);
 				}
 			});
 
@@ -81,8 +162,9 @@
 
                     
       	</script>
-		<script type="text/javascript" src="http://chxo.com/feedsplitter/feedsplitter.php?format=jstable&stylesheet=1&feed=http%3A%2F%2Fgithub.com%2Fjmkr.atom%3Ftoken%3Dtoken&stylesheet=1">
-</script><noscript>Javascript newsfeed here, see https://github.com/jmkr.atom?token=token.</noscript>
+      	<!--
+		<script src="js/feed2js.js" data-src="https://github.com/jmkr.atom?token=token" data-num="3" data-html="y" data-pc="n"></script>
+		-->
 
 
 </html>
