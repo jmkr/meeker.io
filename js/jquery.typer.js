@@ -13,13 +13,13 @@ String.prototype.rightChars = function(n){
 (function($) {
   var
     options = {
-      highlightSpeed    : 80,
-      typeSpeed         : 250,
+      highlightSpeed    : 60,
+      typeSpeed         : 125,
       clearDelay        : 3000,
       typeDelay         : 500,
       clearOnHighlight  : false,
       typerDataAttr     : 'data-typer-targets',
-      typerInterval     : 4000
+      typerInterval     : 2500
     },
     highlight,
     clearText,
