@@ -47,35 +47,34 @@
 		<!--<div class="inside">
     	    <h1>About me</h1>
     	</div>-->
-    	<section class="content">    		
-    		<section class="about">
-    			<header>
-    				<h1>Hi, I'm John.</h1>
-    			</header>
-    			<p>Lorem ipsum dolor sit amet, dolores menandri cum cu, causae mediocrem sea at, ei libris gubergren intellegat his. Ex clita concludaturque pro. 	Eu aeque feugiat electram vel. Alia legendos principes sit in. Ludus utamur nec ad.</p>
+    	<div class="container">
+    		<section class="content">    		
+    			<section class="about">
+    				<header>
+    					<h1>Hi, I'm John.</h1>
+    				</header>
+    				<p>Lorem ipsum dolor sit amet, dolores menandri cum cu, causae mediocrem sea at, ei libris gubergren intellegat his. Ex clita concludaturque 	pro. 	Eu aeque feugiat electram vel. Alia legendos principes sit in. Ludus utamur nec ad.</p>
+		
+					<p>Ei sea menandri quaestio assueverit, ne constituto vituperata persequeris ius. Per case blandit ei, in eos platonem corrumpit. Aliquando 		similique 			scripserit ut mea. Eirmod persius ut sit. Vix ea justo complectitur, partem salutandi ut sea. Vim augue dicunt 	corpora et, ea 	pro semper option, vix elit 			graeco animal et.</p>
+					
+					<p>Diam eripuit ad sea. His an melius dolores. Duo in choro contentiones. No populo labores dolorem eam. Deseruisse efficiantur sed ad, 	idque 	inimicus 			dissentiet ea sed, eum ex nisl esse copiosae. At nemore impetus pri, pro no veritus alienum constituam. In vim 	omnium 	utamur iudicabit, putent fastidii ex 			usu.</p>
+					
+					<p>Eu eum munere alterum minimum. Te prompta civibus mea, posse vivendum cu mei. An est meliore volutpat. An mei nominati theophrastus, duo 	doming 	constituto 			instructior et. Mei errem eligendi ea.</p>
+    			</section>
+    			<div class="deathRays">
+    				<div id="tweetTime"></div>
+    				<div class="thoughtBubble">
+    					<div class="tweetWrap">
+			    			<div id="tweet"></div>   
+			    		</div>
+			    	</div>
+    			</div>	
 	
-				<p>Ei sea menandri quaestio assueverit, ne constituto vituperata persequeris ius. Per case blandit ei, in eos platonem corrumpit. Aliquando 	similique 			scripserit ut mea. Eirmod persius ut sit. Vix ea justo complectitur, partem salutandi ut sea. Vim augue dicunt corpora et, ea 	pro semper option, vix elit 			graeco animal et.</p>
-				
-				<p>Diam eripuit ad sea. His an melius dolores. Duo in choro contentiones. No populo labores dolorem eam. Deseruisse efficiantur sed ad, idque 	inimicus 			dissentiet ea sed, eum ex nisl esse copiosae. At nemore impetus pri, pro no veritus alienum constituam. In vim omnium 	utamur iudicabit, putent fastidii ex 			usu.</p>
-				
-				<p>Eu eum munere alterum minimum. Te prompta civibus mea, posse vivendum cu mei. An est meliore volutpat. An mei nominati theophrastus, duo doming 	constituto 			instructior et. Mei errem eligendi ea.</p>
-				
-				<p>Te nec accumsan appellantur. Ei ius nibh feugiat ullamcorper, ea quo perfecto signiferumque. Quem aliquando efficiantur eu pro, no usu ancillae 	percipitur, 			ei mundi aperiri honestatis cum. Qui adipiscing cotidieque mediocritatem id. Vis an omnis semper.</p>
-    		</section>
-    		<div class="deathRays">
-    			<div id="tweetTime"></div>
-    			<div class="thoughtBubble">
-    				<div class="tweetWrap">
-		    			<div id="tweet"></div>   
-		    		</div>
-		    	</div>
-    		</div>	
-
-    	</section>	
-    			
+    		</section>	
+    	</div>		
     	
 
-    	<div id="twitter">
+    	<div class="bottomEdge">
     	</div>
     	
 
@@ -180,7 +179,30 @@
      			console.log(tweet);
  				tweetSet(tweet);
 			});*/
+			this._$header = $('body>header');
+			function pinHeader(){
+				//this._$header.addClass('animated fadeOutDown');
+				this._$header.addClass('fader');				
+			}
 			
+			function unpinHeader(){
+				//this._$header.removeClass('animated fadeOutDown');
+				this._$header.removeClass('fader');
+			}
+				
+			function setupHeader(){				
+				$(document).scroll(
+					function(){
+						console.log($(document).scrollTop());
+						if( $(document).scrollTop() > 30 ){
+							pinHeader();
+						}else{
+							unpinHeader();
+						}
+					}
+				);				
+			}
+			setupHeader();
 
                     
       	</script>

@@ -39,20 +39,63 @@ html, body {
 	height: 100%;
 	min-height: 600px;
 	max-height: 900px;
-	background: url(../img/bgRails.png);
+	background: url(../img/bgRailsColor.png);
 	background-size: cover;
+	margin-top: -160px;
 }
 
 .topBar {
-	background: url(../img/bgRails.png);
+	background: url(../img/bgRailsColor.png);
 	background-size: cover;
 	height:125px;
+	position: fixed;
+	min-width: 1200px;
+	
+  	-webkit-transition:box-shadow .2s ease-in-out;
+  	-moz-transition:box-shadow .2s ease-in-out;
+  	-ms-transition:box-shadow .2s ease-in-out;
+  	-o-transition:box-shadow .2s ease-in-out;
+  	transition:box-shadow .2s ease-in-out;
+  	-webkit-transition:box-shadow .2s ease-in-out;
+  	-moz-transition:box-shadow .2s ease-in-out;
+  	-ms-transition:box-shadow .2s ease-in-out;
+  	-o-transition:box-shadow .2s ease-in-out;
+  	transition:box-shadow .2s ease-in-out;  	
 }
 
 header {
 	width: 100%;
 	height: 105px;
 	background: rgba(0, 0, 0, 0);
+	z-index: 2;
+
+}
+body>header.pinned {
+  	
+  	top:0 !important;
+  	position:fixed !important;
+}
+body>header.fader {
+	background: url(../img/bgRailsColorSky10.png);
+	background-size: cover;
+	height:125px;	
+	top:0 !important;
+  	position:fixed !important;
+  	border-bottom:1px solid #e6e5e5;
+  	border-bottom-color:rgba(0,0,0,0.2);
+  	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	border-bottom-color:rgba(0,0,0,0.2);
+  	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	-moz-box-shadow:0 1px 2px rgba(0,0,0,0.15);
+  	box-shadow:0 1px 2px rgba(0,0,0,0.15);
 }
 
 .head {
@@ -93,14 +136,16 @@ header {
 }
 
 .logo h1 span {
-	color: rgba(255, 255, 255, .4);
+	color: rgba(12, 12, 12, .4);
 	-webkit-transition: all .6s ease;
 	-moz-transition: all .6s ease;
 	transition: all .6s ease;
+	/*visibility: hidden;*/
 }
 
 .logo:hover h1 span {
-	color: #fff;
+	/*visibility: visible;*/
+	color: rgba(255, 255, 255, .4);
 }
 
 
@@ -217,9 +262,13 @@ header {
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;	
 }
+.cont:hover{
+	
+}
 
 .cont:hover .button {
 	background: #DD4A38;
+
 }
 
 .cont .arrow {
@@ -286,9 +335,12 @@ header {
 }
 
 /* About page */
+.about-page .container{
+	z-index: 1;
+}
 .about-page .content{
 	margin: auto;
-	margin-top: 200px;
+	margin-top: 350px;
 	max-width: 960px;
 
 }
@@ -522,21 +574,27 @@ p.thoughtBubble:after
 }
 
 
-/* Lab */
-.lab{
-	/*border: 3px solid #999;
-    -webkit-border-radius: 30px;
-    height: 18px;
-    width: 18px;*/
-    position: absolute;
-    /*left:20px;
-    top:214px;*/
-    -webkit-animation: pulsate 2s ease-out;
-    -webkit-animation-iteration-count: infinite; 
-    opacity: 0.0
+
+/* Footer */
+.bottomEdge {  
+	
 }
-@-webkit-keyframes pulsate {
-    0% {-webkit-transform: scale(0.5, 0.5); opacity: 0.0;}
-    50% {opacity: 1.0;}
-    100% {-webkit-transform: scale(1.0, 1.0); opacity: 0.0;}
-}​
+.bottom header{
+	
+}
+footer{
+	box-shadow: inset 0px 2px 6px rgba( 0, 0, 0, 0.5 );
+	-webkit-box-shadow: inset 0px 2px 6px rgba( 0, 0, 0, 0.5 );
+	-moz-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
+	-o-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
+	-ms-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
+	margin-top:0px;	
+	padding-top: 100px;
+	background: #DD4A38;	
+	height: 300px;
+	text-align:center;
+	color: white;
+}
+footer h1{
+	
+}
