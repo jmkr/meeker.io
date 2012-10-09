@@ -41,26 +41,24 @@ html, body {
 	max-height: 900px;
 	background: url(../img/bgRailsColor.png);
 	background-size: cover;
-	margin-top: -160px;
 }
 
 .topBar {
-	background: url(../img/bgRailsColor.png);
+	background: url(../img/bgRailsColorSky10.png);
 	background-size: cover;
 	height:125px;
 	position: fixed;
-	min-width: 1200px;
 	
-  	-webkit-transition:box-shadow .2s ease-in-out;
+  	/*-webkit-transition:box-shadow .2s ease-in-out;
   	-moz-transition:box-shadow .2s ease-in-out;
   	-ms-transition:box-shadow .2s ease-in-out;
   	-o-transition:box-shadow .2s ease-in-out;
-  	transition:box-shadow .2s ease-in-out;
-  	-webkit-transition:box-shadow .2s ease-in-out;
-  	-moz-transition:box-shadow .2s ease-in-out;
-  	-ms-transition:box-shadow .2s ease-in-out;
-  	-o-transition:box-shadow .2s ease-in-out;
-  	transition:box-shadow .2s ease-in-out;  	
+  	transition:box-shadow .2s ease-in-out;*/
+  	-webkit-transition:box-shadow .3s ease-in-out;
+  	-moz-transition:box-shadow .3s ease-in-out;
+  	-ms-transition:box-shadow .3s ease-in-out;
+  	-o-transition:box-shadow .3s ease-in-out;
+  	transition:box-shadow .3s ease-in-out;  	
 }
 
 header {
@@ -76,9 +74,9 @@ body>header.pinned {
   	position:fixed !important;
 }
 body>header.fader {
-	background: url(../img/bgRailsColorSky10.png);
+	/*background: url(../img/bgRailsColorSky10.png);
 	background-size: cover;
-	height:125px;	
+	height:125px;*/	
 	top:0 !important;
   	position:fixed !important;
   	border-bottom:1px solid #e6e5e5;
@@ -198,7 +196,7 @@ body>header.fader {
 }
 
 .main {
-	margin-top: 160px;
+	padding-top: 220px;
 	-webkit-animation-name: fadeInUp;
 	-moz-animation-name: fadeInUp;
 	-ms-animation-name: fadeInUp;
@@ -301,12 +299,12 @@ body>header.fader {
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
-	
+	/*
 	-webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  	-moz-transition: all 0.2s ease-out;
+  	-ms-transition: all 0.2s ease-out;
+  	-o-transition: all 0.2s ease-out;
+  	transition: all 0.2s ease-out;*/
 }
 
 .photo-page header, .about-page header{
@@ -331,7 +329,7 @@ body>header.fader {
 	width: 90%;
 	margin: 0 auto;	
 	margin-bottom: -75px;
-	padding-top: 50px;
+	padding-top: 150px;
 }
 
 /* About page */
@@ -419,56 +417,6 @@ body>header.fader {
 	vertical-align: middle;
 }
 
-/*
-p.thoughtBubble
-{
-	font-size: 22px;
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
-	position: relative;
-	width: 600px;
-	height: 150px;
-	text-align: center;
-	margin: 60px auto;
-	background-color: #fff;
-	border: 8px solid #666;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
-	-webkit-box-shadow: 2px 2px 4px #888;
-	-moz-box-shadow: 2px 2px 4px #888;
-	box-shadow: 2px 2px 4px #888;
-	-webkit-border-radius: 108px;
-	-moz-border-radius: 108px;
-	border-radius: 108px;
-}
-p.thoughtBubble:before, p.thoughtBubble:after
-{
-	left: 10px;
-	top: 70px;
-	width: 40px;
-	height: 40px;
-	background-color: #fff;
-	border: 8px solid #666;
-	-webkit-border-radius: 28px;
-	-moz-border-radius: 28px;
-	border-radius: 28px;
-	border-radius: 28px;
-	content: ' ';
-	position: absolute;
-}
-p.thoughtBubble:after
-{
-	width: 20px;
-	height: 20px;
-	left: 5px;
-	top: 100px;
-	-webkit-border-radius: 18px;
-	-moz-border-radius: 18px;
-	border-radius: 18px;
-}
-*/
 
 
 /* Photo page */
@@ -499,10 +447,10 @@ p.thoughtBubble:after
 
 .rss-items li {
 	
-	width: 33%;
-	height: 33%;
+	width: 25%;
+	height: 25%;
 	display: inline-block;
-	padding: 2%;
+	padding: 1%;
 	list-style-type: none;
 	position: relative;
 
@@ -519,14 +467,15 @@ p.thoughtBubble:after
 }
 
 .rss-items li:hover a {
-	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-decoration: none;
 	display: block;
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	padding: 50% 0 0 0;
+	padding: 50% 5% 0 5%;
 	background: rgba(0, 0, 0, 0.1);
 	color: #fff;
 	text-align: center;

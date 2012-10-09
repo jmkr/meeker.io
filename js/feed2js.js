@@ -123,6 +123,12 @@ if (typeof feed2js_idx === 'undefined') {
 						var entry = result.feed.entries[i];
 						var li = document.createElement('li');
 						li.className = 'rss-item';
+						//console.log("what is a? :" + entry.title);
+						//Don't output "Photo" for pics that dont have captions
+						if(entry.title == "Photo"){
+							entry.title = "";
+						}
+
 						li.innerHTML = '<a href="{url}">{title}</a>'.supplant({
 							title: entry.title,
 							url: entry.link
@@ -156,6 +162,7 @@ if (typeof feed2js_idx === 'undefined') {
 										url: mediaEnc.url,
 										title: (function() {
 											// Extract filename from URL
+
 											var matches = mediaEnc.url.match(/([^\/]*)$/);
 											return RegExp.$1;
 										})(),
