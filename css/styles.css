@@ -5,6 +5,7 @@
 Orange-Red: #DD4A38;
 Dark-Red: #7A2116;
 Comp Green: #2AA54A;
+Dark-Grey: #202024;
 
 */
 
@@ -27,7 +28,7 @@ Comp Green: #2AA54A;
 html, body {
 	width: 100%;
 	height: 100%;
-	font-family: 'RawengulkSansRegular', 'Helvetica Neue', Helvetica, serif;
+	font-family: "RawengulkSansRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	color: #333;
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -244,6 +245,67 @@ body>header.fader {
 	line-height: 1.7em;
 }
 
+.aboutMe {
+	font-family: 'Raleway';
+	font-size: 38px;
+	color: #fff;
+	padding: 20px;
+	/*padding-top:30px;*/
+	line-height: 50px;
+	/*background: #DD4A38;*/
+	display: inline-block;
+	margin-top: 50px;
+	border-radius: 3px;
+	text-transform: uppercase;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.aboutMe .iconContainer {
+	position: relative;
+	text-align: center;
+	width: 250px;
+}
+
+.aboutMe .iconContainer .text {
+	position: absolute;
+	width: 75%;
+	left: 12%;
+	top: 26%;
+	z-index: 2;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.aboutMe .iconContainer .arrow {
+	position: absolute;
+	font-family: 'icomoon';
+	font-size: 84px;
+	/*display: inline-block;
+	margin-top: -50px;*/
+	line-height: 0px;
+	/*left: 33.5%;*/
+	left:83px;
+	top: 81.5%;
+	visibility: visible;
+	color: #DD4A38;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.aboutMe:hover .iconContainer .arrow{
+	margin-top:75px;
+}
+
+.aboutMe:hover .iconContainer .text{
+	margin-top: -20px;
+	background:none;
+	color: white;
+}
+
 .cont .button {
 	font-family: 'Raleway';
 	font-size: 30px;
@@ -312,7 +374,7 @@ body>header.fader {
 }
 
 .photo-page h1, .about-page h1 {
-	font-family: "RalewayThin";
+	/*font-family: "RalewayThin";*/
 	text-align: center;
 	font-size: 2.2em;
 }
