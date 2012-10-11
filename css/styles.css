@@ -3,9 +3,11 @@
 /* Colors 
 
 Orange-Red: #DD4A38;
+Orange-Red Comp: #A65449;
 Dark-Red: #7A2116;
 Comp Green: #2AA54A;
 Dark-Grey: #202024;
+text: #555;
 
 */
 
@@ -33,6 +35,7 @@ html, body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 	background: #fff;
+	padding: 0;
 }
 
 .rails {
@@ -49,6 +52,7 @@ html, body {
 	background-size: cover;
 	height:125px;
 	position: fixed;
+
 	
   	/*-webkit-transition:box-shadow .2s ease-in-out;
   	-moz-transition:box-shadow .2s ease-in-out;
@@ -246,17 +250,10 @@ body>header.fader {
 }
 
 .aboutMe {
-	font-family: 'Raleway';
-	font-size: 38px;
-	color: #fff;
-	padding: 20px;
-	/*padding-top:30px;*/
-	line-height: 50px;
+	
 	/*background: #DD4A38;*/
 	display: inline-block;
 	margin-top: 50px;
-	border-radius: 3px;
-	text-transform: uppercase;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;
@@ -265,14 +262,20 @@ body>header.fader {
 .aboutMe .iconContainer {
 	position: relative;
 	text-align: center;
-	width: 250px;
+	width: 220px;
 }
 
 .aboutMe .iconContainer .text {
 	position: absolute;
+	font-family: 'Raleway';
+	font-size: 38px;
+	color: #fff;	
+	text-transform: uppercase;
+	/*padding-top:30px;*/
+	line-height: 50px;
 	width: 75%;
-	left: 12%;
-	top: 26%;
+	left: 13%;
+	top: 21%;
 	z-index: 2;
 	-webkit-transition: all .6s ease;
 	-moz-transition: all .6s ease;
@@ -282,13 +285,12 @@ body>header.fader {
 .aboutMe .iconContainer .arrow {
 	position: absolute;
 	font-family: 'icomoon';
-	font-size: 84px;
+	font-size: 80px;
 	/*display: inline-block;
 	margin-top: -50px;*/
 	line-height: 0px;
-	/*left: 33.5%;*/
-	left:83px;
-	top: 81.5%;
+	left: 32%;
+	top: 86%;
 	visibility: visible;
 	color: #DD4A38;
 	-webkit-transition: all .6s ease;
@@ -301,56 +303,9 @@ body>header.fader {
 }
 
 .aboutMe:hover .iconContainer .text{
-	margin-top: -20px;
-	background:none;
+	margin-top: -12px;
 	color: white;
 }
-
-.cont .button {
-	font-family: 'Raleway';
-	font-size: 30px;
-	color: #fff;
-	padding: 20px;
-	padding-top:30px;
-	line-height: 12px;
-	background: #DD4A38;
-	display: inline-block;
-	margin-top: 30px;
-	border-radius: 3px;
-	text-transform: uppercase;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;	
-}
-.cont:hover{
-	
-}
-
-.cont:hover .button {
-	background: #DD4A38;
-
-}
-
-.cont .arrow {
-	font-family: 'icomoon';
-	font-size: 40px;
-	display: inline-block;
-	margin-top: -50px;
-	opacity: 0;
-	visibility: hidden;
-	color: #DD4A38;
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	transition: all .6s ease;
-}
-
-.cont:hover .arrow {
-	margin-top: 20px;
-	opacity: 1;
-	visibility: visible;
-}
-
-
 
 /* Photo page.. and about page */
 .photo-page, .about-page {
@@ -390,7 +345,7 @@ body>header.fader {
 	padding: 2% 0;
 	width: 90%;
 	margin: 0 auto;	
-	margin-bottom: -75px;
+	/*margin-bottom: -75px;*/
 	padding-top: 150px;
 }
 
@@ -482,6 +437,9 @@ body>header.fader {
 
 
 /* Photo page */
+.photo-page .photo-feed{
+	margin-top: -5%;
+}
 .rss-box {
 	width: 90%;
 	margin: 0 auto;
@@ -507,15 +465,13 @@ body>header.fader {
 }
 
 
-.rss-items li {
-	
+.rss-items li {	
 	width: 25%;
 	height: 25%;
 	display: inline-block;
-	padding: 1%;
+	padding: 0.5%;
 	list-style-type: none;
 	position: relative;
-
 }
 
 .rss-items li br {
@@ -533,15 +489,19 @@ body>header.fader {
 	text-decoration: none;
 	display: block;
 	position: absolute;
-	top: 0px;
+	/*top: 0px;
 	left: 0px;
 	width: 100%;
-	height: 100%;
+	height: 100%;*/
+	top: 2%;
+	left: 2%;
+	width: 96%;
+	height: 96%;
 	padding: 50% 5% 0 5%;
-	background: rgba(0, 0, 0, 0.1);
-	color: #fff;
+	background: rgba(0, 0, 0, 0.2);
+	color: #eee;
 	text-align: center;
-	text-shadow: 0px 1px 0px #000000;
+	text-shadow: 0px 2px 4px #000000;
 
 }
 
@@ -562,8 +522,21 @@ body>header.fader {
 	.rss-items li {
 		width: 49%;
 	}
-	
+	.topBar{
+
+	}
+	.topBar .head .logo{
+		padding-left: 3%;
+	}
+	.topBar .head .slideout{
+		float: right;
+		width: 42%;
+	}
+	.topBar .head .slideout .nav{
+		padding-top: 5%;
+	}
 }
+
 
 @media screen and (max-width: 320px) { 
 	.rss-items li {

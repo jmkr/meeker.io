@@ -2581,18 +2581,18 @@ ul.thumb li:hover {
   z-index: 990; }
 
 body {
-  background: #202024;
-  color: #c5b7a6;
+  /*background: #202024;
+  color: #c5b7a6;*/
   -webkit-text-size-adjust: none;
   -webkit-font-smoothing: antialiased;
 }
 
 html {
-  background: #202024; 
+ /* background: #202024; */
 }
 
 a {
-  color: #c5b7a6; 
+  /*color: #c5b7a6; */
 }
 
 * {
