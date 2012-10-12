@@ -86,10 +86,10 @@
     
     			var user = 'meekr5';    	
     	
-    			$.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
+    			$.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
         			var tweet = "";
         			var tweetTime = "";
-        			console.log(data.length);
+        			//console.log(data.length);
 					//for (i = 0; i < data.length; i++) {
 						tweet += data[0].text;
 						tweetTime += data[0].created_at;
@@ -193,7 +193,7 @@
 			function setupHeader(){				
 				$(document).scroll(
 					function(){
-						console.log($(document).scrollTop());
+						//console.log($(document).scrollTop());
 						if( $(document).scrollTop() > 30 ){
 							pinHeader();
 						}else{
