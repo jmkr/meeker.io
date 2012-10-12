@@ -14,7 +14,7 @@
 
         initTwitter: function($_user){
             var user = $_user;
-            $.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
+            $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
                 var tweet = "";
                 var tweetTime = "";
                 var tweetText = "";
@@ -30,7 +30,6 @@
                 }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
                     return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
                 });         
-                //$("#tweet").html(tweet);
                 tweetTime = Meeker.timeAgo(tweetTime);
                 Meeker.setTweet(tweet, tweetText, tweetTime);
             });
@@ -38,8 +37,8 @@
 
         initPhotos: function(){    
             $(".photo-feed").hide();
-
             var imgs = $(".rss-item").hide();
+            // Make sure these shite pictures are actually loaded
             if(imgs.size() < 1){
                 console.log("not ready");
                 setTimeout(function(){Meeker.initPhotos()},100);

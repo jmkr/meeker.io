@@ -148,7 +148,7 @@
     
           var user = 'meekr5';      
       
-          $.getJSON('http://twitter.com/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
+          $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
               var tweet = "";
               var tweetTime = "";
               console.log(data.length);
