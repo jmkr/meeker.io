@@ -8,15 +8,14 @@
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='css/bootstrap-responsive.min.css' rel='stylesheet' type='text/css'>
-    <!--<link rel="stylesheet" href="css/reset.css">-->
     <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
     <link href='css/styles.css' rel='stylesheet' type='text/css'>
     <script src="js/lte-ie7.js"></script>
-    <script src="js/jquery-1.8.2.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{js/jquery-1.8.2.min.js"><\/script>')</script>
     <script src="js/jquery.easing.1.3.js"></script>
     <script src="js/jquery.typer.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
     <script type="text/javascript" src="//use.typekit.net/jyj1odg.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
@@ -52,14 +51,13 @@
              </div> 
           </div>
         </header>
-    <div class="rails">
-        
+    <div class="rails">        
         <section class="main">
           <div class="head">          
             <div class="in">
               <h1><div id="typer" data-typer-targets='
-    { "targets" : ["I am a creator","I am a web developer","I am innovative","I am hungry","I am foolish"]}'>I am a software engineer</div></h1>
-
+                { "targets" : ["I am a creator","I am a web developer","I am innovative","I am hungry","I am foolish"]}'>
+                I am a software engineer</div></h1>
     
               <small></small><br /> 
               <a class="aboutMe" href="#about">
@@ -69,37 +67,11 @@
                   <span class="arrow">&#x31;</span>
                 </div>
               </a>
-                <!--<div class="iconContainer">
-                  <a class="aboutMe" href="#about"><img src ="img/midIcon6.png"></a>
-                  <span class="text">More about me</span>
-                  <span class="arrow">&#x31;</span>
-                </div>-->
             </div>            
           </div>
         </section>        
     </div>
     <section class="about-page" id="about">
-    <!--<header  class="topBar">
-      <div class="head">
-              <a href="index.html" class="logo">
-                <h1>meeker<span>.io</span>
-                  </h1> 
-              </a>
-              
-              <div class="slideout">
-                  <ul class="nav">
-                    <li><a href="#work">&#x24;</a></li>
-                    <li><a href="about.html">&#x25;</a></li>
-                    <li><a href="http://github.meeker.io">&#x22;</a></li>
-                    <li><a href="http://twitter.com/meekr5">&#x23;</a></li>
-                    <li><a href="http://blog.meeker.io">&#x21;</a></li>              
-                </ul>
-              </div> 
-            </div>      
-    </header>-->
-    <!--<div class="inside">
-          <h1>About me</h1>
-      </div>-->
       <section class="content">       
         <section class="about">
           <header>
@@ -107,11 +79,11 @@
           </header>
           <p>Lorem ipsum dolor sit amet, dolores menandri cum cu, causae mediocrem sea at, ei libris gubergren intellegat his. Ex clita concludaturque pro.   Eu aeque feugiat electram vel. Alia legendos principes sit in. Ludus utamur nec ad.</p>
   
-        <p>Ei sea menandri quaestio assueverit, ne constituto vituperata persequeris ius. Per case blandit ei, in eos platonem corrumpit. Aliquando   similique       scripserit ut mea. Eirmod persius ut sit. Vix ea justo complectitur, partem salutandi ut sea. Vim augue dicunt corpora et, ea   pro semper option, vix elit       graeco animal et.</p>
-        
-        <p>Diam eripuit ad sea. His an melius dolores. Duo in choro contentiones. No populo labores dolorem eam. Deseruisse efficiantur sed ad, idque   inimicus      dissentiet ea sed, eum ex nisl esse copiosae. At nemore impetus pri, pro no veritus alienum constituam. In vim omnium   utamur iudicabit, putent fastidii ex      usu.</p>
-        
-        <p>Eu eum munere alterum minimum. Te prompta civibus mea, posse vivendum cu mei. An est meliore volutpat. An mei nominati theophrastus, duo doming  constituto      instructior et. Mei errem eligendi ea.</p>
+          <p>Ei sea menandri quaestio assueverit, ne constituto vituperata persequeris ius. Per case blandit ei, in eos platonem corrumpit. Aliquando     similique       scripserit ut mea. Eirmod persius ut sit. Vix ea justo complectitur, partem salutandi ut sea. Vim augue dicunt corpora et, ea   pro   semper option, vix elit       graeco animal et.</p>
+          
+          <p>Diam eripuit ad sea. His an melius dolores. Duo in choro contentiones. No populo labores dolorem eam. Deseruisse efficiantur sed ad, idque     inimicus      dissentiet ea sed, eum ex nisl esse copiosae. At nemore impetus pri, pro no veritus alienum constituam. In vim omnium   utamur  iudicabit, putent fastidii ex      usu.</p>
+          
+          <p>Eu eum munere alterum minimum. Te prompta civibus mea, posse vivendum cu mei. An est meliore volutpat. An mei nominati theophrastus, duo doming    constituto      instructior et. Mei errem eligendi ea.</p>
         </section>
         <div class="deathRays">
           <div id="tweetTime"></div>
@@ -120,14 +92,21 @@
               <div id="tweet"></div>   
             </div>
           </div>
-        </div>  
+        </div>
+      </section>
 
-      </section> 
     </section>
-    
+    <section class="contact">
+
+    </section>
+
     <footer>
-        <h1>Contact me</h1>
-        <p>Copyright © 2012</p>
+      <p>
+        <a href="https://twitter.com/meekr5" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @meekr5</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </p>
+
+        <p>Copyright © 2012 John Meeker</p>
     </footer>
 
       <script type="text/javascript">
@@ -242,7 +221,7 @@
         tweetSet(tweet);
       });*/
 
-      this._$header = $('body>header');
+      this._$header = $('.topBar');
       function pinHeader(){
         //this._$header.addClass('animated fadeOutDown');
         this._$header.addClass('fader');        
@@ -256,8 +235,8 @@
       function setupHeader(){       
         $(document).scroll(
           function(){
-            console.log($(document).scrollTop());
-            if( $(document).scrollTop() > 20 ){
+            //console.log($(document).scrollTop());
+            if( $(document).scrollTop() > 275 ){
               pinHeader();
             }else{
               unpinHeader();
@@ -274,6 +253,13 @@
 
       <script type="text/javascript">
         $(document).ready(function() {
+
+          //fix for safari z-indexing//navbar shitake
+          if($.browser.safari){
+            var header = $('.topBar');
+            console.log(header);
+            header.addClass('safariFix');
+          }
 
           setTimeout(function() {
             //$('[data-typer-targets]').typer();    

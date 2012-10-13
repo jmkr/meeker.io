@@ -165,6 +165,14 @@
             );        
         },
 
+
+        safariFix: function(){
+            //fix for safari z-indexing//navbar shitake            
+            var header = $('.topBar');
+            //console.log(header);
+            header.addClass('safariFix');          
+        },
+
         init: function(loaded){
             if(loaded){
                 console.log("loaded");
@@ -172,11 +180,18 @@
             }
             else{
                 $(document).ready(function() {
-                    console.log("ready");
+                    console.log("ready");                    
+
                     Meeker.initBindings();
-                    Meeker.initHeader(); 
+                    Meeker.initHeader();
+
+                    if($.browser.safari){
+                        Meeker.safariFix();
+                    } 
+
                     //Meeker.initPhotos();               
                     Meeker.initTwitter();
+
                 });
                 
                            
