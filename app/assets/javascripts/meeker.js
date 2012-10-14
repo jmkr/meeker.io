@@ -2,10 +2,16 @@
 
     var Meeker = {
         $_header: null,
-        $_user: null,
+        
 
-        setTweet: function(tweet, tweetText, tweetTime){
-            $("#tweet").html(tweet);
+        setTweet: function(tweet, tweetTime){
+            console.log(tweet);
+            $("#tweets").html(tweet);
+            //tweet = tweet.html_safe();
+            //console.log(tweet);
+            //$("#tweet").html('<%= raw ' +tweet +' %>');    
+
+
             $(".thoughtBubble").show();
             //$("#tweet").typeTo(tweet);
             $("#tweetTime").html(". . . " + tweetTime);
@@ -24,17 +30,59 @@
                     tweet += data[0].text;
                     tweetTime += data[0].created_at;
                 //}    
-
-                tweetText = tweet;    
-                tweet = tweet.replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig, function(url) {
-                    return '<a target="_blank" href="'+url+'">'+url+'</a>';
-                }).replace(/B@([_a-z0-9]+)/ig, function(reply) {
-                    return  reply.charAt(0)+'<a href="http://twitter.com/'+reply.substring(1)+'">'+reply.substring(1)+'</a>';
-                });  
-                console.log(tweet);       
+                tweetText = tweet;   
+                tweet = Meeker.formatTweet(tweet);
+                //tweet = " aksjdalskjd";
+                //console.log(tweet);       
                 tweetTime = Meeker.timeAgo(tweetTime);
-                Meeker.setTweet(tweet, tweetText, tweetTime);
+                Meeker.setTweet(tweet, tweetTime);
             });
+        },
+
+        formatTweet: function(text) {
+            text = Meeker.linkURLs(text);
+            text = Meeker.linkHashes(text);
+            text = Meeker.linkMentions(text);
+            return text;
+        },
+
+        linkHashes: function(text) {
+            var hash, hashes, url, _i, _len;
+            hashes = text.match(/\#[\w]*/gi);
+            if (hashes != null) {
+                for (_i = 0, _len = hashes.length; _i < _len; _i++) {
+                    hash = hashes[_i];
+                    url = '<a href="http://twitter.com/search/%23' + hash.replace("#", "") + '">' + hash + '</a>';
+                    text = text.replace(hash, url);
+                }
+            }
+            return text;
+        },
+
+        linkMentions: function(text) {
+            var mention, mentions, url, username, _i, _len;
+            mentions = text.match(/@[\w]*/gi);
+            if (mentions != null) {
+                for (_i = 0, _len = mentions.length; _i < _len; _i++) {
+                    mention = mentions[_i];
+                    username = mention.replace("@", "");
+                    url = '@<a href="http://twitter.com/' + username + '">' + username + '</a>';
+                    text = text.replace(mention, url);
+                }
+            }
+            return text;
+        },
+
+        linkURLs: function(text) {
+            var url, urls, _i, _len;
+            urls = text.match(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi);
+            if (urls != null) {
+                for (_i = 0, _len = urls.length; _i < _len; _i++) {
+                    url = urls[_i];
+                    text = text.replace(url, '<a href="' + url + '">' + url + '</a>');
+                }
+            }
+            return text;
         },
 
         initPhotos: function(){    
@@ -50,9 +98,7 @@
             }
         },
 
-        showPhotos: function(i, imgs){
-                //console.log(imgs.size());
-                //console.log(imgs.eq(i));
+        showPhotos: function(i, imgs){                
                 console.log(i);
 
                 //escape on last image

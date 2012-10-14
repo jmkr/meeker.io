@@ -1,3 +1,590 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+/* Colors 
+
+Orange-Red: #DD4A38;
+Orange-Red Comp: #A65449;
+Dark-Red: #7A2116;
+Comp Green: #2AA54A;
+Dark-Grey: #202024;
+text: #555;
+blue-gray: #457;
+
+*/
+
+@import url(animate.min.css);
+
+@import url(fonts.css);
+
+::selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #333;
+}
+
+::-moz-selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #333;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "RawengulkSansRegular", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	color: #555;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	background: #fff;
+	padding: 0;
+}
+
+h1, h2, h3{
+	color:#333;
+}
+
+.rails {
+	width: 100%;
+	height: 100%;
+	min-height: 700px;
+	max-height: 900px;
+	background: url(bgRailsColor.png) no-repeat center left fixed;
+	background-size: cover;
+}
+
+.topBar {
+	background: url(bgRailsColorSky11.png) no-repeat center left fixed;
+	background-size: cover;
+	height:125px;
+	position: fixed;
+  	-webkit-transition:box-shadow .3s ease-in-out;
+  	-moz-transition:box-shadow .3s ease-in-out;
+  	-ms-transition:box-shadow .3s ease-in-out;
+  	-o-transition:box-shadow .3s ease-in-out;
+  	transition:box-shadow .3s ease-in-out;  
+  	width: 100%;
+  	z-index: 9999;		
+}
+
+/*
+header {
+	height: 105px;
+	background: rgba(0, 0, 0, 0);
+}
+*/
+
+body>header.fader {
+	top:0 !important;
+  	position:fixed !important;
+  	/*border-bottom:1px solid #e6e5e5;
+  	border-bottom-color:rgba(0,0,0,0.2);*/  	
+  	-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  	-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  	box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);  	
+}
+
+body>header.safariFix{
+	z-index: 0;
+}
+
+.head {
+	width: 95%;
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+}
+.logo:hover {
+	text-decoration: none;
+}
+
+.logo h1 {
+	/*font-family: 'Raleway';*/
+	/*font-family: 'Rock Salt', cursive;*/
+
+	text-transform: uppercase;
+	font-size: 2.2em;
+	font-weight: 200;
+	color: #fff;
+	padding-top: 45px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.logo h1 span {
+	color: rgba(12, 12, 12, .4);
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+	/*visibility: hidden;*/
+}
+
+.logo:hover h1 span {
+	/*visibility: visible;*/
+	color: rgba(255, 255, 255, .4);
+}
+
+
+
+.nav {
+	float: right;
+	padding-top: 45px;
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+}
+
+.nav li {
+	display: inline-block;
+}
+
+.nav li:last-child {
+	padding-right: 0px;
+}
+.nav li a {
+	font-family: 'icomoon';
+	font-size: 1.7em;
+	font-weight: 300;
+	color:#DD4A38;
+	padding: 15px;
+	-webkit-transition: color .4s ease;
+	-moz-transition: color .4s ease;
+	transition: color .4s ease;
+}
+
+.nav li a.current {
+	color: #EE988C;
+}
+
+.nav li a:last-child {
+	padding-right: 4px;
+}
+
+.nav li a:hover {
+	background:none;
+	color: #222;
+}
+
+.main {
+	padding-top: 220px;
+	-webkit-animation-name: fadeInUp;
+	-moz-animation-name: fadeInUp;
+	-ms-animation-name: fadeInUp;
+	-o-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .7s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+}
+
+.title {
+	margin-top: -20px;
+	text-align: center;
+}
+
+.title span {
+	padding: 10px;
+	font-size: 2.5em;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-shadow: 0 2px 0 #fff;
+	color: #0cc93d;
+	background: #fff;
+}
+
+.in {
+	font-family: 'RawengulkSansRegular';
+	text-align: center;
+	-webkit-transition: color .6s ease;
+	-moz-transition: color .6s ease;
+	transition: color .6s ease;	
+}
+
+.in h1 {
+	font-size: 5em;
+	color: #fff;
+	line-height: 1;
+}
+
+.in small {
+	font-size: 2em;
+	color: rgba(255, 255, 255, .8);
+	line-height: 1.7em;
+}
+
+.in small span{
+	font-family:icomoon;
+	color: #DD4A38;
+}
+
+.aboutMe {
+	
+	/*background: #DD4A38;*/
+	display: inline-block;
+	margin-top: 50px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.aboutMe .iconContainer {
+	position: relative;
+	text-align: center;
+	width: 220px;
+}
+
+.aboutMe .iconContainer .text {
+	position: absolute;
+	font-family: 'Raleway';
+	font-size: 38px;
+	color: #fff;	
+	text-transform: uppercase;
+	/*padding-top:30px;*/
+	line-height: 50px;
+	width: 75%;
+	left: 13%;
+	top: 21%;
+	z-index: 2;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.aboutMe .iconContainer .arrow {
+	position: absolute;
+	font-family: 'icomoon';
+	font-size: 80px;
+	/*display: inline-block;
+	margin-top: -50px;*/
+	line-height: 0px;
+	left: 32%;
+	top: 86%;
+	visibility: visible;
+	color: #DD4A38;
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+}
+
+.aboutMe:hover .iconContainer .arrow{
+	margin-top:75px;
+}
+
+.aboutMe:hover .iconContainer .text{
+	margin-top: -12px;
+	color: white;
+}
+
+/* Photo page.. and about page */
+.photo-page, .about-page {
+	/*background: #d5ccaf repeat top center;*/
+}
+
+.photo-page * {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	/*
+	-webkit-transition: all 0.2s ease-out;
+  	-moz-transition: all 0.2s ease-out;
+  	-ms-transition: all 0.2s ease-out;
+  	-o-transition: all 0.2s ease-out;
+  	transition: all 0.2s ease-out;*/
+}
+
+.photo-page header, .about-page header{
+	/*background: #52445b repeat top center;*/
+}
+
+.photo-page h1, .about-page h1 {
+	/*font-family: "RalewayThin";*/
+	text-align: center;
+	font-size: 2.2em;
+}
+
+.photo-page header h2, .about-page header h2 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 8px;
+}
+
+.photo-page .inside, .about-page .inside{
+	padding: 2% 0;
+	width: 90%;
+	margin: 0 auto;	
+	/*margin-bottom: -75px;*/
+	padding-top: 150px;
+}
+
+/* About page */
+.about-page .container{
+	//z-index: 1;
+}
+.about-page .container{
+	margin: auto;
+	margin-top: 350px;
+	max-width: 960px;
+	border-bottom: 1px solid #EEE;
+
+}
+
+.about-page .container .deathRays{
+	min-height: 600px;
+	max-width: 438px;
+	background: url(raySmall2.png);
+	background-repeat: no-repeat;
+}
+
+.about-page .container .about{
+	margin-top: -100px;
+	min-width: 40%;
+	float:right;
+	width: 50%;
+	text-align: right;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 300;
+	font-size:17px;
+	line-height: 1.5em;
+}
+
+.about-page .container .about header{
+	height: 60px;
+}
+
+.about-page .deathRays #tweetTime{
+	position: relative;
+	transform:rotate(90deg);
+	-ms-transform:rotate(90deg); /* Internet Explorer */
+	-moz-transform:rotate(90deg); /* Firefox */
+	-webkit-transform:rotate(90deg); /* Safari and Chrome */
+	-o-transform:rotate(90deg); 
+	/*margin-left: 250px;
+	margin-top: 100px;*/
+	font-style: italic;
+	left: 81px;
+	top: 230px;
+	display: none;
+}
+
+.about-page .thoughtBubble{
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .7s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	position: absolute;
+	min-height: 250px;
+	min-width: 278px;
+	background: url(thoughtBubble2S.png);
+	background-repeat: no-repeat;
+	margin-left: 100px;
+	margin-top: -190px;
+	display: none;
+}
+
+.about-page .thoughtBubble .tweetWrap{
+	width: 200px;
+	height: 120px;
+	position: absolute;
+	display: table;
+	top: 19px;
+	left: 35px;
+	text-align: center;
+}
+
+.about-page .thoughtBubble .tweetWrap #tweets{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+
+/* Photo page */
+.photo-page .photo-feed{
+	margin-top: -5%;
+}
+.rss-box {
+	width: 90%;
+	margin: 0 auto;
+	padding: 5% 0;
+}
+
+
+/*Clear fix*/
+/* For modern browsers */
+.rss-items:before,
+.rss-items:after {
+    content:"";
+    display:table;
+}
+
+.rss-items:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.rss-items {
+    zoom:1;
+}
+
+
+.rss-items li {	
+	width: 25%;
+	height: 25%;
+	display: inline-block;
+	padding: 0.5%;
+	list-style-type: none;
+	position: relative;
+}
+
+.rss-items li br {
+	display: none;
+}
+
+.rss-items li a {
+	
+	display: none;
+	
+}
+
+.rss-items li:hover a {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	text-decoration: none;
+	display: block;
+	position: absolute;
+	/*top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;*/
+	top: 2%;
+	left: 2%;
+	width: 96%;
+	height: 96%;
+	padding: 50% 5% 0 5%;
+	background: rgba(0, 0, 0, 0.2);
+	color: #eee;
+	text-align: center;
+	text-shadow: 0px 2px 4px #000000;
+
+}
+
+.rss-items li:nth-child(3n+1) {
+	margin-left: 0;
+}
+
+.rss-items img {
+	display: block;
+	width: 100%;
+	height: auto;
+	
+	-webkit-box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
+	        box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) { 
+	.rss-items li {
+		width: 49%;
+	}
+	.topBar{
+
+	}
+	.topBar .head .logo{
+		padding-left: 3%;
+	}
+	.topBar .head .slideout{
+		float: right;
+		width: 42%;
+	}
+	.topBar .head .slideout .nav{
+		padding-top: 5%;
+	}
+}
+
+
+@media screen and (max-width: 320px) { 
+	.rss-items li {
+		width: 100%;
+	}
+	
+	.photo-page header h1 {
+		font-size: 1em;
+	}
+	
+	.photo-page .connect {
+		width: 100%;
+	}
+	
+	.photo-page .connect h2 {
+		font-size: 2em;
+	}
+	
+}
+
+
+
+/* Footer */
+body>.contact{
+	/*background: #DD4A38;*/
+	/*background: url(../img/pattern9.jpg) repeat center top;*/	
+	/*height: 300px;*/
+	text-align:center;
+
+	/*
+	box-shadow: inset 0px 2px 6px rgba( 0, 0, 0, 0.5 );
+	-webkit-box-shadow: inset 0px 2px 6px rgba( 0, 0, 0, 0.5 );
+	-moz-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
+	-o-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
+	-ms-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
+	*/
+}
+
+footer{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	padding-top:1em;
+	margin: 3em auto;
+
+	margin-top:0px;	
+	height: 300px;
+	text-align:center;
+	color: #AAA;
+}
+footer > p{
+	text-align: center;
+	margin: 2em 0 -1em;
+}
+footer h1{
+	
+}

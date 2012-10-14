@@ -12,5 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.easing.1.3
+//= require jquery.typer
+//= require meeker
 //= require bootstrap
+//= require feed2js
+//= require lte-ie7
 //= require_tree .

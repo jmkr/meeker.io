@@ -1,4 +1,59 @@
-h3 Home
-- @users.each do |user|
-  p
-    | User: #{link_to user.name, user}
+body data-spy="scroll" data-target=".nav"
+  header.topBar
+    .head
+      a.logo href=""
+        h1
+          | meeker
+          span .io
+      .slideout
+        ul.nav
+          li
+            a href="work" &#x24;
+          li
+            a href="#about" &#x25;
+          li
+            a href="http://github.meeker.io" &#x22;
+          li
+            a href="http://twitter.com/meekr5" &#x23;
+          li
+            a href="http://blog.meeker.io" &#x21;
+          li
+            a href="photo.html" &#x30;
+  .rails
+    section.main
+      .head
+        .in
+          h1
+            #typer
+              | I am a software engineer
+          small
+          	| HTML + CSS + JS = 
+          	span &#x35;
+          br/
+          a.aboutMe href="#about"
+            .iconContainer
+              img src="assets/midIcon6.png"
+                span.text More about me
+                span.arrow 1
+  section#about.about-page
+    section.container
+      section.about
+        header
+          h1 Hi, I'm John.
+        p Lorem ipsum dolor sit amet, dolores menandri cum cu, causae mediocrem sea at, ei libris gubergren intellegat his. Ex clita concludaturque pro.   Eu aeque feugiat electram vel. Alia legendos principes sit in. Ludus utamur nec ad.
+        p Ei sea menandri quaestio assueverit, ne constituto vituperata persequeris ius. Per case blandit ei, in eos platonem corrumpit. Aliquando     similique       scripserit ut mea. Eirmod persius ut sit. Vix ea justo complectitur, partem salutandi ut sea. Vim augue dicunt corpora et, ea   pro   semper option, vix elit       graeco animal et.
+        p Diam eripuit ad sea. His an melius dolores. Duo in choro contentiones. No populo labores dolorem eam. Deseruisse efficiantur sed ad, idque     inimicus      dissentiet ea sed, eum ex nisl esse copiosae. At nemore impetus pri, pro no veritus alienum constituam. In vim omnium   utamur  iudicabit, putent fastidii ex      usu.
+        p Eu eum munere alterum minimum. Te prompta civibus mea, posse vivendum cu mei. An est meliore volutpat. An mei nominati theophrastus, duo doming    constituto      instructior et. Mei errem eligendi ea.
+      .deathRays
+        #tweetTime
+        .thoughtBubble
+          .tweetWrap            
+            == render :partial => 'tweet'
+  section.contact
+  footer
+    p
+      a.twitter-follow-button data-show-count="false" data-size="large" href="https://twitter.com/meekr5"
+      javascript:
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"); 
+
+    p Copyright © 2012 John Meeker
