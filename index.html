@@ -26,7 +26,7 @@
     <title>Meeker.io</title>
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".nav">
     <header class="topBar">
           <div class="head">
             <a href class="logo">
@@ -41,8 +41,8 @@
             <div class="slideout">
               
               <ul class="nav">
-                <li><a href="#work">&#x24;</a></li>
-                <li><a href="about.html">&#x25;</a></li>
+                <li><a href="work">&#x24;</a></li>
+                <li><a href="#about">&#x25;</a></li>
                 <li><a href="http://github.meeker.io">&#x22;</a></li>
                 <li><a href="http://twitter.com/meekr5">&#x23;</a></li>
                 <li><a href="http://blog.meeker.io">&#x21;</a></li>    
@@ -234,9 +234,14 @@
         
       function setupHeader(){       
         $(document).scroll(
+
           function(){
+            $(".topBar .nav a.active").removeClass("active");
+
             //console.log($(document).scrollTop());
-            if( $(document).scrollTop() > 275 ){
+            var scroll = $(document).scrollTop();
+
+            if( scroll > 700 ){
               pinHeader();
             }else{
               unpinHeader();
