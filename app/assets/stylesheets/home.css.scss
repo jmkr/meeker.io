@@ -91,12 +91,6 @@ body>header.safariFix{
 	z-index: 0;
 }
 
-.head {
-	width: 95%;
-	max-width: 1140px;
-	margin: 0 auto;
-}
-
 .logo {
 	float: left;
 	-webkit-animation-name: fadeIn;
@@ -189,7 +183,7 @@ body>header.safariFix{
 	color: #222;
 }
 
-.main {
+section.landingInfo {
 	padding-top: 220px;
 	-webkit-animation-name: fadeInUp;
 	-moz-animation-name: fadeInUp;
@@ -203,22 +197,13 @@ body>header.safariFix{
 	-webkit-animation-timing-function: ease;
 }
 
-.title {
-	margin-top: -20px;
-	text-align: center;
+section.landingInfo .wrapper{
+	width: 95%;
+	max-width: 1140px;
+	margin: 0 auto;
 }
 
-.title span {
-	padding: 10px;
-	font-size: 2.5em;
-	font-weight: 300;
-	text-transform: uppercase;
-	text-shadow: 0 2px 0 #fff;
-	color: #0cc93d;
-	background: #fff;
-}
-
-.in {
+.me {
 	font-family: 'RawengulkSansRegular';
 	text-align: center;
 	-webkit-transition: color .6s ease;
@@ -226,19 +211,19 @@ body>header.safariFix{
 	transition: color .6s ease;	
 }
 
-.in h1 {
+.me h1 {
 	font-size: 5em;
 	color: #fff;
 	line-height: 1;
 }
 
-.in small {
+.me small {
 	font-size: 2em;
 	color: rgba(255, 255, 255, .8);
 	line-height: 1.7em;
 }
 
-.in small span{
+.me small span{
 	font-family:icomoon;
 	color: #DD4A38;
 }
@@ -349,7 +334,7 @@ body>header.safariFix{
 }
 .about-page .container{
 	margin: auto;
-	margin-top: 350px;
+	margin-top: 325px;
 	max-width: 960px;
 	border-bottom: 1px solid #EEE;
 
@@ -366,7 +351,7 @@ body>header.safariFix{
 	margin-top: -100px;
 	min-width: 40%;
 	float:right;
-	width: 50%;
+	/*width: 50%;*/
 	text-align: right;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: 300;
@@ -531,6 +516,10 @@ body>header.safariFix{
 	.topBar .head .slideout .nav{
 		padding-top: 5%;
 	}
+
+	.about-page .container .about{
+		margin-top: 0px;
+	}
 }
 
 
@@ -556,10 +545,10 @@ body>header.safariFix{
 
 
 /* Footer */
-body>.contact{
+section.contact{
 	/*background: #DD4A38;*/
 	/*background: url(../img/pattern9.jpg) repeat center top;*/	
-	/*height: 300px;*/
+	height: 300px;
 	text-align:center;
 
 	/*
@@ -569,6 +558,7 @@ body>.contact{
 	-o-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
 	-ms-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
 	*/
+
 }
 
 footer{

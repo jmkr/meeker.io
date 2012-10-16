@@ -1,10 +1,14 @@
-| <!doctype html>
+|<!doctype html>
 html
   head
-    script src="https://www.google.com/jsapi"
+    script src="//use.typekit.net/qjf3ait.js"
+    javascript: 
+      try{Typekit.load();}catch(e){}
+    script src="https://www.google.com/jsapi"    
+    
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"
       title= content_for?(:title) ? yield(:title) : "Meeker.Io"
-      meta content="Meeker.Io" name="description"
+      meta content="meeker.io" name="description"
       meta content="" name="author"
         = stylesheet_link_tag "application", :media => "all"
         = javascript_include_tag "application"
