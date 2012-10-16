@@ -135,7 +135,39 @@ body>header.safariFix{
 	color: rgba(255, 255, 255, .4);
 }
 
+.logo2{
+	float: left;
+	-webkit-animation-name: fadeIn;
+	-moz-animation-name: fadeIn;
+	-ms-animation-name: fadeIn;
+	-o-animation-name: fadeIn;
+	animation-name: fadeIn;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: .3s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+	padding-top: 45px;
+	width:95px;
+	height:57px;
+	background:url(logoJMbacked3.png) right bottom no-repeat;
+	background-size: 95px;
+}
 
+.logo2:hover{
+	-webkit-transition: all .6s ease;
+	-moz-transition: all .6s ease;
+	transition: all .6s ease;
+	float: left;
+	padding-top: 45px;
+	width:95px;
+	height:57px;
+	background:url(logoJMbackedRed2.png) right bottom no-repeat;
+	background-size: 95px;
+}
 
 .nav {
 	float: right;
