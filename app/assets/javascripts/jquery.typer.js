@@ -38,7 +38,7 @@ String.prototype.rightChars = function(n){
   spanWithColor = function(color, backgroundColor) {
     if (color === 'rgba(0, 0, 0, 0)') {
       color = 'rgb(255, 255, 255)';
-      backgroundColor = 'rgb(123, 123, 123)';
+      backgroundColor = 'rgba(70, 70, 70, 0.5)';
     }
 
     return $('<span></span>')

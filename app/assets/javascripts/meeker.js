@@ -213,6 +213,11 @@
             );        
         },
 
+        initTyper: function(){
+            setTimeout(function() {
+                $('[data-typer-targets]').typer();    
+            }, 7500);
+        },
 
         safariFix: function(){
             //fix for safari z-indexing//navbar shitake            
@@ -233,6 +238,7 @@
 
                     Meeker.initBindings();
                     Meeker.initHeader();
+                    Meeker.initTyper();
 
                     if($.browser.safari){
                         Meeker.safariFix();
