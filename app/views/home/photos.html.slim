@@ -1,0 +1,30 @@
+.photo-page
+	header.topBar
+		.wrapper
+			a.logo2 href="/"				
+			.slideout
+				ul.nav
+					li
+						a href="/#work" &#x24;
+					li
+						a href="/#about" &#x25;
+					li
+						a href="http://github.com/jmkr" &#x22;
+					li
+						a href="http://twitter.com/meekr5" &#x23;
+					li
+						a href="http://blog.meeker.io" &#x21;
+					li
+						a href="photos" &#x30;
+	.inside
+		h1 Photographs
+	section.photo-feed
+		== render :partial => 'photoFeed'
+
+	footer
+		p
+		  a.twitter-follow-button data-show-count="false" data-size="large" href="https://twitter.com/meekr5"
+		  javascript:
+		    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"); 
+
+		p Copyright © 2012 John Meeker

@@ -2,8 +2,8 @@
 
     var Meeker = {
         $_header: null,
+        $_safari: null,
         
-
         setTweet: function(tweet, tweetTime){
             console.log(tweet);
             $("#tweets").html(tweet);
@@ -24,16 +24,13 @@
             $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
                 var tweet = "";
                 var tweetTime = "";
-                var tweetText = "";
-                console.log(data.length);
+                //console.log(data.length + " twit");
                 //for (i = 0; i < data.length; i++) {
                     tweet += data[0].text;
                     tweetTime += data[0].created_at;
                 //}    
-                tweetText = tweet;   
-                tweet = Meeker.formatTweet(tweet);
-                //tweet = " aksjdalskjd";
-                //console.log(tweet);       
+
+                tweet = Meeker.formatTweet(tweet);                      
                 tweetTime = Meeker.timeAgo(tweetTime);
                 Meeker.setTweet(tweet, tweetTime);
             });
@@ -99,8 +96,8 @@
         },
 
         showPhotos: function(i, imgs){                
-                console.log(i);
-
+                //console.log(i);
+                //console.log(imgs.eq(i));
                 //escape on last image
                 if(i >= imgs.size()){ return; }                
                 
@@ -112,8 +109,7 @@
                     imgs.eq(i).addClass('bounceBottom'+((i%4)+1));
                 }
 
-                imgs.eq(i).fadeIn(150,function(){ Meeker.showPhotos(i+1, imgs); });
-                //imgs.eq(i).show(function(){ Meeker.showPhotos(i+1, imgs); });                       
+                imgs.eq(i).fadeIn(150, function(){ Meeker.showPhotos(i+1, imgs); });
         },
 
         timeAgo: function(dateString){
@@ -175,7 +171,7 @@
         },
 
         pinHeader: function(){
-            //this._$header.addClass('animated fadeOutDown');
+            //this._$header.addClass('animated fadeOutDown');            
             this._$header.addClass('fader');        
         },
 
@@ -184,9 +180,9 @@
             this._$header.removeClass('fader');
         },
 
-
         initBindings: function(){
-            this._$header = $('body>header');
+            this._$header = $('.topBar');
+            //console.log(this._$header);
             
             $('ul li a, a').bind('click',function(event){
                 var $anchor = $(this);
@@ -204,6 +200,14 @@
             $(document).scroll(
                 function(){
                     //console.log($(document).scrollTop());
+                    if(this._$safari){
+                        if( $(document).scrollTop() > 700 ){
+                            Meeker.pinSafariFix();
+                        }else{
+                            Meeker.unpinSafariFix();
+                        }
+                    }
+
                     if( $(document).scrollTop() > 20 ){
                         Meeker.pinHeader();
                     }else{
@@ -219,33 +223,40 @@
             }, 7500);
         },
 
-        safariFix: function(){
+        pinSafariFix: function(){
             //fix for safari z-indexing//navbar shitake            
-            var header = $('.topBar');
-            //console.log(header);
-            header.addClass('safariFix');          
+            this._$header.addClass('safariFix');          
+        },
+
+        unpinSafariFix: function(){
+            //fix for safari z-indexing//navbar shitake            
+            this._$header.removeClass('safariFix');          
         },
 
         init: function(loaded){
             if(loaded){
-                console.log("loaded");
-                //Meeker.initPhotos();
+                //console.log("loaded");
+                if(window.location.pathname == "/photos"){
+                    Meeker.initPhotos();
+                }
             }
             
             else{
                 $(document).ready(function() {
-                    console.log("ready");                    
+                    //console.log("ready");                    
 
                     Meeker.initBindings();
                     Meeker.initHeader();
                     Meeker.initTyper();
 
                     if($.browser.safari){
-                        Meeker.safariFix();
+                        this._$safari = true;
                     } 
 
-                    //Meeker.initPhotos();               
-                    Meeker.initTwitter("meekr5");
+                    //Meeker.initPhotos(); 
+                    if(window.location.pathname == "/"){              
+                        Meeker.initTwitter("meekr5");
+                    }
 
                 });
                 

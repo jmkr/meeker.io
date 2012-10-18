@@ -36,9 +36,23 @@ String.prototype.rightChars = function(n){
     typerInterval;
 
   spanWithColor = function(color, backgroundColor) {
+    backgroundColorFallback = 'rgb(70,70,70)'; // for firefox and probably IE..
+    //console.log(color);
+
     if (color === 'rgba(0, 0, 0, 0)') {
-      color = 'rgb(255, 255, 255)';
+      color = 'rgb(255, 255, 255)';      
       backgroundColor = 'rgba(70, 70, 70, 0.5)';
+    }
+
+    // mozilla doesn't handle transparent backgrounds too well
+    if($.browser.mozilla){
+      if(color == 'transparent'){
+        color = 'rgb(255,255,255)';
+      }
+
+      return $('<span></span>')
+      .css('color', color)
+      .css('background-color', backgroundColorFallback);
     }
 
     return $('<span></span>')
@@ -228,6 +242,7 @@ String.prototype.rightChars = function(n){
     $e.data('primaryColor', $e.css('color'));
     $e.data('backgroundColor', $e.css('background-color'));
     $e.data('text', newString);
+    //console.log($e);
     highlight($e);
   };
 

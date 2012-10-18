@@ -257,6 +257,11 @@ section.landingInfo .wrapper{
 	line-height: 1;
 }
 
+.me h1 #typer > span {
+	/*color:white;
+	background-color:rgb(0,0,0,0.5);*/
+}
+
 .me small {
 	font-size: 2em;
 	color: rgba(255, 255, 255, .8);
@@ -332,9 +337,10 @@ section.landingInfo .wrapper{
 }
 
 .photo-page * {
-	-moz-box-sizing: border-box;
+	/*-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+	box-sizing: border-box;*/
+	
 	/*
 	-webkit-transition: all 0.2s ease-out;
   	-moz-transition: all 0.2s ease-out;
@@ -585,7 +591,7 @@ section.landingInfo .wrapper{
 
 
 /* Footer */
-section.contact{
+section.work{
 	/*background: #DD4A38;*/
 	/*background: url(../img/pattern9.jpg) repeat center top;*/	
 	margin-top:100px;
