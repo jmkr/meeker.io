@@ -200,7 +200,7 @@
             $(document).scroll(
                 function(){
                     //console.log($(document).scrollTop());
-                    if(this._$safari){
+                    if(this._$needsFixin){
                         if( $(document).scrollTop() > 700 ){
                             Meeker.pinSafariFix();
                         }else{
@@ -249,8 +249,8 @@
                     Meeker.initHeader();
                     Meeker.initTyper();
 
-                    if($.browser.safari){
-                        this._$safari = true;
+                    if($.browser.safari /*|| $.browser.chrome*/){
+                        this._$needsFixin = true;
                     } 
 
                     //Meeker.initPhotos(); 
