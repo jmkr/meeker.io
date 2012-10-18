@@ -75,5 +75,7 @@ module MeekerIo
 
     #turn off doze asset loggin yo
     config.assets.logger = false
+
+    config.assets.initialize_on_precompile = false
   end
 end
