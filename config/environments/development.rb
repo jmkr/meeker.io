@@ -47,4 +47,6 @@ MeekerIo::Application.configure do
   config.assets.debug = true
 
   config.serve_static_assets = false
+
+  GA.tracker = "UA-35178468-1"
 end
