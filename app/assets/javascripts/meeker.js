@@ -200,13 +200,13 @@
             $(document).scroll(
                 function(){
                     //console.log($(document).scrollTop());
-                    if(this._$safari){
+                    /*if(this._$safari){
                         if( $(document).scrollTop() > 700 ){
                             Meeker.pinSafariFix();
                         }else{
                             Meeker.unpinSafariFix();
                         }
-                    }
+                    }*/
 
                     if( $(document).scrollTop() > 20 ){
                         Meeker.pinHeader();
