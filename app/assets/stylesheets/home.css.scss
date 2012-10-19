@@ -50,12 +50,12 @@ h1, h2, h3{
 	min-height: 700px;
 	max-height: 900px;
 	background: url(bgRailsColor3.png) no-repeat top left fixed;
-	background-size: cover;
+	/*background-size: cover;*/
 }
 
 .topBar {
 	background: url(bgRailsColor3.png) no-repeat top left;
-	background-size: cover;
+	/*background-size: cover;*/
 	height:125px;
 	position: fixed;
   	-webkit-transition:box-shadow .3s ease-in-out;
