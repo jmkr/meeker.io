@@ -49,13 +49,13 @@ h1, h2, h3{
 	height: 100%;
 	min-height: 700px;
 	max-height: 900px;
-	background: url(bgRailsColor3.png) no-repeat center left fixed;
-	background-size: cover;
+	background: url(bgRailsColor3.png) no-repeat top left fixed;
+	/*background-size: cover;*/
 }
 
 .topBar {
-	background: url(bgRailsColor3.png) no-repeat center left fixed;
-	background-size: cover;
+	background: url(bgRailsColor3.png) no-repeat top left;
+	/*background-size: cover;*/
 	height:125px;
 	position: fixed;
   	-webkit-transition:box-shadow .3s ease-in-out;
@@ -64,7 +64,7 @@ h1, h2, h3{
   	-o-transition:box-shadow .3s ease-in-out;
   	transition:box-shadow .3s ease-in-out;  
   	width: 100%;
-  	z-index: 9999;		
+  	z-index: 9999;
 }
 
 .topBar .wrapper{
@@ -91,7 +91,7 @@ body>header.fader {
 }
 
 body>header.safariFix{
-	z-index: 0;
+	/*z-index: ;*/
 }
 
 .logo {
@@ -373,7 +373,7 @@ section.landingInfo .wrapper{
 
 /* About page */
 .about-page .container{
-	//z-index: 1;
+	
 }
 .about-page .container{
 	margin: auto;

@@ -2,16 +2,11 @@
 
     var Meeker = {
         $_header: null,
-        $_safari: null,
+        $_needsFixin: null,
         
         setTweet: function(tweet, tweetTime){
             console.log(tweet);
             $("#tweets").html(tweet);
-            //tweet = tweet.html_safe();
-            //console.log(tweet);
-            //$("#tweet").html('<%= raw ' +tweet +' %>');    
-
-
             $(".thoughtBubble").show();
             //$("#tweet").typeTo(tweet);
             $("#tweetTime").html(". . . " + tweetTime);
@@ -109,7 +104,7 @@
                     imgs.eq(i).addClass('bounceBottom'+((i%4)+1));
                 }
 
-                imgs.eq(i).fadeIn(150, function(){ Meeker.showPhotos(i+1, imgs); });
+                imgs.eq(i).fadeIn(200, function(){ Meeker.showPhotos(i+1, imgs); $(imgs).eq(i).css('opacity','1');});
         },
 
         timeAgo: function(dateString){
@@ -199,14 +194,14 @@
        
             $(document).scroll(
                 function(){
-                    //console.log($(document).scrollTop());
-                    if(this._$needsFixin){
+                    //console.log($(document).scrollTop());                
+                    /*if(this._$needsFixin){                  
                         if( $(document).scrollTop() > 700 ){
                             Meeker.pinSafariFix();
                         }else{
                             Meeker.unpinSafariFix();
                         }
-                    }
+                    }*/
 
                     if( $(document).scrollTop() > 20 ){
                         Meeker.pinHeader();
@@ -243,23 +238,21 @@
             
             else{
                 $(document).ready(function() {
-                    //console.log("ready");                    
-
+                    //console.log("ready");
                     Meeker.initBindings();
                     Meeker.initHeader();
                     Meeker.initTyper();
 
-                    if($.browser.safari /*|| $.browser.chrome*/){
+                    /*
+                    if($.browser.safari || $.browser.chrome){
                         this._$needsFixin = true;
-                    } 
+                    } */
 
-                    //Meeker.initPhotos(); 
                     if(window.location.pathname == "/"){              
                         Meeker.initTwitter("meekr5");
                     }
 
-                });
-                
+                });                
                            
                 $(window).load(function(){
                     Meeker.init(true);
