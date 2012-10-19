@@ -1,10 +1,12 @@
 |<!doctype html>
 html
   head
+    = favicon_link_tag "favicon.ico"
     script src="//use.typekit.net/qjf3ait.js"
     javascript: 
       try{Typekit.load();}catch(e){}
-    script src="https://www.google.com/jsapi"    
+    script src="https://www.google.com/jsapi"
+    = analytics_init if Rails.env.production? 
     
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"
       title= content_for?(:title) ? yield(:title) : "John Meeker | Web Developer, Designer, and Creator"

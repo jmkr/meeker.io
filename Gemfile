@@ -18,3 +18,4 @@ gem "bootstrap-sass", ">= 2.1.0.0"
 gem "omniauth", ">= 1.1.1"
 gem "omniauth-twitter"
 gem "simple_form", ">= 2.0.4"
+gem 'google-analytics-rails'

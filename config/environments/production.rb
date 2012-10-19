@@ -79,6 +79,6 @@ MeekerIo::Application.configure do
     password: ENV["GMAIL_PASSWORD"]
   }
 
-
+  GA.tracker = "UA-35178468-1"
 
 end
