@@ -15,6 +15,7 @@ html
         = csrf_meta_tags
         = yield(:head)
   body     
+    == render :partial => 'home/navbar'
     = render 'layouts/messages'
     = yield
           

@@ -109,7 +109,7 @@
                     imgs.eq(i).addClass('bounceBottom'+((i%4)+1));
                 }
 
-                imgs.eq(i).fadeIn(150, function(){ Meeker.showPhotos(i+1, imgs); });
+                imgs.eq(i).fadeIn(200, function(){ Meeker.showPhotos(i+1, imgs); $(imgs).eq(i).css('opacity','1');});
         },
 
         timeAgo: function(dateString){
