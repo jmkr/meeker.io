@@ -67,9 +67,14 @@ h1, h2, h3{
   	z-index: 9999;
 }
 
+.rails, .topBar{
+	background-position-x: -200px;
+	background-position-y: -70px;
+}
+
 .topBar .wrapper{
 	width: 95%;
-	max-width: 1140px;
+	max-width: 1500px;
 	margin: 0 auto;
 }
 
