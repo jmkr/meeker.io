@@ -3,6 +3,7 @@
     var Meeker = {
         $_header: null,
         $_needsFixin: null,
+        $_nav: null,
         
         setTweet: function(tweet, tweetTime){
             console.log(tweet);
@@ -177,21 +178,40 @@
 
         initBindings: function(){
             this._$header = $('.topBar');
+            this._$nav = $('.topBar ul.nav li a');
+            //console.log(this._$nav);
             //console.log(this._$header);
             
             $('ul li a, a').bind('click',function(event){
                 var $anchor = $(this);
-              
+                var offset = 350;
+
+                //fix for navbar links not animating while on home page
+                if(window.location.pathname =="/"){
+                    //console.log($anchor.attr('href'));
+                    if($anchor.attr('href').charAt(0)=="/"){
+                        $anchor[0].href = $anchor.attr('href').slice(1);
+                        console.log($anchor.attr('href'));
+                        
+
+                    }
+                }                
+                // change scroll offset for work section
+                if($anchor.attr('href') == "#work"){
+                    offset = 150;
+                    console.log(offset);                            
+                }
+
+
                 $('html, body').stop().animate({
-                    scrollTop: $($anchor.attr('href')).offset().top -375
-                }, 2500,'easeInOutExpo');
+                    scrollTop: $($anchor.attr('href')).offset().top - offset
+                }, 2000,'easeInOutExpo');
                 event.preventDefault();
             });
         },
 
         initHeader: function(){
-            //this._$header = $('body>header');
-       
+
             $(document).scroll(
                 function(){
                     //console.log($(document).scrollTop());                
@@ -203,10 +223,27 @@
                         }
                     }*/
 
+
                     if( $(document).scrollTop() > 20 ){
                         Meeker.pinHeader();
                     }else{
                         Meeker.unpinHeader();
+                    }
+
+                    //navbar scrollspy on homepage
+                    if(window.location.pathname == "/"){
+                        
+                        //highlight About Icon 
+                        if( $(document).scrollTop() > 675  && $(document).scrollTop()<1600){                            
+                            Meeker.highlightHeader(0);                            
+                        }
+                        //highlight Work Icon
+                        else if($(document).scrollTop() > 1600){
+                                Meeker.highlightHeader(1);
+                        }
+                        else{
+                            Meeker.highlightHeader(-1);
+                        }
                     }
                 }
             );        
@@ -228,11 +265,21 @@
             this._$header.removeClass('safariFix');          
         },
 
+        //Scrollspy & Nav Function => gets -1 for any area not to be highlighted and 'num' corresponds to indexOf anchor in nav to be highlighted
+        highlightHeader: function(num){
+            //console.log("highlight "+num);
+            this._$nav.removeClass('current');
+            if(num >= 0 ){
+                this._$nav.eq(num).addClass('current');
+            }
+        },
+
         init: function(loaded){
             if(loaded){
                 //console.log("loaded");
                 if(window.location.pathname == "/photos"){
-                    Meeker.initPhotos();
+                    Meeker.highlightHeader(5);
+                    Meeker.initPhotos();                    
                 }
             }
             

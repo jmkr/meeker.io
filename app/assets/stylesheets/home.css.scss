@@ -595,7 +595,7 @@ section.landingInfo .wrapper{
 
 
 
-/* Footer */
+
 section.work{
 	/*background: #DD4A38;*/
 	/*background: url(../img/pattern9.jpg) repeat center top;*/	
@@ -613,6 +613,33 @@ section.work{
 
 }
 
+
+
+
+.work .hero-unit{
+	margin: 30px 5%;
+
+}
+.work a{
+	font-family: 'icomoon';
+	color: #DD4A38;
+	text-decoration: none;
+	font-size:3.5em;
+	-webkit-transition: color .4s ease;
+	-moz-transition: color .4s ease;
+	transition: color .4s ease;
+}
+.work a:hover{
+	color:#222;
+}
+.work a.left{
+	float: left;
+}
+.work a.right{
+	float:right;
+}
+
+/* Footer */
 footer{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding-top:1em;

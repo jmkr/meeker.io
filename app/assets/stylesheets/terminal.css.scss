@@ -1,0 +1,18 @@
+.terminal-cursor {
+    background-color: #00ff00;
+    color: black;
+}
+
+.terminal-console {
+    background-color: black;
+    font-family: monospace, courier, arial;
+    color: #00ff00;
+
+    width: 640px;
+    height: 480px;
+    padding: 8px;
+
+    resize: both;
+    overflow-y: scroll;
+    word-wrap: break-word;
+}
