@@ -13,7 +13,7 @@ Comp Green: #2AA54A;
 Dark-Grey: #202024;
 text: #555;
 blue-gray: #457;
-
+Blue: #267689;
 */
 
 
@@ -211,7 +211,8 @@ body>header.safariFix{
 }
 
 .nav li a.current {
-	color: #EE988C;
+	//color: #EE988C;
+	color: #798dd1;
 }
 
 .nav li a:last-child {
@@ -400,11 +401,11 @@ section.landingInfo .wrapper{
 	min-width: 40%;
 	float:right;
 	/*width: 50%;*/
-	text-align: right;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	/*text-align: right;*/
+	//font-family: "proxima-nova";
 	font-weight: 300;
-	font-size:17px;
-	line-height: 1.5em;
+	font-size:18px;
+	line-height: 1.6em;
 }
 
 .about-page .container .about header{
@@ -412,6 +413,7 @@ section.landingInfo .wrapper{
 }
 
 .about-page .deathRays #tweetTime{
+	//font-family:"proxima-nova";
 	position: relative;
 	transform:rotate(90deg);
 	-ms-transform:rotate(90deg); /* Internet Explorer */
@@ -458,7 +460,7 @@ section.landingInfo .wrapper{
 }
 
 .about-page .thoughtBubble .tweetWrap #tweets{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "freight-sans-pro";
 	display: table-cell;
 	vertical-align: middle;
 }
@@ -618,6 +620,7 @@ section.work{
 
 .work .hero-unit{
 	margin: 30px 5%;
+	border:1px solid #e6e5e5;
 
 }
 .work a{

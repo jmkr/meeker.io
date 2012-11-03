@@ -188,7 +188,7 @@
 
                 //fix for navbar links not animating while on home page
                 if(window.location.pathname =="/"){
-                    //console.log($anchor.attr('href'));
+                    console.log($anchor.attr('href'));
                     if($anchor.attr('href').charAt(0)=="/"){
                         $anchor[0].href = $anchor.attr('href').slice(1);
                         console.log($anchor.attr('href'));
@@ -202,6 +202,7 @@
                     console.log(offset);                            
                 }
 
+                
 
                 $('html, body').stop().animate({
                     scrollTop: $($anchor.attr('href')).offset().top - offset

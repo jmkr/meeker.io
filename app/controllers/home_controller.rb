@@ -5,4 +5,7 @@ class HomeController < ApplicationController
   def photos
 
   end
+  def resume
+  	
+  end
 end
