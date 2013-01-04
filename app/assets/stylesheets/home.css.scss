@@ -50,12 +50,10 @@ h1, h2, h3{
 	min-height: 725px;
 	max-height: 900px;
 	background: url(bgRailsColor3.png) no-repeat top left fixed;
-	/*background-size: cover;*/
 }
 
 .topBar {
 	background: url(bgRailsColor3.png) no-repeat top left;
-	/*background-size: cover;*/
 	height:125px;
 	position: fixed;
   	-webkit-transition:box-shadow .3s ease-in-out;
@@ -78,25 +76,12 @@ h1, h2, h3{
 	margin: 0 auto;
 }
 
-/*
-header {
-	height: 105px;
-	background: rgba(0, 0, 0, 0);
-}
-*/
-
 body>header.fader {
 	top:0 !important;
-  	position:fixed !important;
-  	/*border-bottom:1px solid #e6e5e5;
-  	border-bottom-color:rgba(0,0,0,0.2);*/  	
+  	position:fixed !important;	
   	-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
   	-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
   	box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);  	
-}
-
-body>header.safariFix{
-	/*z-index: ;*/
 }
 
 .logo {
@@ -117,9 +102,6 @@ body>header.safariFix{
 }
 
 .logo h1 {
-	/*font-family: 'Raleway';*/
-	/*font-family: 'Rock Salt', cursive;*/
-
 	text-transform: uppercase;
 	font-size: 2.2em;
 	font-weight: 200;
@@ -135,11 +117,9 @@ body>header.safariFix{
 	-webkit-transition: all .6s ease;
 	-moz-transition: all .6s ease;
 	transition: all .6s ease;
-	/*visibility: hidden;*/
 }
 
 .logo:hover h1 span {
-	/*visibility: visible;*/
 	color: rgba(255, 255, 255, .4);
 }
 
@@ -211,7 +191,6 @@ body>header.safariFix{
 }
 
 .nav li a.current {
-	//color: #EE988C;
 	color: #798dd1;
 }
 
@@ -260,11 +239,6 @@ section.landingInfo .wrapper{
 	line-height: 1;
 }
 
-.me h1 #typer > span {
-	/*color:white;
-	background-color:rgb(0,0,0,0.5);*/
-}
-
 .me small {
 	font-size: 2em;
 	color: rgba(255, 255, 255, .8);
@@ -276,9 +250,7 @@ section.landingInfo .wrapper{
 	color: #DD4A38;
 }
 
-.aboutMe {
-	
-	/*background: #DD4A38;*/
+.aboutMe {	
 	display: inline-block;
 	margin-top: 50px;
 	-webkit-transition: all .4s ease;
@@ -298,7 +270,6 @@ section.landingInfo .wrapper{
 	font-size: 38px;
 	color: #fff;	
 	text-transform: uppercase;
-	/*padding-top:30px;*/
 	line-height: 50px;
 	width: 75%;
 	left: 13%;
@@ -313,8 +284,6 @@ section.landingInfo .wrapper{
 	position: absolute;
 	font-family: 'icomoon';
 	font-size: 80px;
-	/*display: inline-block;
-	margin-top: -50px;*/
 	line-height: 0px;
 	left: 32%;
 	top: 86%;
@@ -335,29 +304,7 @@ section.landingInfo .wrapper{
 }
 
 /* Photo page.. and about page */
-.photo-page, .about-page {
-	/*background: #d5ccaf repeat top center;*/
-}
-
-.photo-page * {
-	/*-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;*/
-	
-	/*
-	-webkit-transition: all 0.2s ease-out;
-  	-moz-transition: all 0.2s ease-out;
-  	-ms-transition: all 0.2s ease-out;
-  	-o-transition: all 0.2s ease-out;
-  	transition: all 0.2s ease-out;*/
-}
-
-.photo-page header, .about-page header{
-	/*background: #52445b repeat top center;*/
-}
-
 .photo-page h1, .about-page h1 {
-	/*font-family: "RalewayThin";*/
 	text-align: center;
 	font-size: 2.2em;
 }
@@ -373,7 +320,6 @@ section.landingInfo .wrapper{
 	padding: 2% 0;
 	width: 90%;
 	margin: 0 auto;	
-	/*margin-bottom: -75px;*/
 	padding-top: 150px;
 }
 
@@ -386,7 +332,6 @@ section.landingInfo .wrapper{
 	margin-top: 325px;
 	max-width: 960px;
 	border-bottom: 1px solid #EEE;
-
 }
 
 .about-page .container .deathRays{
@@ -400,9 +345,6 @@ section.landingInfo .wrapper{
 	margin-top: -100px;
 	min-width: 40%;
 	float:right;
-	/*width: 50%;*/
-	/*text-align: right;*/
-	//font-family: "proxima-nova";
 	font-weight: 300;
 	font-size:18px;
 	line-height: 1.6em;
@@ -413,15 +355,12 @@ section.landingInfo .wrapper{
 }
 
 .about-page .deathRays #tweetTime{
-	//font-family:"proxima-nova";
 	position: relative;
 	transform:rotate(90deg);
 	-ms-transform:rotate(90deg); /* Internet Explorer */
 	-moz-transform:rotate(90deg); /* Firefox */
 	-webkit-transform:rotate(90deg); /* Safari and Chrome */
 	-o-transform:rotate(90deg); 
-	/*margin-left: 250px;
-	margin-top: 100px;*/
 	font-style: italic;
 	left: 81px;
 	top: 230px;
@@ -464,8 +403,6 @@ section.landingInfo .wrapper{
 	display: table-cell;
 	vertical-align: middle;
 }
-
-
 
 /* Photo page */
 .photo-page .photo-feed{
@@ -521,10 +458,6 @@ section.landingInfo .wrapper{
 	text-decoration: none;
 	display: block;
 	position: absolute;
-	/*top: 0px;
-	left: 0px;
-	width: 100%;
-	height: 100%;*/
 	top: 2%;
 	left: 2%;
 	width: 96%;
@@ -534,7 +467,6 @@ section.landingInfo .wrapper{
 	color: #eee;
 	text-align: center;
 	text-shadow: 0px 2px 4px #000000;
-
 }
 
 .rss-items li:nth-child(3n+1) {
