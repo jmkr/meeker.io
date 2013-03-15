@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-
 /* Colors 
 
 Orange-Red: #DD4A38;
@@ -16,19 +14,19 @@ blue-gray: #457;
 Blue: #267689;
 */
 
-
+/*
+* Default junk.
+*/
 ::selection {
  	color: #fff;
  	text-shadow: none;
  	background: #333;
 }
-
 ::-moz-selection {
  	color: #fff;
  	text-shadow: none;
  	background: #333;
 }
-
 html, body {
 	width: 100%;
 	height: 100%;
@@ -44,6 +42,9 @@ h1, h2, h3{
 	color:#333;
 }
 
+/*
+* rails. My name for the main container with a railroad track picture.
+*/
 .rails {
 	width: 100%;
 	height: 100%;
@@ -52,6 +53,9 @@ h1, h2, h3{
 	background: url(bgRailsColor3.png) no-repeat top left fixed;
 }
 
+/*
+* The wise topbar.
+*/
 .topBar {
 	background: url(bgRailsColor3.png) no-repeat top left;
 	height:125px;
@@ -63,19 +67,98 @@ h1, h2, h3{
   	transition:box-shadow .3s ease-in-out;  
   	width: 100%;
   	z-index: 9999;
+
+  /* Holds and positions all the content in the tobar. */
+  .wrapper{
+		width: 95%;
+		max-width: 1500px;
+		margin: 0 auto;
+
+		/* The handdrawn JM logo */
+		.logo2{
+			float: left;
+			-webkit-animation-name: fadeIn;
+			-moz-animation-name: fadeIn;
+			-ms-animation-name: fadeIn;
+			-o-animation-name: fadeIn;
+			animation-name: fadeIn;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			-webkit-animation-delay: .3s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-timing-function: ease;
+			-webkit-transition: all .4s ease;
+			-moz-transition: all .4s ease;
+			transition: all .4s ease;
+			padding-top: 45px;
+			width:95px;
+			height:57px;
+			background:url(logoJMbacked3.png) right bottom no-repeat;
+			background-size: 95px;
+		}
+		.logo2:hover{
+			-webkit-transition: all .6s ease;
+			-moz-transition: all .6s ease;
+			transition: all .6s ease;
+			float: left;
+			padding-top: 45px;
+			width:95px;
+			height:57px;
+			background:url(logoJMbackedRed2.png) right bottom no-repeat;
+			background-size: 95px;
+		}
+
+		/* All of the right side navigation icons and links. */
+		.nav {
+			float: right;
+			padding-top: 45px;
+			-webkit-animation-name: fadeIn;
+			-moz-animation-name: fadeIn;
+			-ms-animation-name: fadeIn;
+			-o-animation-name: fadeIn;
+			animation-name: fadeIn;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			-webkit-animation-delay: .3s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-timing-function: ease;
+			li {
+				display: inline-block;
+				a {
+					font-family: 'icomoon';
+					font-size: 1.7em;
+					font-weight: 300;
+					color:#DD4A38;
+					padding: 15px;
+					-webkit-transition: color .4s ease;
+					-moz-transition: color .4s ease;
+					transition: color .4s ease;
+				}
+				a.current {
+					color: #798dd1;
+				}
+				a:last-child {
+					padding-right: 4px;
+				}
+				a:hover {
+					background:none;
+					color: #222;
+				}
+			}
+			li:last-child {
+				padding-right: 0px;
+			}
+		}
+	}	
 }
 
+/* Reposition the background image for the railrod on the topBar and rails container. */
 .rails, .topBar{
 	background-position-x: -200px;
 	background-position-y: -70px;
 }
 
-.topBar .wrapper{
-	width: 95%;
-	max-width: 1500px;
-	margin: 0 auto;
-}
-
+/* Sets the style to snap the topbar after scrolling a certain amount. */
 body>header.fader {
 	top:0 !important;
   	position:fixed !important;	
@@ -84,125 +167,7 @@ body>header.fader {
   	box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);  	
 }
 
-.logo {
-	float: left;
-	-webkit-animation-name: fadeIn;
-	-moz-animation-name: fadeIn;
-	-ms-animation-name: fadeIn;
-	-o-animation-name: fadeIn;
-	animation-name: fadeIn;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	-webkit-animation-delay: .3s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease;
-}
-.logo:hover {
-	text-decoration: none;
-}
-
-.logo h1 {
-	text-transform: uppercase;
-	font-size: 2.2em;
-	font-weight: 200;
-	color: #fff;
-	padding-top: 45px;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;
-}
-
-.logo h1 span {
-	color: rgba(12, 12, 12, .4);
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	transition: all .6s ease;
-}
-
-.logo:hover h1 span {
-	color: rgba(255, 255, 255, .4);
-}
-
-.logo2{
-	float: left;
-	-webkit-animation-name: fadeIn;
-	-moz-animation-name: fadeIn;
-	-ms-animation-name: fadeIn;
-	-o-animation-name: fadeIn;
-	animation-name: fadeIn;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	-webkit-animation-delay: .3s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;
-	padding-top: 45px;
-	width:95px;
-	height:57px;
-	background:url(logoJMbacked3.png) right bottom no-repeat;
-	background-size: 95px;
-}
-
-.logo2:hover{
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	transition: all .6s ease;
-	float: left;
-	padding-top: 45px;
-	width:95px;
-	height:57px;
-	background:url(logoJMbackedRed2.png) right bottom no-repeat;
-	background-size: 95px;
-}
-
-.nav {
-	float: right;
-	padding-top: 45px;
-	-webkit-animation-name: fadeIn;
-	-moz-animation-name: fadeIn;
-	-ms-animation-name: fadeIn;
-	-o-animation-name: fadeIn;
-	animation-name: fadeIn;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	-webkit-animation-delay: .3s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease;
-}
-
-.nav li {
-	display: inline-block;
-}
-
-.nav li:last-child {
-	padding-right: 0px;
-}
-.nav li a {
-	font-family: 'icomoon';
-	font-size: 1.7em;
-	font-weight: 300;
-	color:#DD4A38;
-	padding: 15px;
-	-webkit-transition: color .4s ease;
-	-moz-transition: color .4s ease;
-	transition: color .4s ease;
-}
-
-.nav li a.current {
-	color: #798dd1;
-}
-
-.nav li a:last-child {
-	padding-right: 4px;
-}
-
-.nav li a:hover {
-	background:none;
-	color: #222;
-}
-
+/* Random containers I should reorganize, but won't. */
 section.landingInfo {
 	padding-top: 220px;
 	-webkit-animation-name: fadeInUp;
@@ -216,91 +181,97 @@ section.landingInfo {
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease;
 }
-
 section.landingInfo .wrapper{
 	width: 95%;
 	max-width: 1140px;
 	margin: 0 auto;
 }
 
+/*
+* The wrapper containing the magical autotyper and the quadrahexoid More About Me link.
+*/
 .me {
-	font-family: 'freight-sans-pro';
+	font-family: 'freight-sans-pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 	font-weight: 300;
 	text-align: center;
 	-webkit-transition: color .6s ease;
 	-moz-transition: color .6s ease;
-	transition: color .6s ease;	
+	transition: color .6s ease;
+	/* Text for the magityper automatic. */
+	h1 {
+		font-weight: 100;
+		font-size: 5em;
+		color: #fff;
+		line-height: 1;
+	}
+	/* The text for the amazing coding equation. A breakthrough proof. */
+	small {
+		font-size: 2em;
+		color: rgba(255, 255, 255, .8);
+		line-height: 1.7em;
+		/* That lone thumbs up. */
+		span{
+			font-family:icomoon;
+			color: #DD4A38;
+		}
+	}
 }
 
-.me h1 {
-	font-weight: 100;
-	font-size: 5em;
-	color: #fff;
-	line-height: 1;
-}
-
-.me small {
-	font-size: 2em;
-	color: rgba(255, 255, 255, .8);
-	line-height: 1.7em;
-}
-
-.me small span{
-	font-family:icomoon;
-	color: #DD4A38;
-}
-
+/*
+*	About me pentahexaquadron. Smack in the middle of the home page.
+*/
 .aboutMe {	
 	display: inline-block;
 	margin-top: 50px;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;
+
+	.iconContainer {
+		position: relative;
+		text-align: center;
+		width: 220px;
+
+		.text {
+			position: absolute;
+			font-family: 'Raleway', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+			font-size: 38px;
+			color: #fff;	
+			text-transform: uppercase;
+			line-height: 50px;
+			width: 75%;
+			left: 13%;
+			top: 21%;
+			z-index: 2;
+			-webkit-transition: all .6s ease;
+			-moz-transition: all .6s ease;
+			transition: all .6s ease;
+		}
+
+		.arrow {
+			position: absolute;
+			font-family: 'icomoon';
+			font-size: 80px;
+			line-height: 0px;
+			left: 32%;
+			top: 86%;
+			visibility: visible;
+			color: #DD4A38;
+			-webkit-transition: all .6s ease;
+			-moz-transition: all .6s ease;
+			transition: all .6s ease;
+		}
+	}
 }
 
-.aboutMe .iconContainer {
-	position: relative;
-	text-align: center;
-	width: 220px;
-}
-
-.aboutMe .iconContainer .text {
-	position: absolute;
-	font-family: 'Raleway';
-	font-size: 38px;
-	color: #fff;	
-	text-transform: uppercase;
-	line-height: 50px;
-	width: 75%;
-	left: 13%;
-	top: 21%;
-	z-index: 2;
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	transition: all .6s ease;
-}
-
-.aboutMe .iconContainer .arrow {
-	position: absolute;
-	font-family: 'icomoon';
-	font-size: 80px;
-	line-height: 0px;
-	left: 32%;
-	top: 86%;
-	visibility: visible;
-	color: #DD4A38;
-	-webkit-transition: all .6s ease;
-	-moz-transition: all .6s ease;
-	transition: all .6s ease;
-}
-
-.aboutMe:hover .iconContainer .arrow{
-	margin-top:75px;
-}
-
-.aboutMe:hover .iconContainer .text{
-	margin-top: -12px;
-	color: white;
+.aboutMe:hover .iconContainer{ 
+	.arrow {
+		margin-top: 75px;
+	}
+	.text{
+		margin-top: -12px;
+		color: white;
+	}
 }
 
 /* Photo page.. and about page */
@@ -323,85 +294,99 @@ section.landingInfo .wrapper{
 	padding-top: 150px;
 }
 
-/* About page */
-.about-page .container{
-	
-}
+/*
+*	The section all about me.
+*/
 .about-page .container{
 	margin: auto;
 	margin-top: 325px;
 	max-width: 960px;
 	border-bottom: 1px solid #EEE;
-}
+	
+	/*
+	* Picture of me facebook stalking while playing guitar. I call it deathrays.
+	*/
+	.deathRays{
+		min-height: 600px;
+		max-width: 438px;
+		background: url(raySmall2.png);
+		background-repeat: no-repeat;
 
-.about-page .container .deathRays{
-	min-height: 600px;
-	max-width: 438px;
-	background: url(raySmall2.png);
-	background-repeat: no-repeat;
-}
+		/*
+		* The bubble containing my every thought.
+		*/
+		.thoughtBubble{
+			-webkit-animation-name: fadeIn;
+			-moz-animation-name: fadeIn;
+			-ms-animation-name: fadeIn;
+			-o-animation-name: fadeIn;
+			animation-name: fadeIn;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-fill-mode: both;
+			-webkit-animation-delay: .7s;
+			-webkit-animation-iteration-count: 1;
+			-webkit-animation-timing-function: ease;
+			position: absolute;
+			min-height: 250px;
+			min-width: 278px;
+			background: url(thoughtBubble2S.png);
+			background-repeat: no-repeat;
+			margin-left: 100px;
+			margin-top: -190px;
+			display: none;
 
-.about-page .container .about{
-	margin-top: -100px;
-	min-width: 40%;
-	float:right;
-	font-weight: 300;
-	font-size:18px;
-	line-height: 1.6em;
-}
+			/*
+			*	The wrapper containing the tweet.
+			*/
+			.tweetWrap{
+				width: 200px;
+				height: 120px;
+				position: absolute;
+				display: table;
+				top: 19px;
+				left: 35px;
+				text-align: center;
+				
+				/* Formatting the text inside the tweet. */
+				#tweets{
+					font-family: 'freight-sans-pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
 
-.about-page .container .about header{
-	height: 60px;
-}
+		/*
+		* The time of the tweet.
+		*/
+		#tweetTime{
+			position: relative;
+			transform:rotate(90deg);
+			-ms-transform:rotate(90deg); /* Internet Explorer */
+			-moz-transform:rotate(90deg); /* Firefox */
+			-webkit-transform:rotate(90deg); /* Safari and Chrome */
+			-o-transform:rotate(90deg); 
+			font-style: italic;
+			left: 81px;
+			top: 230px;
+			display: none;
+		}
+	}
 
-.about-page .deathRays #tweetTime{
-	position: relative;
-	transform:rotate(90deg);
-	-ms-transform:rotate(90deg); /* Internet Explorer */
-	-moz-transform:rotate(90deg); /* Firefox */
-	-webkit-transform:rotate(90deg); /* Safari and Chrome */
-	-o-transform:rotate(90deg); 
-	font-style: italic;
-	left: 81px;
-	top: 230px;
-	display: none;
-}
-
-.about-page .thoughtBubble{
-	-webkit-animation-name: fadeIn;
-	-moz-animation-name: fadeIn;
-	-ms-animation-name: fadeIn;
-	-o-animation-name: fadeIn;
-	animation-name: fadeIn;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	-webkit-animation-delay: .7s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease;
-	position: absolute;
-	min-height: 250px;
-	min-width: 278px;
-	background: url(thoughtBubble2S.png);
-	background-repeat: no-repeat;
-	margin-left: 100px;
-	margin-top: -190px;
-	display: none;
-}
-
-.about-page .thoughtBubble .tweetWrap{
-	width: 200px;
-	height: 120px;
-	position: absolute;
-	display: table;
-	top: 19px;
-	left: 35px;
-	text-align: center;
-}
-
-.about-page .thoughtBubble .tweetWrap #tweets{
-	font-family: "freight-sans-pro";
-	display: table-cell;
-	vertical-align: middle;
+	/*
+	* Organizing the block of text about me.
+	*/
+	.about{
+		header{
+			height: 60px;
+		}
+		margin-top: -100px;
+		min-width: 40%;
+		float:right;
+		font-weight: 300;
+		font-size:18px;
+		line-height: 1.6em;
+	}
 }
 
 /* Photo page */
@@ -413,7 +398,6 @@ section.landingInfo .wrapper{
 	margin: 0 auto;
 	padding: 5% 0;
 }
-
 
 /*Clear fix*/
 /* For modern browsers */
@@ -432,7 +416,6 @@ section.landingInfo .wrapper{
     zoom:1;
 }
 
-
 .rss-items li {	
 	width: 25%;
 	height: 25%;
@@ -448,9 +431,7 @@ section.landingInfo .wrapper{
 }
 
 .rss-items li a {
-	
 	display: none;
-	
 }
 
 .rss-items li:hover a {
@@ -477,7 +458,6 @@ section.landingInfo .wrapper{
 	display: block;
 	width: 100%;
 	height: auto;
-	
 	-webkit-box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
 	        box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
 }
@@ -507,71 +487,28 @@ section.landingInfo .wrapper{
 	}
 }
 
-
-@media screen and (max-width: 320px) { 
+@media (max-width: 480px) {
+	section.landingInfo {
+		padding-top: 100px;
+	}
+	.about-page .container{
+		margin-top: 250px;
+		.deathRays{
+			margin-left: -80px;
+		}
+	}
 	.rss-items li {
 		width: 100%;
 	}
-	
 	.photo-page header h1 {
 		font-size: 1em;
 	}
-	
 	.photo-page .connect {
 		width: 100%;
 	}
-	
 	.photo-page .connect h2 {
 		font-size: 2em;
 	}
-	
-}
-
-
-
-
-section.work{
-	/*background: #DD4A38;*/
-	/*background: url(../img/pattern9.jpg) repeat center top;*/	
-	margin-top:100px;
-	height: 300px;
-	text-align:center;
-
-	/*
-	box-shadow: inset 0px 2px 6px rgba( 0, 0, 0, 0.5 );
-	-webkit-box-shadow: inset 0px 2px 6px rgba( 0, 0, 0, 0.5 );
-	-moz-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
-	-o-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
-	-ms-box-shadow: inset 0px 2px 6px rgba( 0,0,0,0.5 );
-	*/
-
-}
-
-
-
-
-.work .hero-unit{
-	margin: 30px 5%;
-	border:1px solid #e6e5e5;
-
-}
-.work a{
-	font-family: 'icomoon';
-	color: #DD4A38;
-	text-decoration: none;
-	font-size:3.5em;
-	-webkit-transition: color .4s ease;
-	-moz-transition: color .4s ease;
-	transition: color .4s ease;
-}
-.work a:hover{
-	color:#222;
-}
-.work a.left{
-	float: left;
-}
-.work a.right{
-	float:right;
 }
 
 /* Footer */
@@ -579,16 +516,12 @@ footer{
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding-top:1em;
 	margin: 3em auto;
-
 	margin-top:0px;	
-	height: 300px;
+	padding-bottom: 4em;
 	text-align:center;
 	color: #AAA;
 }
 footer > p{
 	text-align: center;
 	margin: 2em 0 -1em;
-}
-footer h1{
-	
 }
