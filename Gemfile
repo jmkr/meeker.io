@@ -1,4 +1,7 @@
 source 'https://rubygems.org'
+
+ruby '1.9.3'
+
 gem 'rails', '3.2.12'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -8,7 +11,7 @@ group :assets do
 end
 gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
-gem "mongoid", ">= 3.0.9"
+gem "mongoid", ">= 3.1.4"
 gem "slim", ">= 1.3.2"
 gem "haml2slim", ">= 0.4.6", :group => :development
 gem "haml", ">= 3.1.6", :group => :development

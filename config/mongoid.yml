@@ -1,9 +1,18 @@
-# Configuration for heroku - MongoHQ
+# Configure for heroku - MongoHQ
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
-  max_retries_on_connection_failure: 20
-  persist_in_safe_mode: true
-  skip_version_check: true
+  sessions:
+    default:
+      hosts:
+        - - <hostname>.member0.mongohq.com
+          - <port_number>
+        - - <hostname>.member1.mongohq.com
+          - <port_number>
+      username: <username>
+      password: <password>
+      database: <database>
+      options:
+        skip_version_check: true
+        safe: true
 
 development:
   # Configure available database sessions. (required)
