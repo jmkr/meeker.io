@@ -18,10 +18,12 @@
             /* No longer can you hit Twitter API V1!!
              * But luckily, 'gon' is the shit and lets you pass rails variables from
              * controllers to JS. Twist and shout.
-             */ 
-            tweetContent = Meeker.formatTweet(gon.tweet.content);
-            tweetTime = Meeker.timeAgo(gon.tweet.created);
-            Meeker.setTweet(tweetContent, tweetTime);
+             */
+            if (gon.tweet != null) {
+                tweetContent = Meeker.formatTweet(gon.tweet.content);
+                tweetTime = Meeker.timeAgo(gon.tweet.created);
+                Meeker.setTweet(tweetContent, tweetTime);
+            }
         },
 
         formatTweet: function(text) {
