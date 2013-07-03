@@ -6,30 +6,22 @@
         $_nav: null,
         
         setTweet: function(tweet, tweetTime){
-            console.log(tweet);
+            // console.log(tweet);
             $("#tweets").html(tweet);
             $(".thoughtBubble").show();
-            //$("#tweet").typeTo(tweet);
             $("#tweetTime").html(". . . " + tweetTime);
             $("#tweetTime").show();
         },
 
-        initTwitter: function($_user){
-            var user = $_user;
+        initTwitter: function(){
 
-            $.getJSON('http://api.twitter.com/1/statuses/user_timeline.json?screen_name=' + user + '&count=1&callback=?', function(data){        
-                var tweet = "";
-                var tweetTime = "";
-                //console.log(data.length + " twit");
-                //for (i = 0; i < data.length; i++) {
-                    tweet += data[0].text;
-                    tweetTime += data[0].created_at;
-                //}    
-
-                tweet = Meeker.formatTweet(tweet);                      
-                tweetTime = Meeker.timeAgo(tweetTime);
-                Meeker.setTweet(tweet, tweetTime);
-            });
+            /* No longer can you hit Twitter API V1!!
+             * But luckily, 'gon' is the shit and lets you pass rails variables from
+             * controllers to JS. Twist and shout.
+             */ 
+            tweetContent = Meeker.formatTweet(gon.tweet.content);
+            tweetTime = Meeker.timeAgo(gon.tweet.created);
+            Meeker.setTweet(tweetContent, tweetTime);
         },
 
         formatTweet: function(text) {
@@ -129,58 +121,28 @@
                 return "";
             }
  
-            if (diff < second * 2) {
-                return "right now";
-            }
-      
-            if (diff < minute) {
-                return Math.floor(diff / second) + " seconds ago";
-            }
-      
-            if (diff < minute * 2) {
-                return "about 1 minute ago";
-            }
-      
-            if (diff < hour) {
-                return Math.floor(diff / minute) + " minutes ago";
-            }
-      
-            if (diff < hour * 2) {
-                return "about 1 hour ago";
-            }
-      
-            if (diff < day) {               
-                return  Math.floor(diff / hour) + " hours ago";
-            }
-      
-            if (diff > day && diff < day * 2) {
-                return "yesterday";
-            }
-      
-            if (diff < day * 365) {
-                return Math.floor(diff / day) + " days ago";
-            }
-      
-            else {
-                return "over a year ago";
-            }
+            if (diff < second * 2) return "right now";
+            if (diff < minute) return Math.floor(diff / second) + " seconds ago";      
+            if (diff < minute * 2) return "about 1 minute ago";
+            if (diff < hour) return Math.floor(diff / minute) + " minutes ago";
+            if (diff < hour * 2) return "about 1 hour ago";
+            if (diff < day) return  Math.floor(diff / hour) + " hours ago";
+            if (diff > day && diff < day * 2) return "yesterday";
+            if (diff < day * 365) return Math.floor(diff / day) + " days ago";
+            else return "over a year ago";
         },
 
         pinHeader: function(){
-            //this._$header.addClass('animated fadeOutDown');            
             this._$header.addClass('fader');        
         },
 
         unpinHeader: function(){
-            //this._$header.removeClass('animated fadeOutDown');
             this._$header.removeClass('fader');
         },
 
         initBindings: function(){
             this._$header = $('.topBar');
             this._$nav = $('.topBar ul.nav li a');
-            //console.log(this._$nav);
-            //console.log(this._$header);
             
             $('ul li a, a').bind('click',function(event){
                 var $anchor = $(this);
@@ -188,21 +150,12 @@
 
                 //fix for navbar links not animating while on home page
                 if(window.location.pathname =="/"){
-                    console.log($anchor.attr('href'));
+                    // console.log($anchor.attr('href'));
                     if($anchor.attr('href').charAt(0)=="/"){
                         $anchor[0].href = $anchor.attr('href').slice(1);
-                        console.log($anchor.attr('href'));
-                        
-
+                        // console.log($anchor.attr('href'));
                     }
-                }                
-                // change scroll offset for work section
-                if($anchor.attr('href') == "#work"){
-                    offset = 150;
-                    console.log(offset);                            
                 }
-
-                
 
                 $('html, body').stop().animate({
                     scrollTop: $($anchor.attr('href')).offset().top - offset
@@ -215,15 +168,6 @@
 
             $(document).scroll(
                 function(){
-                    //console.log($(document).scrollTop());                
-                    /*if(this._$needsFixin){                  
-                        if( $(document).scrollTop() > 700 ){
-                            Meeker.pinSafariFix();
-                        }else{
-                            Meeker.unpinSafariFix();
-                        }
-                    }*/
-
 
                     if( $(document).scrollTop() > 20 ){
                         Meeker.pinHeader();
@@ -238,10 +182,6 @@
                         if( $(document).scrollTop() > 675  && $(document).scrollTop()<1600){                            
                             Meeker.highlightHeader(0);                            
                         }
-                        //highlight Work Icon
-                        else if($(document).scrollTop() > 1600){
-                                Meeker.highlightHeader(1);
-                        }
                         else{
                             Meeker.highlightHeader(-1);
                         }
@@ -254,16 +194,6 @@
             setTimeout(function() {
                 $('[data-typer-targets]').typer();    
             }, 7500);
-        },
-
-        pinSafariFix: function(){
-            //fix for safari z-indexing//navbar shitake            
-            this._$header.addClass('safariFix');          
-        },
-
-        unpinSafariFix: function(){
-            //fix for safari z-indexing//navbar shitake            
-            this._$header.removeClass('safariFix');          
         },
 
         //Scrollspy & Nav Function => gets -1 for any area not to be highlighted and 'num' corresponds to indexOf anchor in nav to be highlighted
@@ -286,20 +216,12 @@
             
             else{
                 $(document).ready(function() {
-                    //console.log("ready");
                     Meeker.initBindings();
                     Meeker.initHeader();
-                    Meeker.initTyper();
-
-                    /*
-                    if($.browser.safari || $.browser.chrome){
-                        this._$needsFixin = true;
-                    } */
 
                     if(window.location.pathname == "/"){              
-                        Meeker.initTwitter("meekr5");
+                        Meeker.initTwitter();
                     }
-
                 });                
                            
                 $(window).load(function(){

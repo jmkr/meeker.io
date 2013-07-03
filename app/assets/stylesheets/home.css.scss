@@ -38,6 +38,12 @@ html, body {
 	padding: 0;
 }
 
+/* Preload icon images using CSS */
+body:after{
+    display:none;
+    content: url(logoJMbackedRed2.png) url(logoJMbacked3.png);
+}
+
 h1, h2, h3{
 	color:#333;
 }
@@ -197,21 +203,21 @@ section.landingInfo .wrapper{
 	-webkit-transition: color .6s ease;
 	-moz-transition: color .6s ease;
 	transition: color .6s ease;
-	/* Text for the magityper automatic. */
+	/* No more magityper. This comment is all that remains. */
 	h1 {
 		font-weight: 100;
 		font-size: 5em;
 		color: #fff;
 		line-height: 1;
 	}
-	/* The text for the amazing coding equation. A breakthrough proof. */
+	/* A simpler equation - what I actually do */
 	small {
 		font-size: 2em;
-		color: rgba(255, 255, 255, .8);
+		color: rgba(255, 255, 255, .7);
 		line-height: 1.7em;
-		/* That lone thumbs up. */
+		/* No longer a thumbs up :( */
 		span{
-			font-family:icomoon;
+			font-weight: 400;
 			color: #DD4A38;
 		}
 	}

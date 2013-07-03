@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @users = User.all
+    @tweet = Tweet.last
+    gon.tweet = @tweet
   end
   def photos
 
