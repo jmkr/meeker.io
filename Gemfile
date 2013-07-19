@@ -24,3 +24,4 @@ gem 'oauth'
 gem 'grackle' # https://github.com/hayesdavis/grackle
 gem 'figaro'
 gem 'gon' # https://github.com/gazay/gon
+gem 'newrelic_rpm'
