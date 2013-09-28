@@ -56,14 +56,14 @@ h1, h2, h3{
 	height: 100%;
 	min-height: 725px;
 	max-height: 900px;
-	background: url(bgRailsColor3.png) no-repeat top left fixed;
+	background: url(bgRails.png) no-repeat top left fixed;
 }
 
 /*
 * The wise topbar.
 */
 .topBar {
-	background: url(bgRailsColor3.png) no-repeat top left;
+	background: url(bgRails.png) no-repeat top left;
 	height:125px;
 	position: fixed;
   	-webkit-transition:box-shadow .3s ease-in-out;
@@ -228,7 +228,7 @@ section.landingInfo .wrapper{
 */
 .aboutMe {	
 	display: inline-block;
-	margin-top: 50px;
+	margin-top: 20%;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;
@@ -238,45 +238,24 @@ section.landingInfo .wrapper{
 		text-align: center;
 		width: 220px;
 
-		.text {
-			position: absolute;
-			font-family: 'Raleway', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-			font-size: 38px;
-			color: #fff;	
-			text-transform: uppercase;
-			line-height: 50px;
-			width: 75%;
-			left: 13%;
-			top: 21%;
-			z-index: 2;
-			-webkit-transition: all .6s ease;
-			-moz-transition: all .6s ease;
-			transition: all .6s ease;
-		}
-
 		.arrow {
 			position: absolute;
-			font-family: 'icomoon';
+			font-family: 'entypo';
 			font-size: 80px;
 			line-height: 0px;
 			left: 32%;
-			top: 86%;
-			visibility: visible;
 			color: #DD4A38;
-			-webkit-transition: all .6s ease;
-			-moz-transition: all .6s ease;
-			transition: all .6s ease;
+			-webkit-transition: all .5s ease;
+			-moz-transition: all .5s ease;
+			transition: all .5s ease;
 		}
 	}
 }
 
+/* On hover, move the arrow down. */
 .aboutMe:hover .iconContainer{ 
 	.arrow {
-		margin-top: 75px;
-	}
-	.text{
-		margin-top: -12px;
-		color: white;
+		margin-top: 35px;
 	}
 }
 
@@ -471,9 +450,6 @@ section.landingInfo .wrapper{
 @media screen and (max-width: 768px) { 
 	.rss-items li {
 		width: 49%;
-	}
-	.topBar{
-
 	}
 	.topBar .wrapper .logo2{
 		padding-left: 3%;

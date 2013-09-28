@@ -9,38 +9,13 @@
     font-style: normal;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-[class^="icon-"]:before, [class*=" icon-"]:before {
-    font-family: 'icomoon';
-    font-style: normal;
-    speak: none;
+@font-face {
+    font-family: 'entypo';
+    src:url('fonts/entypo.eot');
+    src:url('fonts/entypo.eot?#iefix') format('embedded-opentype'),
+        url('fonts/entypo.svg#entypo') format('svg'),
+        url('fonts/entypo.woff') format('woff'),
+        url('fonts/entypo.ttf') format('truetype');
     font-weight: normal;
-    -webkit-font-smoothing: antialiased;
-}
-.icon-tumblr:before {
-    content: "\21";
-}
-.icon-github:before {
-    content: "\22";
-}
-.icon-twitter:before {
-    content: "\23";
-}
-.icon-user:before {
-    content: "\25";
-}
-.icon-briefcase:before {
-    content: "\24";
-}
-.icon-user-2:before {
-    content: "\26";
-}
-.icon-home:before {
-    content: "\27";
-}
-.icon-search:before {
-    content: "\28";
-}
-.icon-map-pin-fill:before {
-    content: "\29";
+    font-style: normal;
 }
