@@ -2,11 +2,9 @@
 
     var Meeker = {
         $_header: null,
-        $_needsFixin: null,
         $_nav: null,
         
         setTweet: function(tweet, tweetTime){
-            // console.log(tweet);
             $("#tweets").html(tweet);
             $(".thoughtBubble").show();
             $("#tweetTime").html(". . . " + tweetTime);
@@ -77,7 +75,6 @@
             var imgs = $(".rss-item").hide();
             // Make sure these shite pictures are actually loaded
             if(imgs.size() < 1){
-                console.log("not ready");
                 setTimeout(function(){Meeker.initPhotos()},100);
             }else{
                 $(".photo-feed").show();
@@ -86,8 +83,6 @@
         },
 
         showPhotos: function(i, imgs){                
-                //console.log(i);
-                //console.log(imgs.eq(i));
                 //escape on last image
                 if(i >= imgs.size()){ return; }                
                 
@@ -152,10 +147,8 @@
 
                 //fix for navbar links not animating while on home page
                 if(window.location.pathname =="/"){
-                    // console.log($anchor.attr('href'));
                     if($anchor.attr('href').charAt(0)=="/"){
                         $anchor[0].href = $anchor.attr('href').slice(1);
-                        // console.log($anchor.attr('href'));
                     }
                 }
 
@@ -200,7 +193,6 @@
 
         //Scrollspy & Nav Function => gets -1 for any area not to be highlighted and 'num' corresponds to indexOf anchor in nav to be highlighted
         highlightHeader: function(num){
-            //console.log("highlight "+num);
             this._$nav.removeClass('current');
             if(num >= 0 ){
                 this._$nav.eq(num).addClass('current');
@@ -209,7 +201,6 @@
 
         init: function(loaded){
             if(loaded){
-                //console.log("loaded");
                 if(window.location.pathname == "/photos"){
                     Meeker.highlightHeader(5);
                     Meeker.initPhotos();                    
