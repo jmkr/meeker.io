@@ -13,7 +13,7 @@ class Tweet
       
       # Create and save the tweet if it doesn't already exist.
       unless Tweet.where(created: created).exists?
-        tweet = Tweet.create(:content => t.text, :created => created )
+        tweet = Tweet.create(:content => t.text, :created => created)
         tweet.save
        end
     end
@@ -27,8 +27,7 @@ class Tweet
       :consumer_key=>ENV["TWITTER_CONSUMER_KEY"],
       :consumer_secret=>ENV["TWITTER_CONSUMER_SECRET_KEY"],
       :token=>ENV["TWITTER_ACCESS_TOKEN"],
-      :token_secret=>ENV["TWITTER_ACCESS_TOKEN_SECRET"],
-      :ssl=>true
-    })
+      :token_secret=>ENV["TWITTER_ACCESS_TOKEN_SECRET"]
+    }, :ssl=> true)
   end
 end
