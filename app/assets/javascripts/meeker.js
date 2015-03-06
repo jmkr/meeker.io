@@ -202,7 +202,7 @@
         init: function(loaded){
             if(loaded){
                 if(window.location.pathname == "/photos"){
-                    Meeker.highlightHeader(5);
+                    Meeker.highlightHeader(4);
                     Meeker.initPhotos();                    
                 }
             }

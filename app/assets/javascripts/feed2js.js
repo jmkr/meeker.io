@@ -123,7 +123,10 @@ if (typeof feed2js_idx === 'undefined') {
 						var entry = result.feed.entries[i];
 						var li = document.createElement('li');
 						li.className = 'rss-item';
-						//console.log("what is a? :" + entry.title);
+
+						// console.log("what is a? " + entry.title);
+						// console.log("what is a? " + entry.link);
+
 						//Don't output "Photo" for pics that dont have captions
 						if(entry.title == "Photo"){
 							entry.title = "";
@@ -133,6 +136,7 @@ if (typeof feed2js_idx === 'undefined') {
 							title: entry.title,
 							url: entry.link
 						});
+
 						// Include item timestamp?
 						if (attributes.date == 'y') {
 							var entryDate = new Date(entry.publishedDate);
@@ -140,11 +144,23 @@ if (typeof feed2js_idx === 'undefined') {
 								date: entryDate.toLocaleString()
 							});
 						}
+
 						// Include item description?
-						if (attributes.desc == 'y')
-							li.innerHTML += '<br />{desc}'.supplant({
-								desc: attributes.html == 'y' ? entry.content : entry.contentSnippet
-							});
+						if (attributes.desc == 'y') {
+
+							// Updated to pull feed from http://widget.websta.me/rss/n/meekr
+							$(entry.content).find("img").eq(1).each(function () { // or "item" or whatever suits your feed
+									var el = $(this);
+
+									// console.log("------------------------");
+									// console.log(el.attr("src"));
+									// console.log(el.prop('outerHTML'));
+									li.innerHTML += '<br />{desc}'.supplant({
+										desc: attributes.html == 'y' ? el.prop('outerHTML') : entry.contentSnippet
+									});
+								});
+						}
+
 						// Include media enclosures?
 						if (attributes.pc == 'y' && entry.mediaGroups) {
 							var media = document.createElement('div');
