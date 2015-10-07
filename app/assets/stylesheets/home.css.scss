@@ -41,7 +41,7 @@ html, body {
 /* Preload icon images using CSS */
 body:after{
     display:none;
-    content: url(logoJMbackedRed2.png) url(logoJMbacked3.png);
+    content: image-url('logoJMbackedRed2.png') image-url('logoJMbacked3.png');
 }
 
 h1, h2, h3{
@@ -56,14 +56,14 @@ h1, h2, h3{
 	height: 100%;
 	min-height: 725px;
 	max-height: 900px;
-	background: url(bgRails.png) no-repeat top left fixed;
+	background: image-url('bgRails.png') no-repeat top left fixed;
 }
 
 /*
 * The wise topbar.
 */
 .topBar {
-	background: url(bgRails.png) no-repeat top left;
+	background: image-url('bgRails.png') no-repeat top left;
 	height:125px;
 	position: fixed;
   	-webkit-transition:box-shadow .3s ease-in-out;
@@ -99,7 +99,7 @@ h1, h2, h3{
 			margin-top: 45px;
 			width:95px;
 			height:57px;
-			background:url(logoJMbacked3.png) right bottom no-repeat;
+			background:image-url('logoJMbacked3.png') right bottom no-repeat;
 			background-size: 95px;
 		}
 		.logo2:hover{
@@ -110,7 +110,7 @@ h1, h2, h3{
 			padding-top: 45px;
 			width:95px;
 			height:57px;
-			background:url(logoJMbackedRed2.png) right bottom no-repeat;
+			background:image-url('logoJMbackedRed2.png') right bottom no-repeat;
 			background-size: 95px;
 		}
 
@@ -291,7 +291,7 @@ section.landingInfo .wrapper{
 	.deathRays{
 		min-height: 600px;
 		max-width: 438px;
-		background: url(raySmall2.png);
+		background: image-url('raySmall2.png');
 		background-repeat: no-repeat;
 
 		/*
@@ -311,7 +311,7 @@ section.landingInfo .wrapper{
 			position: absolute;
 			min-height: 250px;
 			min-width: 278px;
-			background: url(thoughtBubble2S.png);
+			background: image-url('thoughtBubble2S');
 			background-repeat: no-repeat;
 			margin-left: 100px;
 			margin-top: -190px;
