@@ -101,10 +101,10 @@
             var rightNow = new Date();
             var then = new Date(dateString);
          
-            if ($.browser.msie) {
-                // IE can't parse for poop
-                then = Date.parse(dateString.replace(/( \+)/, ' UTC$1'));
-            }
+            // if ($.browser.msie) {
+            //     // IE can't parse for poop
+            //     then = Date.parse(dateString.replace(/( \+)/, ' UTC$1'));
+            // }
  
             var diff = rightNow - then;
  

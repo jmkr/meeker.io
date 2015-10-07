@@ -10,8 +10,10 @@
  *
  *= require_self
  *= require_tree .
- *= require jquery.ui.core
 */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 .content {
   background-color: #eee;

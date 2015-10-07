@@ -1,14 +1,16 @@
 source 'https://rubygems.org'
 
-ruby '1.9.3'
+ruby '2.1.2'
 
-gem 'rails', '3.2.12'
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-ui-rails'
-end
+gem 'rails', '4.2.4'
+
+gem 'bootstrap-sass', '~> 3.3.5'
+gem 'sass-rails', '>= 3.2'
+
+gem 'coffee-rails'
+gem 'uglifier'
+gem 'jquery-ui-rails'
+
 gem 'jquery-rails'
 gem "thin", ">= 1.5.0"
 gem "mongoid", ">= 3.1.4"
@@ -18,7 +20,6 @@ gem "haml", ">= 3.1.6", :group => :development
 gem "haml-rails", ">= 0.3.5", :group => :development
 gem "hpricot", ">= 0.8.6", :group => :development
 gem "ruby_parser", ">= 2.3.1", :group => :development
-gem "bootstrap-sass", ">= 2.1.0.0"
 gem 'google-analytics-rails'
 gem 'oauth'
 gem 'grackle' # https://github.com/hayesdavis/grackle
