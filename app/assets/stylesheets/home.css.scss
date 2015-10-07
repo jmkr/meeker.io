@@ -74,15 +74,15 @@ h1, h2, h3{
   	width: 100%;
   	z-index: 9999;
 
-  /* Holds and positions all the content in the tobar. */
+  /* Holds and positions all the content in the topbar. */
   .wrapper{
 		width: 95%;
 		max-width: 1500px;
 		margin: 0 auto;
 
-		/* The handdrawn JM logo */
 		.logo2{
 			float: left;
+			margin: 0 auto;
 			-webkit-animation-name: fadeIn;
 			-moz-animation-name: fadeIn;
 			-ms-animation-name: fadeIn;
@@ -96,9 +96,9 @@ h1, h2, h3{
 			-webkit-transition: all .4s ease;
 			-moz-transition: all .4s ease;
 			transition: all .4s ease;
-			margin-top: 45px;
-			width:95px;
-			height:57px;
+			margin-top: 25px;
+			width:100px;
+			height:80px;
 			background:image-url('logoJMbacked3.png') right bottom no-repeat;
 			background-size: 95px;
 		}
@@ -106,10 +106,8 @@ h1, h2, h3{
 			-webkit-transition: all .6s ease;
 			-moz-transition: all .6s ease;
 			transition: all .6s ease;
-			float: left;
-			padding-top: 45px;
-			width:95px;
-			height:57px;
+			width:100px;
+			height:80px;
 			background:image-url('logoJMbackedRed2.png') right bottom no-repeat;
 			background-size: 95px;
 		}
@@ -158,7 +156,7 @@ h1, h2, h3{
 	}	
 }
 
-/* Reposition the background image for the railrod on the topBar and rails container. */
+/* Reposition the background image for the railroad on the topBar and rails container. */
 .rails, .topBar{
 	background-position-x: -200px;
 	background-position-y: -70px;
@@ -168,10 +166,10 @@ h1, h2, h3{
 body>header.fader {
 	top:0 !important;
   	position:fixed !important;
-  	/* The border bottom and drop shadow for the navbar. 
-  	-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  	-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  	box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);	*/
+  	/* The border bottom and drop shadow for the navbar. */
+  	// -webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  	// -moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  	// box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
 }
 
 /* Random containers I should reorganize, but won't. */
@@ -200,19 +198,16 @@ section.landingInfo .wrapper{
 	-webkit-transition: color .6s ease;
 	-moz-transition: color .6s ease;
 	transition: color .6s ease;
-	/* No more magityper. This comment is all that remains. */
 	h1 {
 		font-weight: 100;
 		font-size: 5em;
 		color: #fff;
 		line-height: 1;
 	}
-	/* A simpler equation - what I actually do */
 	small {
 		font-size: 2em;
 		color: rgba(255, 255, 255, .7);
 		line-height: 1.7em;
-		/* No longer a thumbs up :( */
 		span{
 			font-weight: 400;
 			color: #DD4A38;
@@ -220,9 +215,6 @@ section.landingInfo .wrapper{
 	}
 }
 
-/*
-*	About me pentahexaquadron. Smack in the middle of the home page.
-*/
 .aboutMe {	
 	display: inline-block;
 	margin-top: 20%;
@@ -418,23 +410,26 @@ section.landingInfo .wrapper{
 }
 
 .rss-items li a {
-	display: none;
-}
-
-.rss-items li:hover a {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	text-decoration: none;
-	display: block;
+	color: #eee;
 	position: absolute;
 	top: 2%;
 	left: 2%;
 	width: 96%;
-	height: 96%;
-	padding: 50% 5% 0 5%;
-	background: rgba(0, 0, 0, 0.2);
-	color: #eee;
+	height: 100%;
+	padding: 45% 5% 0 5%;
 	text-align: center;
-	text-shadow: 0px 2px 4px #000000;
+
+	opacity: 0;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+.rss-items li:hover a {
+		opacity: 1;
+		text-shadow: 0px 2px 4px #000000;
 }
 
 .rss-items li:nth-child(3n+1) {
@@ -442,11 +437,8 @@ section.landingInfo .wrapper{
 }
 
 .rss-items img {
-	display: block;
 	width: 100%;
 	height: auto;
-	-webkit-box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
-	        box-shadow:  0px 5px 5px 2px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 768px) {
