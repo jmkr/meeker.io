@@ -164,12 +164,12 @@
             $(document).scroll(
                 function(){
 
-                    if ( $(window).width() < 500 ) {
-                        // if( $(document).scrollTop() > 0){
-                        //     Meeker.pinHeader();
-                        // }else{
-                        //     Meeker.unpinHeader();
-                        // }
+                    if ( $(window).width() > 480  && $(window).width() <= 768 ) {
+                        if( $(document).scrollTop() > 0){
+                            Meeker.pinHeader();
+                        }else{
+                            Meeker.unpinHeader();
+                        }
                     } else {
                        if( $(document).scrollTop() > ($(window).height() - 125) ){
                             Meeker.pinHeader();

@@ -60,7 +60,7 @@ body:after{
 * rails. My name for the main container with a railroad track picture.
 */
 .rails {
-  background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
+  background: image-url('bgRailsColor.png') repeat-x;// fixed;// top left;
   background-size: cover;
 	//width: 100%;
 	min-height: 600px;
@@ -78,10 +78,10 @@ body:after{
 
 	height:125px;
 	position: fixed;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   width: 100%;
   z-index: 9999;	
 
@@ -572,6 +572,8 @@ ul.apps:after {
   }
   .rails {
     min-height: 400px;
+    background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
+    background-size: cover;
   }
 	section.landingInfo {
 		padding-top: 10px;
