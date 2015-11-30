@@ -60,7 +60,7 @@ body:after{
 * rails. My name for the main container with a railroad track picture.
 */
 .rails {
-  background: image-url('bgRailsColor.png') repeat-x;// top left;
+  background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
   background-size: cover;
 	//width: 100%;
 	min-height: 600px;
@@ -73,8 +73,8 @@ body:after{
 */
 .topBar {
 	//background: rgba(255, 255, 255, .1);
-	//background: image-url('bgRailsColor.png') repeat-x top left;
-	//background-size: cover;
+	background: image-url('bgRailsColor.png') repeat-x fixed;
+	background-size: cover;
 
 	height:125px;
 	position: fixed;
@@ -169,15 +169,15 @@ body:after{
 
 /* Sets the style to snap the topbar after scrolling a certain amount. */
 body>header.fader {
-		//top:0 !important;
-  	//position:fixed !important;  	
+		top:0 !important;
+  	position:fixed !important;  	
   	//-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
   	//-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
   	//box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
 
-  	background: rgba(10, 10, 10, .9);
-  	// background: image-url('bgRailsColor.png');
-	  // background-size: cover;
+  	//background: rgba(10, 10, 10, .9);
+  	//background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
+    //background-size: cover
   }
 
 /* Random containers I should reorganize, but won't. */
@@ -232,7 +232,7 @@ section.landingInfo .wrapper{
 
 .aboutMe {	
 	display: inline-block;
-	margin-top: 100px;
+	//margin-top: 100px;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;
@@ -576,10 +576,10 @@ ul.apps:after {
 
 @media (max-width: 480px) {
 	.rails {
-		max-height: 500px;
+		//max-height: 500px;
 	}
 	section.landingInfo {
-		padding-top: 180px;
+		//padding-top: 180px;
 	}
 	.about-page .container{
 		.deathRays{
@@ -590,8 +590,8 @@ ul.apps:after {
 			margin-top: 20px;
 			margin-bottom: 10px;
 			h1 {
-				font-family: 'freight-sans-pro';
-				text-align: center;
+				//font-family: 'freight-sans-pro';
+				//text-align: center;
 			}
 		}
 	}
