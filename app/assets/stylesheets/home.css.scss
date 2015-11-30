@@ -73,8 +73,8 @@ body:after{
 */
 .topBar {
 	//background: rgba(255, 255, 255, .1);
-	background: image-url('bgRailsColor.png') repeat-x fixed;
-	background-size: cover;
+	//background: image-url('bgRailsColor.png') repeat-x fixed;
+	//background-size: cover;
 
 	height:125px;
 	position: fixed;
@@ -169,13 +169,13 @@ body:after{
 
 /* Sets the style to snap the topbar after scrolling a certain amount. */
 body>header.fader {
-		top:0 !important;
-  	position:fixed !important;  	
+		//top:0 !important;
+  	//position:fixed !important;  	
   	//-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
   	//-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
   	//box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
 
-  	//background: rgba(10, 10, 10, .9);
+  	background: rgba(10, 10, 10, .9);
   	//background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
     //background-size: cover
   }
@@ -533,21 +533,11 @@ ul.apps:after {
 }
 
 @media screen and (max-width: 768px) {
-	.rails {
-		// max-height: 700px;
-	}
 	.rss-items li {
 		width: 49%;
 	}
 	.topBar .wrapper .logo2{
 		padding-left: 3%;
-	}
-	.topBar .wrapper .slideout{
-		float: right;
-		width: 45%;
-	}
-	.topBar .wrapper .slideout .nav{
-		//padding-top: 5%;
 	}
 	.about-page .container .deathRays{
 		margin-top: -25px;
@@ -575,11 +565,15 @@ ul.apps:after {
 }
 
 @media (max-width: 480px) {
-	.rails {
-		//max-height: 500px;
-	}
+  .topBar {
+    background: rgba(0, 0, 0, 1);
+    position: relative;
+  }
 	section.landingInfo {
-		//padding-top: 180px;
+		padding-top: 10px;
+    .wrapper {
+      margin-top: -165px;
+    }
 	}
 	.about-page .container{
 		.deathRays{
@@ -589,10 +583,6 @@ ul.apps:after {
 		.about header{
 			margin-top: 20px;
 			margin-bottom: 10px;
-			h1 {
-				//font-family: 'freight-sans-pro';
-				//text-align: center;
-			}
 		}
 	}
   .about-page .container .work{
