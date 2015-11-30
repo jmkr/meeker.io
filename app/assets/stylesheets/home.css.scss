@@ -72,9 +72,9 @@ body:after{
 * The wise topbar.
 */
 .topBar {
-	//background: rgba(255, 255, 255, .1);
-	//background: image-url('bgRailsColor.png') repeat-x fixed;
-	//background-size: cover;
+	// background: rgba(255, 255, 255, .1);
+	// background: image-url('bgRailsColor.png') repeat-x fixed;
+	// background-size: cover;
 
 	height:125px;
 	position: fixed;
@@ -243,6 +243,7 @@ section.landingInfo .wrapper{
 		width: 220px;
 
 		.arrow {
+      margin-top: 24px;
 			position: absolute;
 			font-family: 'entypo';
 			font-size: 80px;
@@ -259,7 +260,7 @@ section.landingInfo .wrapper{
 /* On hover, move the arrow down. */
 .aboutMe:hover .iconContainer{ 
 	.arrow {
-		margin-top: 35px;
+		margin-top: 42px;
 	}
 }
 
@@ -569,20 +570,29 @@ ul.apps:after {
     background: rgba(0, 0, 0, 1);
     position: relative;
   }
+  .rails {
+    min-height: 400px;
+  }
 	section.landingInfo {
 		padding-top: 10px;
     .wrapper {
-      margin-top: -165px;
+      margin-top: -155px;
     }
 	}
 	.about-page .container{
+    margin-top: 240px;
 		.deathRays{
-			margin-left: -40px;
       margin: 0 auto;
 		}
-		.about header{
-			margin-top: 20px;
-			margin-bottom: 10px;
+		.about {
+      text-align: center;
+      header {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        h1 {
+          text-align: center;
+        }
+      }
 		}
 	}
   .about-page .container .work{
