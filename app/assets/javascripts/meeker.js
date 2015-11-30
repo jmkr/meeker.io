@@ -164,7 +164,7 @@
             $(document).scroll(
                 function(){
 
-                    if( $(document).scrollTop() > 20 ){
+                    if( $(document).scrollTop() > ($(window).height() - 125) ){
                         Meeker.pinHeader();
                     }else{
                         Meeker.unpinHeader();

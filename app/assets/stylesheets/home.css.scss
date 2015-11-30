@@ -18,14 +18,14 @@ Blue: #267689;
 * Default junk.
 */
 ::selection {
- 	color: #fff;
- 	text-shadow: none;
- 	background: #333;
+  color: #fff;
+  text-shadow: none;
+  background: #333;
 }
 ::-moz-selection {
- 	color: #fff;
- 	text-shadow: none;
- 	background: #333;
+  color: #fff;
+  text-shadow: none;
+  background: #333;
 }
 html, body {
 	width: 100%;
@@ -37,80 +37,91 @@ html, body {
 	background: #fff;
 	padding: 0;
 }
+h1, h2, h3{
+  color:#333;
+}
+a, a:hover {
+  text-decoration: none;
+}
+ol,ul {
+  list-style: none;
+  -webkit-padding-start: 0px;
+}
 
 /* Preload icon images using CSS */
 body:after{
-    display:none;
-    content: image-url('logoJMbackedRed2.png') image-url('logoJMbacked3.png');
+  display:none;
+  content: image-url('logoJMbackedRed2.png') image-url('logoJMbacked3.png');
 }
 
-h1, h2, h3{
-	color:#333;
-}
+
 
 /*
 * rails. My name for the main container with a railroad track picture.
 */
 .rails {
-	width: 100%;
-	height: 100%;
-	min-height: 725px;
-	max-height: 900px;
-	background: image-url('bgRails.png') no-repeat top left fixed;
+  background: image-url('bgRailsColor.png') repeat-x;// top left;
+  background-size: cover;
+	//width: 100%;
+	min-height: 600px;
+	// max-height: 1000px;
+  height: 100%;
 }
 
 /*
 * The wise topbar.
 */
 .topBar {
-	background: image-url('bgRails.png') no-repeat top left;
+	//background: rgba(255, 255, 255, .1);
+	//background: image-url('bgRailsColor.png') repeat-x top left;
+	//background-size: cover;
+
 	height:125px;
 	position: fixed;
-  	-webkit-transition:box-shadow .3s ease-in-out;
-  	-moz-transition:box-shadow .3s ease-in-out;
-  	-ms-transition:box-shadow .3s ease-in-out;
-  	-o-transition:box-shadow .3s ease-in-out;
-  	transition:box-shadow .3s ease-in-out;  
-  	width: 100%;
-  	z-index: 9999;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: 9999;	
 
   /* Holds and positions all the content in the topbar. */
   .wrapper{
-		width: 95%;
-		max-width: 1500px;
-		margin: 0 auto;
+    width: 95%;
+    max-width: 1500px;
+    margin: 0 auto;
 
-		.logo2{
-			float: left;
-			margin: 0 auto;
-			-webkit-animation-name: fadeIn;
-			-moz-animation-name: fadeIn;
-			-ms-animation-name: fadeIn;
-			-o-animation-name: fadeIn;
-			animation-name: fadeIn;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			-webkit-animation-delay: .3s;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-timing-function: ease;
-			-webkit-transition: all .4s ease;
-			-moz-transition: all .4s ease;
-			transition: all .4s ease;
-			margin-top: 25px;
-			width:100px;
-			height:80px;
-			background:image-url('logoJMbacked3.png') right bottom no-repeat;
-			background-size: 95px;
-		}
-		.logo2:hover{
-			-webkit-transition: all .6s ease;
-			-moz-transition: all .6s ease;
-			transition: all .6s ease;
-			width:100px;
-			height:80px;
-			background:image-url('logoJMbackedRed2.png') right bottom no-repeat;
-			background-size: 95px;
-		}
+    .logo2{
+     float: left;
+     margin: 0 auto;
+     -webkit-animation-name: fadeIn;
+     -moz-animation-name: fadeIn;
+     -ms-animation-name: fadeIn;
+     -o-animation-name: fadeIn;
+     animation-name: fadeIn;
+     -webkit-animation-duration: 1s;
+     -webkit-animation-fill-mode: both;
+     -webkit-animation-delay: .3s;
+     -webkit-animation-iteration-count: 1;
+     -webkit-animation-timing-function: ease;
+     -webkit-transition: all .4s ease;
+     -moz-transition: all .4s ease;
+     transition: all .4s ease;
+     margin-top: 25px;
+     width:100px;
+     height:80px;
+     background:image-url('logoJMbacked3.png') right bottom no-repeat;
+     background-size: 95px;
+   }
+   .logo2:hover{
+     -webkit-transition: all .6s ease;
+     -moz-transition: all .6s ease;
+     transition: all .6s ease;
+     width:100px;
+     height:80px;
+     background:image-url('logoJMbackedRed2.png') right bottom no-repeat;
+     background-size: 95px;
+   }
 
 		/* All of the right side navigation icons and links. */
 		.nav {
@@ -156,25 +167,29 @@ h1, h2, h3{
 	}	
 }
 
-/* Reposition the background image for the railroad on the topBar and rails container. */
-.rails, .topBar{
-	background-position-x: -200px;
-	background-position-y: -70px;
-}
-
 /* Sets the style to snap the topbar after scrolling a certain amount. */
 body>header.fader {
-	top:0 !important;
-  	position:fixed !important;
-  	/* The border bottom and drop shadow for the navbar. */
-  	// -webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  	// -moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  	// box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-}
+		//top:0 !important;
+  	//position:fixed !important;  	
+  	//-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  	//-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  	//box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+
+  	background: rgba(10, 10, 10, .9);
+  	// background: image-url('bgRailsColor.png');
+	  // background-size: cover;
+  }
 
 /* Random containers I should reorganize, but won't. */
 section.landingInfo {
-	padding-top: 220px;
+	padding-top: 20px;
+  position: relative;
+  top: 40%;
+  transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+
 	-webkit-animation-name: fadeInUp;
 	-moz-animation-name: fadeInUp;
 	-ms-animation-name: fadeInUp;
@@ -217,7 +232,7 @@ section.landingInfo .wrapper{
 
 .aboutMe {	
 	display: inline-block;
-	margin-top: 20%;
+	margin-top: 100px;
 	-webkit-transition: all .4s ease;
 	-moz-transition: all .4s ease;
 	transition: all .4s ease;
@@ -359,13 +374,77 @@ section.landingInfo .wrapper{
 		p {
 			font-family: 'freight-sans-pro';
 		}
-		margin-top: -140px;
+		margin-top: -120px;
 		min-width: 40%;
 		float:right;
 		font-weight: 400;
 		font-size:15pt;
 		line-height: 1.55em;
 	}
+}
+
+section.work {
+  //padding-top: 50px;
+  max-width: 768px;
+  margin: 0 auto;
+  margin-top: 100px;
+
+  h1 {
+    //margin-left: 80px;
+    text-align: left;
+  }
+
+  ul.apps {
+    margin: 2em auto;
+    width: 100%;
+    font-family: 'HelveticaNeue', Helvetica, sans-serif;
+    font-size: 14px;
+
+    li {
+      border-radius: 20px;
+      float: left;
+      display: block;
+      width: 25%;
+      height: 120px;
+      margin-bottom: 2em;
+    }
+
+    a {
+      display: block;
+      width: 100px;
+      height: 120px;
+      line-height: 0;
+      margin: 0 auto;
+
+      span {
+        display: block;
+        width: 100px;
+        height: 10px;
+        font-weight: 800;
+        text-align: center;
+        line-height: 1em;
+        padding: 8px 0 0;
+        color: #888;
+      }
+    }
+
+    img {
+      box-sizing: border-box;
+      border-radius: 20px;
+      height: 100px;
+      width: 100px;
+      position: relative;
+      z-index: -2;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3), inset 0 0 2px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    }
+  }
+}
+
+
+ul.apps:after {
+  clear: both;
+  content: "";
+  display: table;
 }
 
 /* Photo page */
@@ -382,17 +461,17 @@ section.landingInfo .wrapper{
 /* For modern browsers */
 .rss-items:before,
 .rss-items:after {
-    content:"";
-    display:table;
+  content:"";
+  display:table;
 }
 
 .rss-items:after {
-    clear:both;
+  clear:both;
 }
 
 /* For IE 6/7 (trigger hasLayout) */
 .rss-items {
-    zoom:1;
+  zoom:1;
 }
 
 .rss-items li {	
@@ -411,7 +490,6 @@ section.landingInfo .wrapper{
 
 .rss-items li a {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	text-decoration: none;
 	color: #eee;
 	position: absolute;
 	top: 2%;
@@ -428,8 +506,8 @@ section.landingInfo .wrapper{
 }
 
 .rss-items li:hover a {
-		opacity: 1;
-		text-shadow: 0px 2px 4px #000000;
+  opacity: 1;
+  text-shadow: 0px 2px 4px #000000;
 }
 
 .rss-items li:nth-child(3n+1) {
@@ -441,9 +519,22 @@ section.landingInfo .wrapper{
 	height: auto;
 }
 
+@media screen and (max-width: 991px) {
+  .about-page .container .about{
+    margin: 0px 15px;
+    margin-bottom: 80px;
+  }
+  .about-page .container .work .apps{
+    max-width: 768px;
+    li {
+      width: 25%;
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
 	.rails {
-		max-height: 700px;
+		// max-height: 700px;
 	}
 	.rss-items li {
 		width: 49%;
@@ -456,14 +547,31 @@ section.landingInfo .wrapper{
 		width: 45%;
 	}
 	.topBar .wrapper .slideout .nav{
-		padding-top: 5%;
+		//padding-top: 5%;
 	}
 	.about-page .container .deathRays{
 		margin-top: -25px;
 	}
 	.about-page .container .about{
 		margin: 0px 15px;
+    margin-bottom: 80px;
 	}
+  .about-page .container .work{
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .about-page .container .work .apps{
+    width: 280px;
+    li {
+      width: 50%;
+    }
+  }
+  .about-page .container .about{
+    margin: 0px 15px;
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -474,9 +582,9 @@ section.landingInfo .wrapper{
 		padding-top: 180px;
 	}
 	.about-page .container{
-		margin-top: 250px;
 		.deathRays{
 			margin-left: -40px;
+      margin: 0 auto;
 		}
 		.about header{
 			margin-top: 20px;
@@ -487,6 +595,9 @@ section.landingInfo .wrapper{
 			}
 		}
 	}
+  .about-page .container .work{
+    margin-top: 100px;
+  }
 	.rss-items li {
 		width: 100%;
 	}
