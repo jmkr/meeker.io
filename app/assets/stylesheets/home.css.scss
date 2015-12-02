@@ -565,16 +565,49 @@ ul.apps:after {
   }
 }
 
+@media (max-height: 400px) {
+  .topBar {
+    //background: rgba(0, 0, 0, 1);
+    //position: relative;
+    height: 100px;
+
+    .wrapper {
+      .logo2 {
+        margin-top: 10px;
+      }
+      .nav {
+        padding-top: 25px;
+      }
+    }
+  }
+}
+
 @media (max-width: 480px) {
   .topBar {
     background: rgba(0, 0, 0, 1);
     position: relative;
+
+    .wrapper {
+      .nav {
+        font-size: 12px;
+        width: 140px;
+        padding-top: 40px;
+        margin-bottom: -40px;
+
+        .blog, .photos {
+          visibility: hidden;
+        }
+      }  
+    }
   }
+
   .rails {
+    font-size: 12px;
     min-height: 400px;
     background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
     background-size: cover;
   }
+
 	section.landingInfo {
 		padding-top: 10px;
     .wrapper {
@@ -585,8 +618,19 @@ ul.apps:after {
     margin-top: 240px;
 		.deathRays{
       margin: 0 auto;
+      background-size: contain;
+      min-height: 400px;
+      #tweetTime {
+        visibility: hidden;
+      }
+      .thoughtBubble {
+        margin-left: 0px;
+        margin-top: -210px;
+      }
 		}
 		.about {
+      margin: 0 auto;
+      margin-bottom: 60px;
       text-align: center;
       header {
         margin-top: 20px;
@@ -599,6 +643,10 @@ ul.apps:after {
 	}
   .about-page .container .work{
     margin-top: 100px;
+    .apps {
+      width: 100%;
+      margin-bottom: 0px;
+    }
   }
 	.rss-items li {
 		width: 100%;
