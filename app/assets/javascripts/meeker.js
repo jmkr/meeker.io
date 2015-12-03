@@ -51,7 +51,7 @@
                 for (_i = 0, _len = mentions.length; _i < _len; _i++) {
                     mention = mentions[_i];
                     username = mention.replace("@", "");
-                    url = '@<a href="http://twitter.com/' + username + '">' + username + '</a>';
+                    url = '<a href="http://twitter.com/' + username + '">' + '@' + username + '</a>';
                     text = text.replace(mention, url);
                 }
             }
