@@ -400,14 +400,15 @@ section.work {
     width: 100%;
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
     font-size: 14px;
+    text-align: center;
 
     li {
       border-radius: 20px;
-      float: left;
-      display: block;
+      display: inline-block;
       width: 25%;
-      height: 120px;
-      margin-bottom: 2em;
+      height: 148px;
+      // margin-bottom: 2em;
+      vertical-align: top;
     }
 
     a {
