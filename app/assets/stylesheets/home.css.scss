@@ -60,7 +60,7 @@ body:after{
 * rails. My name for the main container with a railroad track picture.
 */
 .rails {
-  background: image-url('bgRailsColor.png') repeat-x;// fixed;// top left;
+  // background: image-url('bgRailsColor.png') repeat-x;// fixed;// top left;
   background-size: cover;
 	//width: 100%;
 	min-height: 600px;
@@ -182,6 +182,7 @@ body>header.fader {
 
 /* Random containers I should reorganize, but won't. */
 section.landingInfo {
+  display: none;
 	padding-top: 20px;
   position: relative;
   top: 40%;

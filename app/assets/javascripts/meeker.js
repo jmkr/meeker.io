@@ -199,6 +199,15 @@
             }, 7500);
         },
 
+        initBackgroundImage: function(){
+            var img = new Image();
+            img.src = 'assets/bgRailsColor.png';
+            img.onload = function() {
+                $(".rails" ).attr("style", "background-image:url('" + img.src + "')");
+                $(".landingInfo" ).attr("style", "display:block");
+            };
+        },
+
         //Scrollspy & Nav Function => gets -1 for any area not to be highlighted and 'num' corresponds to indexOf anchor in nav to be highlighted
         highlightHeader: function(num){
             this._$nav.removeClass('current');
@@ -219,6 +228,7 @@
                 $(document).ready(function() {
                     Meeker.initBindings();
                     Meeker.initHeader();
+                    Meeker.initBackgroundImage();
 
                     if(window.location.pathname == "/"){              
                         Meeker.initTwitter();
