@@ -2,7 +2,7 @@
 production:
   clients:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      uri: <%= ENV['MONGODB_URI'] %>
       options:
         skip_version_check: true
         safe: true
