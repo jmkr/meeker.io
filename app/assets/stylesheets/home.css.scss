@@ -375,6 +375,10 @@ section.landingInfo .wrapper{
 		}
 		p {
 			font-family: 'freight-sans-pro';
+      a {
+        z-index: 10;
+        position: relative;
+      }
 		}
 		margin-top: -120px;
 		min-width: 40%;
