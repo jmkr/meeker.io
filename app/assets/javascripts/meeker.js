@@ -233,6 +233,12 @@
                     if(window.location.pathname == "/"){              
                         Meeker.initTwitter();
                     }
+
+                    $('a[rel="external"]').click(function() {
+                      console.log("test");
+                        window.open($(this).attr('href'));
+                        return false;
+                    });
                 });                
                            
                 $(window).load(function(){
