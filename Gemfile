@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.5.0'
 
-gem 'rails', '4.2.10'
+gem 'rails', '4.2.11'
 
-gem 'bootstrap-sass', '~> 3.3.5'
+gem "bootstrap-sass", ">= 3.4.1"
 gem 'sass-rails', '>= 3.2'
 
 gem 'rails_12factor', group: :production
