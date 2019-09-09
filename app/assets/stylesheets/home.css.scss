@@ -18,14 +18,14 @@ Blue: #267689;
 * Default junk.
 */
 ::selection {
-  color: #fff;
+  color: #eee;
   text-shadow: none;
-  background: #333;
+  background: #555;
 }
 ::-moz-selection {
-  color: #fff;
+  color: #eee;
   text-shadow: none;
-  background: #333;
+  background: #555;
 }
 html, body {
 	width: 100%;
@@ -374,7 +374,8 @@ section.landingInfo .wrapper{
 			}
 		}
 		p {
-			font-family: 'freight-sans-pro';
+			font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			font-size: 19px;
       a {
         z-index: 10;
         position: relative;
