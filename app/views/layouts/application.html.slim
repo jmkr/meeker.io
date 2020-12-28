@@ -6,8 +6,6 @@ html
     script src="//use.typekit.net/qjf3ait.js"
     javascript: 
       try{Typekit.load();}catch(e){}
-    script src="https://www.google.com/jsapi"
-    = analytics_init if Rails.env.production? 
     
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"
       title= content_for?(:title) ? yield(:title) : "John Meeker | iOS Developer"
@@ -18,6 +16,5 @@ html
         = csrf_meta_tags
         = yield(:head)
   body     
-    == render :partial => 'home/navbar'
     = render 'layouts/messages'
     = yield

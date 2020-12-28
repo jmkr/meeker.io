@@ -28,14 +28,13 @@ Blue: #267689;
   background: #555;
 }
 html, body {
-	width: 100%;
-	height: 100%;
-	font-family: 'freight-sans-pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-	color: #555;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	background: #fff;
-	padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'freight-sans-pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding: 0;
 }
 h1, h2, h3{
   color:#333;
@@ -54,17 +53,15 @@ body:after{
   content: image-url('logoJMbackedRed2.png') image-url('logoJMbacked3.png');
 }
 
-
-
 /*
 * rails. My name for the main container with a railroad track picture.
 */
 .rails {
   // background: image-url('bgRailsColor.png') repeat-x;// fixed;// top left;
   background-size: cover;
-	//width: 100%;
-	min-height: 600px;
-	// max-height: 1000px;
+  //width: 100%;
+  min-height: 600px;
+  // max-height: 1000px;
   height: 100%;
 }
 
@@ -72,322 +69,331 @@ body:after{
 * The wise topbar.
 */
 .topBar {
-	// background: rgba(255, 255, 255, .1);
-	// background: image-url('bgRailsColor.png') repeat-x fixed;
-	// background-size: cover;
-
-	height:125px;
-	position: fixed;
+  // background: rgba(255, 255, 255, .1);
+  // background: image-url('bgRailsColor.png') repeat-x fixed;
+  // background-size: cover;
+  
+  height:125px;
+  // position: fixed;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   width: 100%;
   z-index: 9999;	
-
+  
   /* Holds and positions all the content in the topbar. */
   .wrapper{
     width: 95%;
     max-width: 1500px;
     margin: 0 auto;
-
+    
     .logo2{
-     float: left;
-     margin: 0 auto;
-     -webkit-animation-name: fadeIn;
-     -moz-animation-name: fadeIn;
-     -ms-animation-name: fadeIn;
-     -o-animation-name: fadeIn;
-     animation-name: fadeIn;
-     -webkit-animation-duration: 1s;
-     -webkit-animation-fill-mode: both;
-     -webkit-animation-delay: .3s;
-     -webkit-animation-iteration-count: 1;
-     -webkit-animation-timing-function: ease;
-     -webkit-transition: all .4s ease;
-     -moz-transition: all .4s ease;
-     transition: all .4s ease;
-     margin-top: 25px;
-     width:100px;
-     height:80px;
-     background:image-url('logoJMbacked3.png') right bottom no-repeat;
-     background-size: 95px;
-   }
-   .logo2:hover{
-     -webkit-transition: all .6s ease;
-     -moz-transition: all .6s ease;
-     transition: all .6s ease;
-     width:100px;
-     height:80px;
-     background:image-url('logoJMbackedRed2.png') right bottom no-repeat;
-     background-size: 95px;
-   }
-
-		/* All of the right side navigation icons and links. */
-		.nav {
-			float: right;
-			padding-top: 45px;
-			-webkit-animation-name: fadeIn;
-			-moz-animation-name: fadeIn;
-			-ms-animation-name: fadeIn;
-			-o-animation-name: fadeIn;
-			animation-name: fadeIn;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			-webkit-animation-delay: .3s;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-timing-function: ease;
-			li {
-				display: inline-block;
-				a {
-					font-family: 'icomoon';
-					font-size: 1.7em;
-					font-weight: 300;
-					color:#DD4A38;
-					padding: 15px;
-					-webkit-transition: color .4s ease;
-					-moz-transition: color .4s ease;
-					transition: color .4s ease;
-				}
-				a.current {
-					color: #798dd1;
-				}
-				a:last-child {
-					padding-right: 4px;
-				}
-				a:hover {
-					background:none;
-					color: #222;
-				}
-			}
-			li:last-child {
-				padding-right: 0px;
-			}
-		}
-	}	
+      float: left;
+      margin: 0 auto;
+      
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-delay: .3s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      
+      -moz-animation-name: fadeIn;
+      -ms-animation-name: fadeIn;
+      -o-animation-name: fadeIn;
+      -webkit-animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-delay: .3s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease;
+      -webkit-transition: all .4s ease;
+      -moz-transition: all .4s ease;
+      
+      transition: all .4s ease;
+      margin-top: 25px;
+      width:100px;
+      height:80px;
+      background:image-url('logoJMbacked3.png') right bottom no-repeat;
+      background-size: 95px;
+    }
+    .logo2:hover{
+      -webkit-transition: all .6s ease;
+      -moz-transition: all .6s ease;
+      transition: all .6s ease;
+      width:100px;
+      height:80px;
+      background:image-url('logoJMbackedRed2.png') right bottom no-repeat;
+      background-size: 95px;
+    }
+    
+    /* All of the right side navigation icons and links. */
+    .nav {
+      float: right;
+      padding-top: 45px;
+      -webkit-animation-name: fadeIn;
+      -moz-animation-name: fadeIn;
+      -ms-animation-name: fadeIn;
+      -o-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      -webkit-animation-delay: .3s;
+      -webkit-animation-iteration-count: 1;
+      -webkit-animation-timing-function: ease;
+      li {
+        display: inline-block;
+        a {
+          font-family: 'icomoon';
+          font-size: 1.7em;
+          font-weight: 300;
+          color:#DD4A38;
+          padding: 15px;
+          -webkit-transition: color .4s ease;
+          -moz-transition: color .4s ease;
+          transition: color .4s ease;
+        }
+        a.current {
+          color: #798dd1;
+        }
+        a:last-child {
+          padding-right: 4px;
+        }
+        a:hover {
+          background:none;
+          color: #222;
+        }
+      }
+      li:last-child {
+        padding-right: 0px;
+      }
+    }
+  }	
 }
 
 /* Sets the style to snap the topbar after scrolling a certain amount. */
 body>header.fader {
-		//top:0 !important;
-  	//position:fixed !important;  	
-  	//-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  	//-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  	//box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-
-  	background: rgba(10, 10, 10, .9);
-  	//background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
-    //background-size: cover
-  }
+  //top:0 !important;
+  //position:fixed !important;  	
+  //-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  //-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  //box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
+  
+  background: rgba(10, 10, 10, .9);
+  //background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
+  //background-size: cover
+}
 
 /* Random containers I should reorganize, but won't. */
 section.landingInfo {
   display: none;
-	padding-top: 20px;
+  padding-top: 20px;
   position: relative;
   top: 40%;
   transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
-
-	-webkit-animation-name: fadeInUp;
-	-moz-animation-name: fadeInUp;
-	-ms-animation-name: fadeInUp;
-	-o-animation-name: fadeInUp;
-	animation-name: fadeInUp;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-fill-mode: both;
-	-webkit-animation-delay: .7s;
-	-webkit-animation-iteration-count: 1;
-	-webkit-animation-timing-function: ease;
+  
+  -webkit-animation-name: fadeInUp;
+  -moz-animation-name: fadeInUp;
+  -ms-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: .7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: .7s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
 }
+
 section.landingInfo .wrapper{
-	width: 95%;
-	//max-width: 1140px;
-	margin: 0 auto;
+  width: 95%;
+  margin: 0 auto;
 }
 
 
 .me {
-	text-align: center;
-	-webkit-transition: color .6s ease;
-	-moz-transition: color .6s ease;
-	transition: color .6s ease;
-	h1 {
-		font-weight: 100;
-		font-size: 5em;
-		color: #fff;
-		line-height: 1;
-	}
-	small {
-		font-size: 2em;
-		color: rgba(255, 255, 255, .7);
-		line-height: 1.7em;
-		span{
-			font-weight: 400;
-			color: #DD4A38;
-		}
-	}
+  text-align: center;
+  -webkit-transition: color .6s ease;
+  -moz-transition: color .6s ease;
+  transition: color .6s ease;
+  h1 {
+    font-weight: 100;
+    font-size: 5em;
+    color: #fff;
+    line-height: 1;
+  }
+  small {
+    font-size: 2em;
+    color: rgba(255, 255, 255, .7);
+    line-height: 1.7em;
+    span{
+      font-weight: 400;
+      color: #DD4A38;
+    }
+  }
 }
 
 .aboutMe {	
-	display: inline-block;
-	//margin-top: 100px;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;
-
-	.iconContainer {
-		position: relative;
-		text-align: center;
-		width: 220px;
-
-		.arrow {
+  display: inline-block;
+  //margin-top: 100px;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  transition: all .4s ease;
+  
+  .iconContainer {
+    position: relative;
+    text-align: center;
+    width: 220px;
+    
+    .arrow {
       margin-top: 24px;
-			position: absolute;
-			font-family: 'entypo';
-			font-size: 80px;
-			line-height: 0px;
-			left: 32%;
-			color: #DD4A38;
-			-webkit-transition: all .5s ease;
-			-moz-transition: all .5s ease;
-			transition: all .5s ease;
-		}
-	}
+      position: absolute;
+      font-family: 'entypo';
+      font-size: 80px;
+      line-height: 0px;
+      left: 32%;
+      color: #DD4A38;
+      -webkit-transition: all .5s ease;
+      -moz-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+  }
 }
 
 /* On hover, move the arrow down. */
 .aboutMe:hover .iconContainer{ 
-	.arrow {
-		margin-top: 42px;
-	}
+  .arrow {
+    margin-top: 42px;
+  }
 }
 
 /* Photo page.. and about page */
-.photo-page h1, .about-page h1 {
-	text-align: center;
-	font-size: 2.2em;
+.about-page h1 {
+  text-align: center;
+  font-size: 2.2em;
 }
 
-.photo-page header h2, .about-page header h2 {
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 1em;
-	letter-spacing: 8px;
+.about-page header h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 8px;
 }
 
-.photo-page .inside, .about-page .inside{
-	padding: 2% 0;
-	width: 90%;
-	margin: 0 auto;	
-	padding-top: 150px;
+.about-page .inside {
+  padding: 2% 0;
+  width: 90%;
+  margin: 0 auto;	
+  padding-top: 150px;
 }
 
 /*
 *	The section all about me.
 */
-.about-page .container{
-	margin: auto;
-	margin-top: 325px;
-	max-width: 960px;
-	font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	
-	/*
-	* Picture of me facebook stalking while playing guitar. I call it deathrays.
-	*/
-	.deathRays{
-		min-height: 600px;
-		max-width: 438px;
-		background: image-url('raySmall2.png');
-		background-repeat: no-repeat;
-
-		/*
-		* The bubble containing my every thought.
-		*/
-		.thoughtBubble{
-			-webkit-animation-name: fadeIn;
-			-moz-animation-name: fadeIn;
-			-ms-animation-name: fadeIn;
-			-o-animation-name: fadeIn;
-			animation-name: fadeIn;
-			-webkit-animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			-webkit-animation-delay: .7s;
-			-webkit-animation-iteration-count: 1;
-			-webkit-animation-timing-function: ease;
-			position: absolute;
-			min-height: 250px;
-			min-width: 278px;
-			background: image-url('thoughtBubble2S');
-			background-repeat: no-repeat;
-			margin-left: 100px;
-			margin-top: -190px;
-			display: none;
-
-			/*
-			*	The wrapper containing the tweet.
-			*/
-			.tweetWrap{
-				width: 200px;
-				height: 120px;
-				position: absolute;
-				display: table;
-				top: 19px;
-				left: 35px;
-				text-align: center;
-				
-				/* Formatting the text inside the tweet. */
-				#tweets{
-					display: table-cell;
-					vertical-align: middle;
-				}
-			}
-		}
-
-		/*
-		* The time of the tweet.
-		*/
-		#tweetTime{
-			position: relative;
-			transform:rotate(90deg);
-			-ms-transform:rotate(90deg); /* Internet Explorer */
-			-moz-transform:rotate(90deg); /* Firefox */
-			-webkit-transform:rotate(90deg); /* Safari and Chrome */
-			-o-transform:rotate(90deg); 
-			font-style: italic;
-			left: 81px;
-			top: 230px;
-			display: none;
-		}
-	}
-
-	/*
-	* Organizing the block of text about me.
-	*/
-	.about{
-		header{
-			margin-bottom: 30px;
-			h1 {
-				text-align: left;
-			}
-		}
-		p {
-			font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-			font-size: 19px;
+.about-page .container {
+  margin: auto;
+  margin-top: 325px;
+  max-width: 960px;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+  /*
+  * Picture of me facebook stalking while playing guitar. I call it deathrays.
+  */
+  .deathRays{
+    min-height: 600px;
+    max-width: 438px;
+    background: image-url('raySmall2.png');
+    background-repeat: no-repeat;
+    
+    /*
+    * The bubble containing my every thought.
+    */
+    .thoughtBubble {
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+      animation-delay: .7s;
+      animation-iteration-count: 1;
+      animation-timing-function: ease;
+      position: absolute;
+      min-height: 250px;
+      min-width: 278px;
+      background: image-url('thoughtBubble2S');
+      background-repeat: no-repeat;
+      margin-left: 100px;
+      margin-top: -190px;
+      display: none;
+      
+      /*
+      *	The wrapper containing the tweet.
+      */
+      .tweetWrap{
+        width: 200px;
+        height: 120px;
+        position: absolute;
+        display: table;
+        top: 19px;
+        left: 35px;
+        text-align: center;
+        
+        /* Formatting the text inside the tweet. */
+        #tweets{
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+    
+    /*
+    * The time of the tweet.
+    */
+    #tweetTime{
+      position: relative;
+      transform:rotate(90deg);
+      -ms-transform:rotate(90deg); /* Internet Explorer */
+      -moz-transform:rotate(90deg); /* Firefox */
+      -webkit-transform:rotate(90deg); /* Safari and Chrome */
+      -o-transform:rotate(90deg); 
+      font-style: italic;
+      left: 81px;
+      top: 230px;
+      display: none;
+    }
+  }
+  
+  /*
+  * Organizing the block of text about me.
+  */
+  .about{
+    header{
+      margin-bottom: 30px;
+      h1 {
+        text-align: left;
+      }
+    }
+    p {
+      font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 19px;
       a {
         z-index: 10;
         position: relative;
       }
-		}
-		margin-top: -120px;
-		min-width: 40%;
-		float:right;
-		font-weight: 400;
-		font-size:15pt;
-		line-height: 1.55em;
-	}
+    }
+    margin-top: -120px;
+    min-width: 40%;
+    float:right;
+    font-weight: 400;
+    font-size:15pt;
+    line-height: 1.55em;
+  }
 }
 
 section.work {
@@ -395,19 +401,19 @@ section.work {
   max-width: 768px;
   margin: 0 auto;
   margin-top: 100px;
-
+  
   h1 {
     //margin-left: 80px;
     text-align: left;
   }
-
+  
   ul.apps {
     margin: 2em auto;
     width: 100%;
     font-family: 'HelveticaNeue', Helvetica, sans-serif;
     font-size: 14px;
     text-align: center;
-
+    
     li {
       border-radius: 20px;
       display: inline-block;
@@ -416,14 +422,14 @@ section.work {
       // margin-bottom: 2em;
       vertical-align: top;
     }
-
+    
     a {
       display: block;
       width: 100px;
       height: 120px;
       line-height: 0;
       margin: 0 auto;
-
+      
       span {
         display: block;
         width: 100px;
@@ -435,7 +441,7 @@ section.work {
         color: #888;
       }
     }
-
+    
     img {
       box-sizing: border-box;
       border-radius: 20px;
@@ -455,78 +461,6 @@ ul.apps:after {
   display: table;
 }
 
-/* Photo page */
-.photo-page .photo-feed{
-	margin-top: -5%;
-}
-.rss-box {
-	width: 90%;
-	margin: 0 auto;
-	padding: 5% 0;
-}
-
-/*Clear fix*/
-/* For modern browsers */
-.rss-items:before,
-.rss-items:after {
-  content:"";
-  display:table;
-}
-
-.rss-items:after {
-  clear:both;
-}
-
-/* For IE 6/7 (trigger hasLayout) */
-.rss-items {
-  zoom:1;
-}
-
-.rss-items li {	
-	width: 25%;
-	height: 25%;
-	display: inline-block;
-	padding: 0.5%;
-	list-style-type: none;
-	position: relative;
-	opacity:1;
-}
-
-.rss-items li br {
-	display: none;
-}
-
-.rss-items li a {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	color: #eee;
-	position: absolute;
-	top: 2%;
-	left: 2%;
-	width: 96%;
-	height: 100%;
-	padding: 45% 5% 0 5%;
-	text-align: center;
-
-	opacity: 0;
-	-webkit-transition: all .4s ease;
-	-moz-transition: all .4s ease;
-	transition: all .4s ease;
-}
-
-.rss-items li:hover a {
-  opacity: 1;
-  text-shadow: 0px 2px 4px #000000;
-}
-
-.rss-items li:nth-child(3n+1) {
-	margin-left: 0;
-}
-
-.rss-items img {
-	width: 100%;
-	height: auto;
-}
-
 @media screen and (max-width: 991px) {
   .about-page .container .about{
     margin: 0px 15px;
@@ -541,32 +475,29 @@ ul.apps:after {
 }
 
 @media screen and (max-width: 768px) {
-	.rss-items li {
-		width: 49%;
-	}
-	.topBar .wrapper .logo2{
-		padding-left: 3%;
-	}
-	.about-page .container .deathRays{
-		margin-top: -25px;
-	}
-	.about-page .container .about{
-		margin: 0px 15px;
+  .topBar .wrapper .logo2 {
+    padding-left: 3%;
+  }
+  .about-page .container .deathRays {
+    margin-top: -25px;
+  }
+  .about-page .container .about {
+    margin: 0px 15px;
     margin-bottom: 80px;
-	}
-  .about-page .container .work{
+  }
+  .about-page .container .work {
     margin-top: 100px;
   }
 }
 
 @media screen and (max-width: 660px) {
-  .about-page .container .work .apps{
+  .about-page .container .work .apps {
     width: 280px;
     li {
       width: 50%;
     }
   }
-  .about-page .container .about{
+  .about-page .container .about {
     margin: 0px 15px;
     margin-bottom: 60px;
   }
@@ -574,10 +505,8 @@ ul.apps:after {
 
 @media (max-height: 400px) {
   .topBar {
-    //background: rgba(0, 0, 0, 1);
-    //position: relative;
     height: 100px;
-
+    
     .wrapper {
       .logo2 {
         margin-top: 10px;
@@ -593,37 +522,37 @@ ul.apps:after {
   .topBar {
     background: rgba(0, 0, 0, 1);
     position: relative;
-
+    
     .wrapper {
       .nav {
         font-size: 12px;
         width: 140px;
         padding-top: 40px;
         margin-bottom: -40px;
-
+        
         .blog, .photos {
           visibility: hidden;
         }
       }  
     }
   }
-
+  
   .rails {
     font-size: 12px;
     min-height: 400px;
     background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
     background-size: cover;
   }
-
-	section.landingInfo {
-		padding-top: 10px;
+  
+  section.landingInfo {
+    padding-top: 10px;
     .wrapper {
       margin-top: -155px;
     }
-	}
-	.about-page .container{
+  }
+  .about-page .container{
     margin-top: 240px;
-		.deathRays{
+    .deathRays{
       margin: 0 auto;
       background-size: contain;
       min-height: 400px;
@@ -634,8 +563,8 @@ ul.apps:after {
         margin-left: 0px;
         margin-top: -210px;
       }
-		}
-		.about {
+    }
+    .about {
       margin: 0 auto;
       margin-bottom: 60px;
       text-align: center;
@@ -646,40 +575,28 @@ ul.apps:after {
           text-align: center;
         }
       }
-		}
-	}
-  .about-page .container .work{
+    }
+  }
+  .about-page .container .work {
     margin-top: 100px;
     .apps {
       width: 100%;
       margin-bottom: 0px;
     }
   }
-	.rss-items li {
-		width: 100%;
-	}
-	.photo-page header h1 {
-		font-size: 1em;
-	}
-	.photo-page .connect {
-		width: 100%;
-	}
-	.photo-page .connect h2 {
-		font-size: 2em;
-	}
 }
 
 /* Footer */
-footer{
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-	padding-top:1em;
-	margin: 3em auto;
-	margin-top:0px;	
-	padding-bottom: 4em;
-	text-align:center;
-	color: #AAA;
+footer {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-top:1em;
+  margin: 3em auto;
+  margin-top:0px;	
+  padding-bottom: 4em;
+  text-align:center;
+  color: #AAA;
 }
-footer > p{
-	text-align: center;
-	margin: 2em 0 -1em;
+footer > p {
+  text-align: center;
+  margin: 2em 0 -1em;
 }
