@@ -22,7 +22,9 @@ class Tweet
   private
 
   def self.client
-    Grackle::Transport.ca_cert_file = "../assets/cacerts.pem"
+    if !Rails.env.production?
+      Grackle::Transport.ca_cert_file = "../assets/cacerts.pem"
+    end
     Grackle::Client.new(:auth=>{
       :type=>:oauth,
       :consumer_key=>ENV["TWITTER_CONSUMER_KEY"],
