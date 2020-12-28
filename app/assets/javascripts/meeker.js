@@ -72,7 +72,7 @@
       var second = 1000,
       minute = second * 60,
       hour = minute * 60,
-      day = hour * 24,
+      day = hour * 24;
 
       if (isNaN(diff) || diff < 0) {
         return "";
