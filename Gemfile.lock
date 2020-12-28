@@ -96,7 +96,7 @@ GEM
       origin (~> 2.3)
       tzinfo (>= 0.3.37)
     multi_json (1.13.1)
-    nokogiri (1.10.3)
+    nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     oauth (0.5.4)
     origin (2.3.1)
