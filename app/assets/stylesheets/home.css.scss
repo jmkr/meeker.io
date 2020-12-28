@@ -57,11 +57,8 @@ body:after{
 * rails. My name for the main container with a railroad track picture.
 */
 .rails {
-  // background: image-url('bgRailsColor.png') repeat-x;// fixed;// top left;
   background-size: cover;
-  //width: 100%;
   min-height: 600px;
-  // max-height: 1000px;
   height: 100%;
 }
 
@@ -69,12 +66,7 @@ body:after{
 * The wise topbar.
 */
 .topBar {
-  // background: rgba(255, 255, 255, .1);
-  // background: image-url('bgRailsColor.png') repeat-x fixed;
-  // background-size: cover;
-  
   height:125px;
-  // position: fixed;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -137,11 +129,6 @@ body:after{
       -ms-animation-name: fadeIn;
       -o-animation-name: fadeIn;
       animation-name: fadeIn;
-      -webkit-animation-duration: 1s;
-      -webkit-animation-fill-mode: both;
-      -webkit-animation-delay: .3s;
-      -webkit-animation-iteration-count: 1;
-      -webkit-animation-timing-function: ease;
       li {
         display: inline-block;
         a {
@@ -174,15 +161,7 @@ body:after{
 
 /* Sets the style to snap the topbar after scrolling a certain amount. */
 body>header.fader {
-  //top:0 !important;
-  //position:fixed !important;  	
-  //-webkit-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  //-moz-box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  //box-shadow:0px 10px 16px -8px rgba(0,0,0,0.15);
-  
   background: rgba(10, 10, 10, .9);
-  //background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
-  //background-size: cover
 }
 
 /* Random containers I should reorganize, but won't. */
@@ -243,7 +222,6 @@ section.landingInfo .wrapper{
 
 .aboutMe {	
   display: inline-block;
-  //margin-top: 100px;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
   transition: all .4s ease;
@@ -397,13 +375,11 @@ section.landingInfo .wrapper{
 }
 
 section.work {
-  //padding-top: 50px;
   max-width: 768px;
   margin: 0 auto;
   margin-top: 100px;
   
   h1 {
-    //margin-left: 80px;
     text-align: left;
   }
   
@@ -419,7 +395,6 @@ section.work {
       display: inline-block;
       width: 25%;
       height: 148px;
-      // margin-bottom: 2em;
       vertical-align: top;
     }
     
@@ -540,7 +515,7 @@ ul.apps:after {
   .rails {
     font-size: 12px;
     min-height: 400px;
-    background: image-url('bgRailsColor.png') repeat-x fixed;// top left;
+    background: image-url('bgRailsColor.png') repeat-x fixed;
     background-size: cover;
   }
   
