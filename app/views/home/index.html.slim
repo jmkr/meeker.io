@@ -1,29 +1,24 @@
 body
-	.rails
+	.landing
 		== render :partial => 'home/navbar'
-		section.landingInfo
-			.wrapper
-				.me
+		.info
+			.info-wrapper
+				.info-content
 					h1
 						| I am a creator of
 					small
 						| iOS | Android | Web 
 						span | Apps
 					br
-					a.aboutMe href="#about"
-						.iconContainer
+					.arrow-container
+						a.arrow-icon href="#about"
 							span.arrow 2 
 
-	section#about.about-page
+	section#about.about
 		section.container
-
 			.row-fluid
 				.col-md-6   
-					.deathRays
-					    #tweetTime
-					    .thoughtBubble
-					    	.tweetWrap            
-					        	== render :partial => 'tweet'
+					.dt
 				.col-md-6
 					section.about
 						header
@@ -64,7 +59,7 @@ body
 						p 
 							| I do have a 
 							a href="resume"
-								|résumé
+								|resumé
 							|  you can look at, but am not currently looking for full time work.
 							|  You can 
 							a href="mailto:john@meeker.io"
@@ -76,17 +71,17 @@ body
 					section.work
 						ul.apps
 							li
-								a href="https://apps.apple.com/us/app/honey-smart-shopping-assistant/id1358499588" rel="external" target="_blank"
+								a href="https://paypal.com" rel="external" target="_blank"
+									img src="/assets/app-icons/paypal-ios.png" alt="PayPal"
+									span PayPal for iOS
+							li
+								a href="https://joinhoney.com" rel="external" target="_blank"
 									img src="/assets/app-icons/honey.jpg" alt="Honey"
-									span Honey
+									span Honey for iOS
 							li
 								a href="http://www.science37.com/" rel="external" target="_blank"
 									img src="/assets/app-icons/nora.png" alt="NORA"
 									span NORA
-							li
-								a href="https://vidme.com" rel="external" target="_blank"
-									img src="/assets/app-icons/copper-ios.png" alt="Copper Chat"
-									span Copper Chat
 							li
 								a href="https://vidme.com" rel="external" target="_blank"
 									img src="/assets/app-icons/vidme-tvos.png" alt="Vidme for tvOS"
@@ -104,40 +99,14 @@ body
 									img src="/assets/app-icons/gifdub.png" alt="Gifdub"
 									span Gifdub
 							li
-								a href="https://bitkitchen.co" rel="external" target="_blank"
-									img src="/assets/app-icons/vidme-astro-ios.png" alt="Astro"
-									span Astro
-							li
 								a href="https://itunes.apple.com/us/app/kpcc/id293825085?mt=8" rel="external" target="_blank"
 									img src="/assets/app-icons/kpcc-ios.png" alt="KPCC for iPhone"
 									span KPCC for iPhone
-							li
-								a href="https://scpr.org/" rel="external" target="_blank"
-									img src="/assets/app-icons/kpcc-ipad.png" alt="KPCC for iPad"
-									span KPCC for iPad
-							li
-								a href="https://fanium.com" rel="external" target="_blank"
-									img src="/assets/app-icons/fanium-football-ios.png" alt="Fanium for iOS"
-									span Fanium for iOS
 
 	footer
-		p
-		  a.twitter-follow-button data-show-count="false" data-size="large" href="https://twitter.com/meekr5"
-		  javascript:
-		    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs"); 
+		p 
+			| Contact:   
+			a href="mailto:john@meeker.io"
+				| john@meeker.io
 
 		p Copyright © #{Time.now.year} John Meeker
-		// p
-		// 	| More recently, I was working at
-		//   	a href="https://vid.me" rel="external"
-		// 		|Vidme
-		// 	|  as a lead iOS engineer, developing  
-		// 	a href="https://itunes.apple.com/us/app/vidme-share-discover-videos/id774292353?mt=8" rel="external" target="_blank"
-		// 		|Vidme for iPhone
-		// 	|  and helping create several video creation tools, including 
-		// 	a href="https://itunes.apple.com/us/app/gifdub/id982061074?mt=8" rel="external" target="_blank"
-		// 		|Gifdub
-		// 	|  and 
-		// 	a href="https://itunes.apple.com/app/id1097992677" rel="external" target="_blank"
-		// 		|Copper Chat
-		// 	|  from the ground up.
