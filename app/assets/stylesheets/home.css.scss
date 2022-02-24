@@ -180,22 +180,21 @@ ol,ul {
 }
 
 .about .container {
-  // margin: auto;
   margin-top: 80px;
   // max-width: 960px;
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  // font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
-  .dt {
-    margin-top: 120px;
-    min-height: 450px;
-    // max-width: 438px;
-    // background-size: cover;
-    // object-fit: cover;
-    background: image-url('dt-la.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    /*background-repeat: no-repeat;*/
+  .wrapper {
+    width: 100%;
+    height: 100%;
 
+    .dt {
+      background: image-url('dt-la.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      // min-height: 450px;
+      // margin-top: 120px;
+    }
   }
 
   .about{
@@ -206,7 +205,6 @@ ol,ul {
       }
     }
     p {
-      font-family: '-apple-system,BlinkMacSystemFont','sans-serif';
       font-size: 19px;
       a {
         z-index: 10;
@@ -283,11 +281,30 @@ section.work {
 //   content: "";
 //   display: table;
 // }
+@media screen and (min-width: 1280px) {
+  .dt {
+    margin-top: 120px;
+    min-height: 450px;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .dt {
+    margin-top: 120px;
+    min-height: 450px;
+  }
+}
+
 
 @media screen and (max-width: 991px) {
-  .about-page .container .about{
-    margin: 0px 15px;
-    margin-bottom: 80px;
+  .dt {
+    margin-top: 0px;
+    min-height: 450px;
+  }
+  .about-page .container .about {
+    // margin: 0px 15px;
+    // margin-bottom: 80px;
   }
   .about-page .container .work .apps {
     max-width: 768px;
@@ -314,6 +331,9 @@ section.work {
 }
 
 @media screen and (max-width: 660px) {
+  .dt {
+    min-height: 400px;
+  }
   .about .container .work .apps {
     // width: 280px;
     li {
@@ -327,6 +347,7 @@ section.work {
 }
 
 @media (max-height: 400px) {
+  
   .topBar {
     height: 100px;
     
@@ -342,6 +363,10 @@ section.work {
 }
 
 @media (max-width: 480px) {
+  .dt {
+    min-height: 250px;
+  }
+
   .topBar {
     // background: rgba(0, 0, 0, 1);
     // position: relative;
@@ -404,6 +429,12 @@ section.work {
       // width: 100%;
       // margin-bottom: 0px;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .dt {
+    min-height: 200px;
   }
 }
 
