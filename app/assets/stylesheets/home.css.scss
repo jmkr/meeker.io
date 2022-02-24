@@ -33,20 +33,18 @@ ol,ul {
     max-width: 1500px;
     margin: 0 auto;
     
-    .logo2{
+    .logo2 {
       float: left;
       margin: 0 auto;
-      
+
       animation-name: fadeIn;
       animation-duration: 1s;
       animation-fill-mode: both;
       animation-delay: .3s;
       animation-iteration-count: 1;
       animation-timing-function: ease;
-      
-      -moz-animation-name: fadeIn;
-      -ms-animation-name: fadeIn;
-      -o-animation-name: fadeIn;
+      transition: all .4s ease;
+
       -webkit-animation-name: fadeIn;
       -webkit-animation-duration: 1s;
       -webkit-animation-fill-mode: both;
@@ -54,24 +52,19 @@ ol,ul {
       -webkit-animation-iteration-count: 1;
       -webkit-animation-timing-function: ease;
       -webkit-transition: all .4s ease;
-      -moz-transition: all .4s ease;
-      
-      transition: all .4s ease;
+
       margin-top: 25px;
       width:100px;
       height:80px;
       background:image-url('logoJMbacked3.png') right bottom no-repeat;
       background-size: 95px;
     }
-    
+
     /* All of the right side navigation icons and links. */
     .nav {
       float: right;
       padding-top: 45px;
       -webkit-animation-name: fadeIn;
-      -moz-animation-name: fadeIn;
-      -ms-animation-name: fadeIn;
-      -o-animation-name: fadeIn;
       animation-name: fadeIn;
       li {
         display: inline-block;
