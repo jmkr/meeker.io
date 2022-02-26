@@ -12,13 +12,6 @@
         var $anchor = $(this);
         var offset = 250;
 
-        // fix for navbar links not animating while on home page
-        if(window.location.pathname =="/") {
-          if($anchor.attr('href').charAt(0)=="/") {
-            $anchor[0].href = $anchor.attr('href').slice(1);
-          }
-        }
-
         $('html, body').stop().animate({
           scrollTop: $($anchor.attr('href')).offset().top - offset
         }, 2000,'easeInOutExpo');

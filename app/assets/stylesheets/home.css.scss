@@ -1,11 +1,9 @@
 html, body {
   width: 100%;
   height: 100%;
-  // font-family: 'freight-sans-pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
   color: #555;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  // padding: 0;
 }
 
 h1, h2, h3 {
@@ -27,7 +25,6 @@ ol,ul {
   width: 100%;
   z-index: 9999;	
   
-  /* Holds and positions all the content in the topbar. */
   .wrapper {
     width: 95%;
     max-width: 1500px;
@@ -60,14 +57,30 @@ ol,ul {
       background-size: 95px;
     }
 
-    /* All of the right side navigation icons and links. */
     .nav {
       float: right;
       padding-top: 45px;
       -webkit-animation-name: fadeIn;
       animation-name: fadeIn;
+
+      .github {
+        background:image-url('github-50.png') no-repeat;
+        background-size: contain;
+      }
+
+      .twitter {
+        background:image-url('twitter-50.png') no-repeat;
+        background-size: contain;
+      }
+
+      .linkedin {
+        background:image-url('linkedin-50.png') no-repeat;
+        background-size: contain;
+      }
+
       li {
         display: inline-block;
+
         a {
           font-family: 'icomoon';
           font-size: 1.7em;
@@ -77,9 +90,6 @@ ol,ul {
           -webkit-transition: color .3s ease;
           -moz-transition: color .3s ease;
           transition: color .3s ease;
-        }
-        a.current {
-          color: #798dd1;
         }
         a:last-child {
           padding-right: 4px;
@@ -130,6 +140,7 @@ ol,ul {
         }
 
         small {
+          font-weight: 200;
           font-size: 2em;
           color: rgba(255, 255, 255, .7);
           line-height: 1.7em;
@@ -162,20 +173,16 @@ ol,ul {
 
 .about {
   display: flex;
-    /* align-content: stretch; */
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
 }
 
 .about h1 {
   text-align: center;
-  font-size: 2.2em;
 }
 
 .about .container {
   margin-top: 80px;
-  // max-width: 960px;
-  // font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 
   .wrapper {
     width: 100%;
@@ -185,20 +192,18 @@ ol,ul {
       background: image-url('dt-la.png');
       background-repeat: no-repeat;
       background-size: contain;
-      // min-height: 450px;
-      // margin-top: 120px;
     }
   }
 
   .about{
     header{
-      margin-bottom: 30px;
+      margin-bottom: 12px;
       h1 {
         text-align: left;
       }
     }
     p {
-      font-size: 19px;
+      font-size: 18px;
       a {
         z-index: 10;
         position: relative;
@@ -212,9 +217,6 @@ ol,ul {
 }
 
 section.work {
-  // max-width: 768px;
-  // margin: 0 auto;
-  // margin-top: 100px;
   padding-top: 100px;
   
   h1 {
@@ -268,15 +270,9 @@ section.work {
   }
 }
 
-
-// ul.apps:after {
-//   clear: both;
-//   content: "";
-//   display: table;
-// }
 @media screen and (min-width: 1280px) {
   .dt {
-    margin-top: 120px;
+    margin-top: 50px;
     min-height: 450px;
   }
 }
@@ -284,7 +280,7 @@ section.work {
 
 @media screen and (max-width: 1280px) {
   .dt {
-    margin-top: 120px;
+    margin-top: 50px;
     min-height: 450px;
   }
 }
@@ -294,10 +290,6 @@ section.work {
   .dt {
     margin-top: 0px;
     min-height: 450px;
-  }
-  .about-page .container .about {
-    // margin: 0px 15px;
-    // margin-bottom: 80px;
   }
   .about-page .container .work .apps {
     max-width: 768px;
@@ -311,16 +303,6 @@ section.work {
   .topBar .wrapper .logo2 {
     padding-left: 3%;
   }
-  .about .container .img {
-    // margin-top: -25px;
-  }
-  .about .container .about {
-    // margin: 0px 15px;
-    // margin-bottom: 80px;
-  }
-  .about .container .work {
-    // margin-top: 100px;
-  }
 }
 
 @media screen and (max-width: 660px) {
@@ -328,14 +310,9 @@ section.work {
     min-height: 400px;
   }
   .about .container .work .apps {
-    // width: 280px;
     li {
       width: 50%;
     }
-  }
-  .about .container .about {
-    // margin: 0px 15px;
-    // margin-bottom: 60px;
   }
 }
 
@@ -359,68 +336,10 @@ section.work {
   .dt {
     min-height: 250px;
   }
-
-  .topBar {
-    // background: rgba(0, 0, 0, 1);
-    // position: relative;
-    
-    .wrapper {
-      .nav {
-        // font-size: 12px;
-        // width: 140px;
-        // padding-top: 40px;
-        // margin-bottom: -40px;
-        
-        .blog, .photos {
-          visibility: hidden;
-        }
-      }  
-    }
-  }
   
   .landing {
-    
-    // font-size: 12px;
-    // min-height: 400px;
-    // background: image-url('bgRailsColor.png') repeat-x fixed;
-    // background-size: cover;
-
     .info {
       padding: 10px;
-      // padding-top: 10px;
-      .info-wrapper {
-        // margin-top: -155px;
-      }
-    }
-  }
-  
-  .about .container {
-    // margin-top: 240px;
-    .img {
-      // margin: 0 auto;
-      // background-size: contain;
-      // min-height: 400px;
-
-    }
-    .about {
-      // margin: 0 auto;
-      // margin-bottom: 60px;
-      // text-align: center;
-      header {
-        // margin-top: 20px;
-        // margin-bottom: 10px;
-        h1 {
-          // text-align: center;
-        }
-      }
-    }
-  }
-
-  .about .container .work {
-    // margin-top: 100px;
-    .apps {
-      // width: 100%;
-      // margin-bottom: 0px;
     }
   }
 }
@@ -431,7 +350,6 @@ section.work {
   }
 }
 
-/* Footer */
 footer {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   padding-top:1em;
