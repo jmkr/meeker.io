@@ -1,16 +1,10 @@
 (function($){
 
   var Meeker = {
-    $_header: null,
-    $_nav: null,
-
     initBindings: function() {
-      this._$header = $('.topBar');
-      this._$nav = $('.topBar ul.nav li a');
-
-      $('ul li a, a').bind('click',function(event) {
+      $('.arrow-icon').bind('click',function(event) {
         var $anchor = $(this);
-        var offset = 250;
+        var offset = 0;
 
         $('html, body').stop().animate({
           scrollTop: $($anchor.attr('href')).offset().top - offset
@@ -24,7 +18,7 @@
       img.src = 'assets/bgRailsColor.png';
       img.onload = function() {
         $(".landing" ).attr("style", "background-image:url('" + img.src + "')");
-        $(".arrow-container" ).attr("style", "display:block");
+        $(".info-wrapper" ).removeClass('hide');
       };
     },
 
