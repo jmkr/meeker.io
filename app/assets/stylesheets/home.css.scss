@@ -134,7 +134,7 @@ a:hover {
 
         h1 {
           font-weight: 100;
-          font-size: 5em;
+          font-size: 4em;
           color: #fff;
           line-height: 1;
         }
@@ -225,11 +225,14 @@ section.work {
   padding-top: 100px;
   
   h1 {
-    text-align: left;
+    text-align: center;
+    font-family: 'courier-bold', 'monospace';
+    font-size: 19px;
+    color:#353535;
   }
   
   ul.apps {
-    margin: 2em auto;
+    margin: 3em auto;
     width: 100%;
     font-family: 'courier', 'monospace';
     font-size: 12px;
@@ -276,7 +279,7 @@ section.work {
 
 @media screen and (min-width: 1280px) {
   .dt {
-    margin-top: 40px;
+    margin-top: 68px;
     min-height: 450px;
   }
 }
@@ -284,7 +287,7 @@ section.work {
 
 @media screen and (max-width: 1280px) {
   .dt {
-    margin-top: 40px;
+    margin-top: 68px;
     min-height: 450px;
   }
 }
