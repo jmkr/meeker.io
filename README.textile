@@ -1,3 +1,6 @@
-h1. meeker.io
+<h1 align="center">Hi 👋, I'm John</h1>
+<h3 align="center">This is the repo for my portfolio website, built using Rails 7</h3>
 
-** ********* ****
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+</p>
