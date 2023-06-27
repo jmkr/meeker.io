@@ -16,7 +16,7 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 
 # Use Sass to process CSS
-gem "sassc-rails"
+gem "sass-rails"
 
 gem 'bootstrap-sass'
 gem 'jquery-rails'
