@@ -13,23 +13,14 @@
       });
     },
 
-    initBackgroundImage: function() {
-      var img = new Image();
-      img.src = 'assets/bgRailsColor.png';
-      img.onload = function() {
-        $(".landing" ).attr("style", "background-image:url('" + img.src + "')");
-        $(".info-wrapper" ).removeClass('hide');
-      };
-    },
-
     init: function(loaded) {
       $(document).ready(function() {
         Meeker.initBindings();
-        Meeker.initBackgroundImage();
       });
 
       $(window).load(function() {
         Meeker.init(true);
+        $(".info-wrapper" ).removeClass('hide');
       });
     }
   };
