@@ -50,5 +50,4 @@ MeekerIo::Application.configure do
 
   config.serve_static_files = false
 
-  GA.tracker = "UA-35178468-1"
 end
