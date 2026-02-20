@@ -429,7 +429,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .apps li:hover { background: rgba(255, 255, 255, 0.04); }
 
-.apps li a {
+.apps li div {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -442,7 +442,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   text-align: center;
   transition: color 0.2s ease;
 }
-.apps li a:hover { color: var(--text); }
+.apps li:hover div { color: var(--text); }
 
 .apps img {
   width: 88px;
@@ -456,7 +456,7 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 /* Lift + chromatic aberration on hover */
-.apps li a:hover img {
+.apps li:hover img {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 22px 52px rgba(0, 0, 0, 0.65);
   filter: drop-shadow(-3px 0 0 rgba(221, 74, 56, 0.65))
@@ -500,53 +500,3 @@ footer a:hover { color: var(--accent); }
   :root { --nav-height: 54px; }
 }
 
-/* ============================================================
-   Custom cursor (pointer devices only)
-   ============================================================ */
-@media (pointer: fine) {
-  *, *::before, *::after { cursor: none !important; }
-
-  .cursor-dot,
-  .cursor-ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 10000;
-    will-change: transform;
-    transition: opacity 0.3s ease;
-  }
-
-  .cursor-dot {
-    width: 5px;
-    height: 5px;
-    background: var(--accent);
-    transform: translate(-50%, -50%);
-  }
-
-  .cursor-ring {
-    width: 32px;
-    height: 32px;
-    border: 1.5px solid rgba(221, 74, 56, 0.55);
-    background: transparent;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, opacity 0.3s ease;
-  }
-
-  .cursor-dot.hovering {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(0);
-  }
-
-  .cursor-ring.hovering {
-    width: 48px;
-    height: 48px;
-    border-color: rgba(221, 74, 56, 0.8);
-  }
-
-  .cursor-dot.hidden,
-  .cursor-ring.hidden {
-    opacity: 0;
-  }
-}
