@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Meeker</title>
+  <link rel="icon" href="assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed navigation -->
+  <header id="site-nav" class="topBar">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home"></a>
+      <nav aria-label="Social links">
+        <ul class="social-nav">
+          <li><a href="https://github.com/jmkr" rel="external" target="_blank" aria-label="GitHub" class="icon-github"></a></li>
+          <li><a href="https://twitter.com/meekr5" rel="external" target="_blank" aria-label="Twitter" class="icon-twitter"></a></li>
+          <li><a href="https://linkedin.com/in/johnkmeeker" rel="external" target="_blank" aria-label="LinkedIn" class="icon-linkedin"></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="landing">
+    <div class="hero-orb" aria-hidden="true"></div>
+    <div class="hero-content" id="hero-content">
+      <h1 id="hero-heading">In theory, there is no difference between theory and practice. In practice, there is.</h1>
+      <p class="hero-sub">— Yogi Berra</p>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid reveal">
+        <div class="about-image">
+          <div class="dt" aria-hidden="true"></div>
+        </div>
+        <div class="about-body">
+          <span class="section-label">// about</span>
+          <p class="meta">New York, NY &nbsp;&middot;&nbsp; <span class="available"><span class="dot"></span>Available</span></p>
+          <h2>Hi, I'm John.</h2>
+          <p>
+            I'm an engineering manager at Atlassian, working on cloud security. The decade
+            before that was mobile — iOS and Android at PayPal, Honey, Vidme, and KPCC,
+            as both an IC and an EM.
+          </p>
+          <p>
+            Honestly, the line between the two has always been a little blurry for me —
+            managing and still ending up in PR reviews, IC and always half-thinking about
+            the team. At some point I stopped trying to fight it. Turns out it's been
+            pretty useful.
+          </p>
+          <p>
+            Currently looking for what's next. Security, infrastructure, or mobile. What I
+            care most about is the team: people who are good at what they do and invested
+            in each other's work. <a href="mailto:john@meeker.io">Reach out &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Prior Work -->
+  <section class="work">
+    <div class="container">
+      <div class="work-header reveal">
+        <span class="section-label">// prior_work</span>
+      </div>
+      <ul class="apps" id="apps-grid">
+        <li>
+          <a href="https://paypal.com" rel="external" target="_blank">
+            <img src="assets/images/app-icons/paypal-ios.png" alt="PayPal for iOS" loading="lazy">
+            <span>PayPal for iOS</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://joinhoney.com" rel="external" target="_blank">
+            <img src="assets/images/app-icons/honey.jpg" alt="Honey for iOS" loading="lazy">
+            <span>Honey for iOS</span>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.science37.com/" rel="external" target="_blank">
+            <img src="assets/images/app-icons/nora.png" alt="NORA" loading="lazy">
+            <span>NORA</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vidme.com" rel="external" target="_blank">
+            <img src="assets/images/app-icons/vidme-tvos.png" alt="Vidme for tvOS" loading="lazy">
+            <span>Vidme for tvOS</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://vidme.com" rel="external" target="_blank">
+            <img src="assets/images/app-icons/vidme-ios.png" alt="Vidme for iOS" loading="lazy">
+            <span>Vidme for iOS</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://bitkitchen.co" rel="external" target="_blank">
+            <img src="assets/images/app-icons/vidme-cam-ios.png" alt="Vidme Cam" loading="lazy">
+            <span>Vidme Cam</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://bitkitchen.co" rel="external" target="_blank">
+            <img src="assets/images/app-icons/gifdub.png" alt="Gifdub" loading="lazy">
+            <span>Gifdub</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://itunes.apple.com/us/app/kpcc/id293825085?mt=8" rel="external" target="_blank">
+            <img src="assets/images/app-icons/kpcc-ios.png" alt="KPCC for iPhone" loading="lazy">
+            <span>KPCC for iPhone</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p><a href="mailto:john@meeker.io">john@meeker.io</a></p>
+    <p>&copy; <span id="year"></span> John Meeker</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
