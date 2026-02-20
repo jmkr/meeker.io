@@ -499,3 +499,54 @@ footer a:hover { color: var(--accent); }
 @media (max-height: 500px) {
   :root { --nav-height: 54px; }
 }
+
+/* ============================================================
+   Custom cursor (pointer devices only)
+   ============================================================ */
+@media (pointer: fine) {
+  *, *::before, *::after { cursor: none !important; }
+
+  .cursor-dot,
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    will-change: transform;
+    transition: opacity 0.3s ease;
+  }
+
+  .cursor-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor-ring {
+    width: 32px;
+    height: 32px;
+    border: 1.5px solid rgba(221, 74, 56, 0.55);
+    background: transparent;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease, opacity 0.3s ease;
+  }
+
+  .cursor-dot.hovering {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  .cursor-ring.hovering {
+    width: 48px;
+    height: 48px;
+    border-color: rgba(221, 74, 56, 0.8);
+  }
+
+  .cursor-dot.hidden,
+  .cursor-ring.hidden {
+    opacity: 0;
+  }
+}

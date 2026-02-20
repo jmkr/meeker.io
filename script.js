@@ -112,3 +112,53 @@ new IntersectionObserver(function (entries) {
     this.unobserve(appsGrid);
   }
 }, { threshold: 0.1 }).observe(appsGrid);
+
+// ── Custom cursor (pointer devices only) ──────────────────────
+if (window.matchMedia('(pointer: fine)').matches) {
+  var dot  = document.createElement('div');
+  var ring = document.createElement('div');
+  dot.className  = 'cursor-dot hidden';
+  ring.className = 'cursor-ring hidden';
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+
+  var mx = -1000, my = -1000; // dot position (instant)
+  var rx = -1000, ry = -1000; // ring position (lerped)
+  var LERP = 0.12;
+
+  document.addEventListener('mousemove', function (e) {
+    mx = e.clientX;
+    my = e.clientY;
+    dot.classList.remove('hidden');
+    ring.classList.remove('hidden');
+  });
+
+  document.addEventListener('mouseleave', function () {
+    dot.classList.add('hidden');
+    ring.classList.add('hidden');
+  });
+
+  // Hover state on interactive elements
+  var interactiveSelector = 'a, button, [role="button"], input, textarea, select, label, .apps li';
+  document.querySelectorAll(interactiveSelector).forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      dot.classList.add('hovering');
+      ring.classList.add('hovering');
+    });
+    el.addEventListener('mouseleave', function () {
+      dot.classList.remove('hovering');
+      ring.classList.remove('hovering');
+    });
+  });
+
+  // RAF loop: snap dot, lerp ring
+  (function loop() {
+    dot.style.transform  = 'translate(' + (mx - 2.5) + 'px, ' + (my - 2.5) + 'px)';
+
+    rx += (mx - rx) * LERP;
+    ry += (my - ry) * LERP;
+    ring.style.transform = 'translate(' + (rx - 16) + 'px, ' + (ry - 16) + 'px)';
+
+    requestAnimationFrame(loop);
+  })();
+}
