@@ -99,6 +99,27 @@ document.querySelectorAll('.reveal').forEach(function (el) {
   revealObserver.observe(el);
 });
 
+// ── Konami code easter egg ────────────────────────────────────
+var KONAMI = [38,38,40,40,37,39,37,39,66,65];
+var konamiIdx = 0;
+var HERO_TEXT = 'In theory, there is no difference between theory and practice. In practice, there is.';
+
+document.addEventListener('keydown', function (e) {
+  if (e.keyCode === KONAMI[konamiIdx]) {
+    konamiIdx++;
+    if (konamiIdx === KONAMI.length) {
+      konamiIdx = 0;
+      scramble(heroHeading, 'you found it.', function () {
+        setTimeout(function () {
+          scramble(heroHeading, HERO_TEXT);
+        }, 1800);
+      });
+    }
+  } else {
+    konamiIdx = 0;
+  }
+});
+
 // ── Staggered app icon reveal ─────────────────────────────────
 var appsGrid = document.getElementById('apps-grid');
 new IntersectionObserver(function (entries) {

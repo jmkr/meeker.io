@@ -88,6 +88,13 @@ h1, h2, h3 { margin: 0; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; margin: 0; padding: 0; }
 
+/* Keyboard focus — visible only on keyboard nav, not mouse clicks */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* ============================================================
    Layout
    ============================================================ */
@@ -333,7 +340,9 @@ ul { list-style: none; margin: 0; padding: 0; }
   display: inline-flex;
   align-items: center;
   gap: 5px;
+  transition: opacity 0.2s ease;
 }
+.available:hover { opacity: 0.75; }
 
 .dot {
   display: inline-block;
